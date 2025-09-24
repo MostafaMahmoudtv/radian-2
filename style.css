@@ -14,10 +14,11 @@ margin: auto;
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+width: 100%;
   padding: 0rem 1rem;
   transition: all 0.3s ease;
-  position: absolute;     /* أول ما الصفحة تفتح */
+  position: absolute; 
+    box-sizing: border-box;    /* أول ما الصفحة تفتح */
   top: 0;
   background: transparent;
   color: white;
