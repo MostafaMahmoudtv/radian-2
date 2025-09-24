@@ -6,15 +6,20 @@ window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY;
 
   if (scrollTop === 0) {
+    // فوق خالص
     header.classList.remove("fixed");
     logo.src = "/assets/Radian-Logo.webp"; // اللوجو الأبيض
+    menuIcon.style.color = "white";        // الآيكون أبيض
   } else if (scrollTop < lastScrollTop) {
+    // طالع لفوق
     header.classList.add("fixed");
     logo.src = "/assets/Logo-Dark.webp";
-      menuIcon.style.color = "black"; // اللوجو الأسود
+    menuIcon.style.color = "black";
   } else {
+    // نازل لتحت
     header.classList.remove("fixed");
-    logo.src = "/assets/Radian-Logo.webp"; // يرجع للأبيض لو نازل
+    logo.src = "/assets/Radian-Logo.webp";
+    menuIcon.style.color = "white";
   }
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
