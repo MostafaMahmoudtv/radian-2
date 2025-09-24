@@ -10,7 +10,8 @@ window.addEventListener("scroll", function () {
     logo.src = "/assets/Radian-Logo.webp"; // اللوجو الأبيض
   } else if (scrollTop < lastScrollTop) {
     header.classList.add("fixed");
-    logo.src = "/assets/Logo-Dark.webp"; // اللوجو الأسود
+    logo.src = "/assets/Logo-Dark.webp";
+      menuIcon.style.color = "black"; // اللوجو الأسود
   } else {
     header.classList.remove("fixed");
     logo.src = "/assets/Radian-Logo.webp"; // يرجع للأبيض لو نازل

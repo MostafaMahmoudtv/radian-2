@@ -77,13 +77,13 @@ width: 100%;
 
   #menuIcon {
     display: flex;   /* خلي أيقونة المينيو تبان */
-    color: white;    /* أو غيرها حسب الخلفية */
+    color:white; 
+    font-weight: bold;   /* أو غيرها حسب الخلفية */
   }
 
   .header {
-    position: fixed;
-    background: rgba(0,0,0,0.6); /* خلفية شفافة أو solid */
-    border: none;
+    position: absolute;
+    background: transparent; /* خلفية شفافة أو solid */
   }
 }
 
