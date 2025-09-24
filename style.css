@@ -54,9 +54,35 @@ margin: auto;
   width: fit-content;
   padding: 1.5rem;
 }
+/* الوضع العادي (ديسكتوب) */
+.header .nav {
+  display: flex;
+}
+
+
+
+/* الموبايل والتابلت */
+@media (max-width: 1024px) {
+
+  .header .nav {
+    display: none;   /* اخفي القايمة العادية */
+  }
+
+  #menuIcon {
+    display: flex;   /* خلي أيقونة المينيو تبان */
+    color: white;    /* أو غيرها حسب الخلفية */
+  }
+
+  .header {
+    position: fixed;
+    background: rgba(0,0,0,0.6); /* خلفية شفافة أو solid */
+    border: none;
+  }
+}
+
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;   
   justify-content: center; 
@@ -118,3 +144,17 @@ margin: auto;
   cursor: pointer;
   color: #1e293b;
 }
+  .counter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1da1f2; /* الأزرق المستخدم */
+    }
+    .icon-C {
+     
+      stroke: #1da1f2;
+      fill: none;
+      stroke-width: 2;
+       color: #1da1f2;
+      margin-bottom: 1rem;
+    }
+    
