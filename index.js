@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
     // فوق خالص
     header.classList.remove("fixed");
     logo.src = "/assets/Radian-Logo.webp"; // اللوجو الأبيض
-    menuIcon.style.color = "white";        // الآيكون أبيض
+    menuIcon.style.color = "white"; // الآيكون أبيض
   } else if (scrollTop < lastScrollTop) {
     // طالع لفوق
     header.classList.add("fixed");
@@ -62,14 +62,14 @@ document.addEventListener("keydown", (e) => {
 const slides = [
   {
     img: "/assets/Slider-1.webp",
-    text: "التميز الهندسي عبر القارات",
-    btnText: "اعرف المزيد عن راديان",
+    text: "التميّز الهندسي عبر القارات",
+    btnText: "  اعرف المزيد عن راديان  " + " " + " 🡤 ",
     btnLink: "#about",
   },
   {
     img: "/assets/Slider-2.webp",
-    text: "بناء المستقبل مع راديان",
-    btnText: "استعرض خدماتنا",
+    text: "تحويل الأفكار إلى تحف هندسية",
+    btnText: "استعرض خدماتنا" + " " + " 🡤 ",
     btnLink: "#about",
   },
 ];
@@ -103,10 +103,27 @@ function goToSlide(index) {
 
   // 6. بعد نص ثانية غيّر النص + الزر
   setTimeout(() => {
-    sliderText.textContent = slides[index].text;
+    // تقسيم النص لأول كلمة وبقية النص
+    const fullText = slides[index].text;
+    const firstSpace = fullText.indexOf(" ");
+    let firstWord, restText;
+
+    if (firstSpace === -1) {
+      firstWord = fullText;
+      restText = "";
+    } else {
+      firstWord = fullText.slice(0, firstSpace);
+      restText = fullText.slice(firstSpace);
+    }
+
+    // اعرض النص مع أول كلمة ملونة ومائلة
+    sliderText.innerHTML = `<span class="text-blue-400 italic">${firstWord}</span>${restText}`;
+
+    // تحديث الزر
     sliderBtn.textContent = slides[index].btnText;
     sliderBtn.href = slides[index].btnLink;
 
+    // إظهار النص مع الأنيميشن
     sliderContent.classList.remove("opacity-0", "translate-y-5");
   }, 500);
 
@@ -115,6 +132,7 @@ function goToSlide(index) {
   dots[index].classList.add("bg-white");
 }
 
+// التعامل مع الضغط على الدوائر
 dots.forEach((dot) => {
   dot.addEventListener("click", () => goToSlide(dot.dataset.slide));
 });
@@ -172,29 +190,48 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 const items = document.querySelectorAll("#projects-list > div");
-  const toggleBtn = document.getElementById("toggle-btn");
-  let expanded = false;
+const toggleBtn = document.getElementById("toggle-btn");
+let expanded = false;
 
-  // في البداية اعرض نص العناصر فقط
-  const initialCount = Math.ceil(items.length / 2);
-  items.forEach((item, i) => {
-    if (i < initialCount) item.classList.remove("hidden");
+// في البداية اعرض نص العناصر فقط
+const initialCount = Math.ceil(items.length / 2);
+items.forEach((item, i) => {
+  if (i < initialCount) item.classList.remove("hidden");
+});
+
+toggleBtn.addEventListener("click", () => {
+  expanded = !expanded;
+  if (expanded) {
+    items.forEach((item) => item.classList.remove("hidden"));
+    toggleBtn.textContent = "عرض أقل";
+  } else {
+    items.forEach((item, i) => {
+      if (i < initialCount) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+    toggleBtn.textContent = "عرض المزيد";
+  }
+});
+document.querySelectorAll(".dropdownWrapper").forEach((wrapper) => {
+  const btn = wrapper.querySelector(".dropdownBtn");
+  const menu = wrapper.querySelector(".dropdownMenu");
+  const icon = wrapper.querySelector(".dropdownIcon");
+
+  // الفتح/الإغلاق عند المرور أو الضغط
+  btn.addEventListener("mouseenter", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("hidden");
+    icon.classList.toggle("rotate-180");
   });
 
-  toggleBtn.addEventListener("click", () => {
-    expanded = !expanded;
-    if (expanded) {
-      items.forEach((item) => item.classList.remove("hidden"));
-      toggleBtn.textContent = "عرض أقل";
-    } else {
-      items.forEach((item, i) => {
-        if (i < initialCount) {
-          item.classList.remove("hidden");
-        } else {
-          item.classList.add("hidden");
-        }
-      });
-      toggleBtn.textContent = "عرض المزيد";
+  // إغلاق عند الضغط خارج العنصر
+  document.addEventListener("mouseover", (e) => {
+    if (!wrapper.contains(e.target)) {
+      menu.classList.add("hidden");
+      icon.classList.remove("rotate-180");
     }
   });
-  
+});

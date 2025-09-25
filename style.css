@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -10,21 +11,21 @@ body {
   padding: 0;
   direction: rtl;
   overflow-x: hidden;
-      font-family: 'Cairo', sans-serif; /* أو 'Tajawal' */
-
+  font-family: "Almarai", sans-serif;
+  font-size: 12px;
 }
 .contianer {
   max-width: 1400px;
-margin: auto;
+  margin: auto;
 }
 .header {
   display: flex;
   justify-content: space-between;
-width: 100%;
+  width: 100%;
   padding: 0rem 1rem;
   transition: all 0.3s ease;
-  position: absolute; 
-    box-sizing: border-box;    /* أول ما الصفحة تفتح */
+  position: absolute;
+  box-sizing: border-box;
   top: 0;
   background: transparent;
   color: white;
@@ -33,9 +34,9 @@ width: 100%;
 }
 
 .header.fixed {
-  position: fixed;        /* يبقى ثابت */
-  background: white;      /* خلفية بيضة */
-  color: black;           /* النص غامق */
+  position: fixed;
+  background: white; /* خلفية بيضة */
+  color: black; /* النص غامق */
   border-bottom: 1px solid #ddd;
 }
 
@@ -51,34 +52,83 @@ width: 100%;
   border-left: 1px solid white;
   flex: 4;
 }
-.header .nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  margin: auto;
-}
-.header .nav ul li {
-  width: fit-content;
-  padding: 1.5rem;
-}
-/* الوضع العادي (ديسكتوب) */
+
 .header .nav {
   display: flex;
 }
+.header > .nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem; /* بدل margin جوه li */
+  align-items: center;
+}
 
+.header > .nav > ul > li {
+  position: relative; /* لازم عشان الدروب داون يتربط بيه */
+  margin: 0; /* نشيل المسافة الكبيرة */
+  padding: 0.5rem 0; /* padding بسيط */
+  cursor: pointer;
+}
 
+.header .nav ul li ul {
+  position: absolute;
+  top: 100%; /* ينزل تحت الكلمة */
+  right: 0;
+  margin-top: 0.5rem;
+}
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
 
-/* الموبايل والتابلت */
+.language-dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  transition: background-color 0.2s ease;
+}
+
+.language-option:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdown-dropdown-m {
+  left: -190px;
+  top: -40px;
+  padding: 0.5rem;
+}
+
+.dropdown-dropdown-m ul {
+  background-color: white !important;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+.dropdown-dropdown-m ul li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding: 1rem !important;
+  font-size: 12px;
+}
 @media (max-width: 1024px) {
-
   .header .nav {
-    display: none;   /* اخفي القايمة العادية */
+    display: none; /* اخفي القايمة العادية */
   }
 
   #menuIcon {
-    display: flex;   /* خلي أيقونة المينيو تبان */
-    color:white; 
-    font-weight: bold;   /* أو غيرها حسب الخلفية */
+    display: flex; /* خلي أيقونة المينيو تبان */
+    color: white;
+    font-weight: bold; /* أو غيرها حسب الخلفية */
   }
 
   .header {
@@ -91,18 +141,17 @@ width: 100%;
   width: 20px;
   height: 20px;
   display: flex;
-  align-items: center;   
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   cursor: pointer;
   transition: transform 0.6s ease;
-  transform-origin: center center; 
+  transform-origin: center center;
 }
 
 .icon:hover {
   transform: rotate(180deg);
 }
-
 
 .header .icon {
   padding: 0.5rem 4rem;
@@ -113,10 +162,7 @@ width: 100%;
   height: 100vh;
   width: 100vw;
 }
-.slider-section img {
-  width: 100%;
-  height: 100vh;
-}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -151,17 +197,15 @@ width: 100%;
   cursor: pointer;
   color: #1e293b;
 }
-  .counter {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #1da1f2; /* الأزرق المستخدم */
-    }
-    .icon-C {
-     
-      stroke: #1da1f2;
-      fill: none;
-      stroke-width: 2;
-       color: #1da1f2;
-      margin-bottom: 1rem;
-    }
-    
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1da1f2; /* الأزرق المستخدم */
+}
+.icon-C {
+  stroke: #1da1f2;
+  fill: none;
+  stroke-width: 2;
+  color: #1da1f2;
+  margin-bottom: 1rem;
+}

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -115,18 +115,23 @@
           id="sliderContent"
           class="absolute top-1/3 right-10 max-w-lg text-white drop-shadow-lg space-y-6 opacity-0 translate-y-5 transition-all duration-700 z-10"
         >
-          <h2 id="sliderText" class="text-4xl font-bold">
-            التميز الهندسي عبر القارات
+          <h2 id="sliderText" class="text-6xl">
+            <span
+              class="text-blue-400 italic"
+              style="font-style: italic !important"
+              >التميّز</span
+            >
+            الهندسي عبر القارات
           </h2>
+
           <a
             id="sliderBtn"
             href="#about"
-            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition"
+            class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-6 py-3 rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white"
           >
-            اعرف المزيد عن راديان
+            <span>اعرف المزيد عن راديان </span>
           </a>
         </div>
-
         <!-- عناصر التحكم (دوائر جانبية) -->
         <div
           class="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 z-10"
@@ -148,8 +153,8 @@
       id="about"
       class="relative flex flex-col md:flex-row-reverse items-stretch w-full my-10 px-4 md:px-0"
     >
-      <!-- الصورة (على الشمال في RTL) -->
-      <div class="w-full md:w-1/2 h-[400px] md:h-[500px] relative">
+      <!-- الصورة -->
+      <div class="w-full md:w-1/2 h-[400px] md:h-[500px] relative z-0">
         <img
           src="/assets/About.webp"
           alt="about image"
@@ -157,31 +162,32 @@
         />
       </div>
 
-      <!-- النص (يمين في RTL) -->
+      <!-- النص -->
       <div
-        class="w-full md:w-1/2 bg-blue-100 p-10 flex flex-col justify-center rounded-3xl md:rounded-l-3xl md:rounded-r-none space-y-4 relative top-2 -ml-10 shadow-lg"
+        class="absolute right-0 top-16 w-[60%] bg-blue-100 py-[6rem] px-16 flex flex-col justify-center rounded-3xl md:rounded-l-3xl md:rounded-r-none space-y-4 z-10"
+        style="margin-right: -40px"
       >
-        <span class="text-sm text-gray-600">من نحن</span>
-        <h2 class="text-3xl font-bold text-gray-900">
-          نُحوّل المفاهيم إلى <span class="text-blue-600">إنجازات عالمية</span>
+        <span class="text-sm text-gray-600 py-4">من نحن</span>
+        <h2 class="text-5xl text-gray-900">
+          <div>نُحوّل المفاهيم إلى</div>
+          <span class="text-[#4BA1F7] italic">إنجازات عالمية</span>
         </h2>
-        <p class="text-gray-700 leading-relaxed">
+        <p class="text-gray-700 leading-relaxed py-4">
           نحن شركة هندسية عالمية نقدم خدماتنا في 28 دولة في مختلف أنحاء العالم.
           نكرس جهودنا لتقديم حلول مستدامة من خلال فريق متكامل من المهندسين
           والفنيين والإداريين لنحوّل رؤى عملائنا إلى واقع ملموس.
         </p>
-     <a
-  href="#"
-  class="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition 
-         w-full max-w-xs sm:max-w-sm md:max-w-md text-center mx-auto"
->
-  اعرف المزيد عن راديان
-</a>
-
+        <a
+          href="#"
+          class="block bg-[#3779BB] text-white px-6 py-3 rounded-full shadow-lg transition duration-500 w-full max-w-[180px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600"
+        >
+          اعرف المزيد عن راديان 🡤
+        </a>
       </div>
     </section>
+
     <!-- Section -->
-    <section id="stats" class="py-8 bg-white">
+    <section id="stats" class="py-8 mt-16 bg-white">
       <div class="mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
         <!-- Box 1 -->
         <div class="flex flex-col items-center">
@@ -299,32 +305,38 @@
       </div>
     </section>
     <section class="bg-blue-100 py-16">
+      <!-- العنوان -->
       <div class="max-w-6xl mx-auto text-center mb-12">
-        <h2 class="text-3xl font-bold">
-          فيما <span class="text-sky-500">نتميز</span>
+        <h2 class="text-5xl">
+          فيما <span class="text-sky-500 italic">نتميز</span>
         </h2>
       </div>
 
+      <!-- الشبكة -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-12 min-h-[350px]"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 md:px-12 min-h-[340px]"
       >
         <!-- الكارت 1 -->
         <div
-          class="relative group bg-white shadow rounded-md overflow-hidden text-center p-6"
+          class="relative group text-center p-6 flex flex-col justify-between border-l border-gray-400"
         >
-          <!-- أيقونة -->
-          <div
-            class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center mx-auto mb-4"
-          >
-            <i class="fa-solid fa-plus text-gray-600"></i>
+          <div>
+            <h3 class="text-lg font-bold mb-4">درء أخطار السيول</h3>
+            <p class="text-gray-600 text-sm">
+              في راديان، حلول هندسية مرنة لإدارة مخاطر السيول وسلامة المجتمعات
+            </p>
           </div>
-          <!-- النص -->
-          <h3 class="text-lg font-bold mb-2">درء أخطار السيول</h3>
-          <p class="text-gray-600 text-sm">
-            في راديان، حلول هندسية مرنة لإدارة مخاطر السيول وسلامة المجتمعات
-          </p>
 
-          <!-- صورة + زر استعراض عند الهوفر -->
+          <!-- أيقونة + -->
+          <div class="flex mt-6">
+            <div
+              class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-solid fa-plus text-gray-600"></i>
+            </div>
+          </div>
+
+          <!-- الهوفر -->
           <div
             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
           >
@@ -348,18 +360,23 @@
 
         <!-- الكارت 2 -->
         <div
-          class="relative group bg-white shadow rounded-md overflow-hidden text-center p-6"
+          class="relative group text-center p-6 flex flex-col justify-between border-l border-gray-400"
         >
-          <div
-            class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center mx-auto mb-4"
-          >
-            <i class="fa-solid fa-plus text-gray-600"></i>
+          <div>
+            <h3 class="text-lg font-bold mb-4">إدارة المرافق</h3>
+            <p class="text-gray-600 text-sm">
+              في راديان، نعني بأداء المرافق من خلال حلول مستدامة تضمن بيئات سلسة
+              وفعّالة وآمنة
+            </p>
           </div>
-          <h3 class="text-lg font-bold mb-2">إدارة المرافق</h3>
-          <p class="text-gray-600 text-sm">
-            في راديان، نعني بأداء المرافق من خلال حلول مستدامة تضمن بيئات سلسة
-            وفعّالة وآمنة
-          </p>
+
+          <div class="flex mt-6">
+            <div
+              class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-solid fa-plus text-gray-600"></i>
+            </div>
+          </div>
 
           <div
             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
@@ -384,18 +401,23 @@
 
         <!-- الكارت 3 -->
         <div
-          class="relative group bg-white shadow rounded-md overflow-hidden text-center p-6"
+          class="relative group text-center p-6 flex flex-col justify-between border-l border-gray-400"
         >
-          <div
-            class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center mx-auto mb-4"
-          >
-            <i class="fa-solid fa-plus text-gray-600"></i>
+          <div>
+            <h3 class="text-lg font-bold mb-4">الدراسات البيئية</h3>
+            <p class="text-gray-600 text-sm">
+              في راديان، نقدم حلول مستدامة تبدأ من دراسات بيئية دقيقة ونركز على
+              ممارسات مبتكرة
+            </p>
           </div>
-          <h3 class="text-lg font-bold mb-2">الدراسات البيئية</h3>
-          <p class="text-gray-600 text-sm">
-            في راديان، نقدم حلول مستدامة تبدأ من دراسات بيئية دقيقة ونركز على
-            ممارسات مبتكرة
-          </p>
+
+          <div class="flex mt-6">
+            <div
+              class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-solid fa-plus text-gray-600"></i>
+            </div>
+          </div>
 
           <div
             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
@@ -420,18 +442,23 @@
 
         <!-- الكارت 4 -->
         <div
-          class="relative group bg-white shadow rounded-md overflow-hidden text-center p-6"
+          class="relative group text-center p-6 flex flex-col justify-between"
         >
-          <div
-            class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center mx-auto mb-4"
-          >
-            <i class="fa-solid fa-plus text-gray-600"></i>
+          <div>
+            <h3 class="text-lg font-bold mb-4">التصاميم المعمارية</h3>
+            <p class="text-gray-600 text-sm">
+              في راديان، نبدع في تقديم تصاميم معمارية مبتكرة تحول الأفكار إلى
+              شواهد خالدة
+            </p>
           </div>
-          <h3 class="text-lg font-bold mb-2">التصاميم المعمارية</h3>
-          <p class="text-gray-600 text-sm">
-            في راديان، نبدع في تقديم تصاميم معمارية مبتكرة تحول الأفكار إلى
-            شواهد خالدة
-          </p>
+
+          <div class="flex mt-6">
+            <div
+              class="w-10 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-solid fa-plus text-gray-600"></i>
+            </div>
+          </div>
 
           <div
             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
@@ -456,55 +483,57 @@
       </div>
 
       <!-- زر استعرض جميع الخدمات -->
-      <div class="text-center mt-12">
-        <button
-          class="px-6 py-2 border-2 border-sky-600 text-sky-600 rounded-full flex items-center justify-center gap-2 mx-auto hover:bg-sky-600 hover:text-white transition"
+      <div class="text-center mt-12 flex justify-center items-center">
+        <a
+          href="#"
+          class="block bg-[#3779BB] text-white px-6 py-3 rounded-full shadow-lg transition duration-500 w-full max-w-[180px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600"
         >
-          <i class="fa-solid fa-arrow-left"></i>
-          استعرض جميع الخدمات
-        </button>
+          استعرض جميع الخدمات🡤
+        </a>
       </div>
     </section>
+
     <section class="bg-white py-20">
       <div
         class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
       >
-        <!-- النص -->
-        <div class="space-y-6">
-          <span class="text-gray-500 text-sm font-medium"
-            >لماذا تختار راديان؟</span
-          >
-          <h2 class="text-3xl md:text-4xl font-bold leading-relaxed">
-            قم <span class="text-sky-600">بناء</span> مستقبلك المهني عالميًا
-          </h2>
-          <p class="text-gray-600 leading-relaxed">
-            نحن نؤمن بالتميز والابتكار والاستدامة ونسعى إلى استقطاب المهندسين
-            والفنيين والإداريين الموهوبين لتحقيق رؤى عملائنا وتحويلها إلى واقع.
-          </p>
-          <button
-            class="px-6 py-3 bg-sky-600 text-white rounded-full hover:bg-sky-700 transition"
-          >
-            كن جزءًا من راديان
-          </button>
-        </div>
-
         <!-- الصورة -->
         <div>
           <img
             src="/assets/career.jpg"
             alt="بناء المستقبل"
-            class="rounded-lg shadow-md"
+            class="rounded-lg shadow-md h-[70vh]"
           />
+        </div>
+        <!-- النص -->
+        <div class="space-y-6 ">
+          <span class="text-gray-500 text-sm font-medium"
+            >لماذا تختار راديان؟</span
+          >
+          <h2 class="text-3xl md:text-5xl text-gray-700 leading-relaxed">
+            <span class="text-sky-600 italic">قم ببناء</span> مستقبلك
+            <div>المهني عالميا</div>
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            نحن نؤمن بالتميز والابتكار والاستدامة ونسعى إلى استقطاب المهندسين
+            والفنيين والإداريين الموهوبين لتحقيق رؤى عملائنا وتحويلها إلى واقع.
+          </p>
+          <a
+            href="#"
+            class="block bg-[#3779BB] text-white px-6 py-3 rounded-full shadow-lg transition duration-500 w-full max-w-[180px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600"
+          >
+            اعرف المزيد عن راديان🡤
+          </a>
         </div>
       </div>
 
       <!-- الكروت -->
       <div
-        class="max-w-7xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 px-6"
+        class="max-w-4xl mt-[-5rem] ms-[21rem] grid grid-cols-1 md:grid-cols-3 gap-8 px-6"
       >
         <!-- الكارت 1 -->
         <div
-          class="p-8 bg-white rounded-lg shadow border text-center space-y-4"
+          class="p-8 bg-transparent bg-white bg-opacity-70 rounded-lg  border text-center space-y-4"
         >
           <i class="fa-solid fa-arrow-trend-up text-2xl text-sky-600"></i>
           <h3 class="font-bold text-lg">النمو المهني</h3>
@@ -515,7 +544,7 @@
 
         <!-- الكارت 2 -->
         <div
-          class="p-8 bg-white rounded-lg shadow border text-center space-y-4"
+          class="p-8 bg-white rounded-lg bg-opacity-70  border text-center space-y-4"
         >
           <i class="fa-solid fa-chart-column text-2xl text-sky-600"></i>
           <h3 class="font-bold text-lg">الأثر المستدام</h3>
@@ -527,7 +556,7 @@
 
         <!-- الكارت 3 -->
         <div
-          class="p-8 bg-white rounded-lg shadow border text-center space-y-4"
+          class="p-8 bg-white rounded-lg bg-opacity-70  border text-center space-y-4"
         >
           <i class="fa-solid fa-earth-asia text-2xl text-sky-600"></i>
           <h3 class="font-bold text-lg">العمل ضمن بيئة عالمية</h3>
@@ -549,51 +578,142 @@
       </div>
     </section>
     <section class="bg-white py-12">
-  <div class="max-w-7xl mx-auto px-6">
-    <!-- القائمة -->
-    <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-      <!-- العناصر -->
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• نيويورك (الولايات المتحدة الأمريكية)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• أمستردام (هولندا)</h3><p class="text-gray-600 text-sm">تصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• نواكشوط (موريتانيا)</h3><p class="text-gray-600 text-sm">تصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• المملكة العربية السعودية</h3><p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• واشنطن (الولايات المتحدة الأمريكية)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• دبلن (أيرلندا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• أكرا (غانا)</h3><p class="text-gray-600 text-sm">إشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• كابول (أفغانستان)</h3><p class="text-gray-600 text-sm">تصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• مكسيكو سيتي (المكسيك)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• برن (سويسرا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• أبوجا (نيجيريا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• أستانا (كازاخستان)</h3><p class="text-gray-600 text-sm">التصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• كراكاس (فنزويلا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• سانتياغو (إسبانيا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• كانو (نيجيريا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• سيول (كوريا الجنوبية)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• ستوكهولم (السويد)</h3><p class="text-gray-600 text-sm">تصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• روما (إيطاليا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• الخرطوم (السودان)</h3><p class="text-gray-600 text-sm">تصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• بيشكك (قيرغيزستان)</h3><p class="text-gray-600 text-sm">التصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• وارسو (بولندا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• هلسنكي (فنلندا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• نيامي (النيجر)</h3><p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• بوخارست (رومانيا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• موسكو (روسيا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• أسمرة (إريتريا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• مانيلا (الفلبين)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-      <div class="hidden"><h3 class="text-sky-700 font-medium">• كولومبو (سريلانكا)</h3><p class="text-gray-600 text-sm">دراسات وتصميم</p></div>
-    </div>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- القائمة -->
+        <div
+          id="projects-list"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center"
+        >
+          <!-- العناصر -->
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">
+              • نيويورك (الولايات المتحدة الأمريكية)
+            </h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• أمستردام (هولندا)</h3>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• نواكشوط (موريتانيا)</h3>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• المملكة العربية السعودية</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">
+              • واشنطن (الولايات المتحدة الأمريكية)
+            </h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• دبلن (أيرلندا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• أكرا (غانا)</h3>
+            <p class="text-gray-600 text-sm">إشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• كابول (أفغانستان)</h3>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• مكسيكو سيتي (المكسيك)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• برن (سويسرا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• أبوجا (نيجيريا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• أستانا (كازاخستان)</h3>
+            <p class="text-gray-600 text-sm">التصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• كراكاس (فنزويلا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• سانتياغو (إسبانيا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• كانو (نيجيريا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• سيول (كوريا الجنوبية)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• ستوكهولم (السويد)</h3>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• روما (إيطاليا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• الخرطوم (السودان)</h3>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• بيشكك (قيرغيزستان)</h3>
+            <p class="text-gray-600 text-sm">التصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• وارسو (بولندا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• هلسنكي (فنلندا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• نيامي (النيجر)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• بوخارست (رومانيا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• موسكو (روسيا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• أسمرة (إريتريا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• مانيلا (الفلبين)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 font-medium">• كولومبو (سريلانكا)</h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+        </div>
 
-    <!-- الزر -->
-    <div class="text-center mt-8">
-      <button
-        id="toggle-btn"
-        class="text-sky-600 hover:underline font-medium"
-      >
-        عرض المزيد
-      </button>
-    </div>
-  </div>
-</section>
+        <!-- الزر -->
+        <div class="text-center mt-8">
+          <button
+            id="toggle-btn"
+            class="text-sky-600 hover:underline font-medium"
+          >
+            عرض المزيد
+          </button>
+        </div>
+      </div>
+    </section>
 
     <section class="bg-white py-16">
       <div class="max-w-7xl mx-auto text-center px-6">
@@ -806,7 +926,7 @@
                 class="h-20"
               />
             </div>
-          
+
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Rajhi-development.webp"
@@ -889,7 +1009,7 @@
             <div class="swiper-slide flex justify-center">
               <img src="/assets/Zood.webp" alt="زود" class="h-20" />
             </div>
-           
+
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/abdollah-salleh.webp"
