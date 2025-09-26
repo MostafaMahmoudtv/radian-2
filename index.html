@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-      <link
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
       rel="stylesheet"
     />
@@ -31,13 +33,225 @@
         <img src="/assets/Radian-Logo.webp" alt="Logo" id="logo" />
       </div>
       <div class="nav flex justify-center">
-        <ul class="flex">
-          <li>من نحن</li>
-          <li>الخدمات</li>
-          <li>المركز الاعلامي</li>
-          <li>الوظائف</li>
-          <li>تواصل معنا</li>
-          <li>اللغة</li>
+        <ul class="flex font-medium space-x-8">
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center"> من نحن </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span>نبذة عن راديان</span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span>الإستدامة</span>
+              </div>
+            </div>
+          </li>
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center"> الخدمات </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full pr-2 right-0 mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="ar"
+              >
+                <span>الإستدامة</span>
+              </div>
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="en"
+              >
+                <span>التخطيط العمراني</span>
+              </div>
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="ml-[5.4rem] w-100">الدراسات الهندسية</span>
+                </button>
+                <i class="fa-regular fa-greater-than"></i>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      الدراسات المرورية
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      الدراسات الهيدرولوجية
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      الدراسات البيئية
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      الدراسات الجيوتقنية
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="ml-[7.5rem] w-100"> البنية التحتية</span>
+                  <!-- أيقونة سهم -->
+                </button>
+                <i class="fa-regular fa-greater-than"></i>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      الطرق,الجسور ,الأنفاق
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      المياه وشبكات الصرف الصحي
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      درء اخطار السبول
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      الدراسات الجيوتقنية
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="ml-[2rem] w-100">
+                    الهندسة المعمارية والإنشائية</span
+                  >
+                  <!-- أيقونة سهم -->
+                </button>
+                <i class="fa-regular fa-greater-than"></i>
+
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      التصاميم المعمارية
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      تصميم المساحات الداخلية
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      تصميم المساحات الخارجية
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      التصميم الهيكلي
+                    </li>
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      تصميم الأنظمة الكهربائية والميكانيكية والصحية(MEP)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="language-option py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span> الدعم والإدارة</span>
+              </div>
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="ml-[5.4rem] w-100"> الإشراف الهندسي</span>
+                </button>
+                <i class="fa-regular fa-greater-than"></i>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                      إدارة المرافق
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span>المركز الاعلامي</span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span>الوظائف</span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span>تواصل معنا</span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center"> اللغة </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span>العربية</span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span>English</span>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
 
@@ -506,7 +720,7 @@
           />
         </div>
         <!-- النص -->
-        <div class="space-y-6 ">
+        <div class="space-y-6">
           <span class="text-gray-500 text-sm font-medium"
             >لماذا تختار راديان؟</span
           >
@@ -533,7 +747,7 @@
       >
         <!-- الكارت 1 -->
         <div
-          class="p-8 bg-transparent bg-white bg-opacity-70 rounded-lg  border text-center space-y-4"
+          class="p-8 bg-transparent bg-white bg-opacity-70 rounded-lg border text-center space-y-4"
         >
           <i class="fa-solid fa-arrow-trend-up text-2xl text-sky-600"></i>
           <h3 class="font-bold text-lg">النمو المهني</h3>
@@ -544,7 +758,7 @@
 
         <!-- الكارت 2 -->
         <div
-          class="p-8 bg-white rounded-lg bg-opacity-70  border text-center space-y-4"
+          class="p-8 bg-white rounded-lg bg-opacity-70 border text-center space-y-4"
         >
           <i class="fa-solid fa-chart-column text-2xl text-sky-600"></i>
           <h3 class="font-bold text-lg">الأثر المستدام</h3>
@@ -556,7 +770,7 @@
 
         <!-- الكارت 3 -->
         <div
-          class="p-8 bg-white rounded-lg bg-opacity-70  border text-center space-y-4"
+          class="p-8 bg-white rounded-lg bg-opacity-70 border text-center space-y-4"
         >
           <i class="fa-solid fa-earth-asia text-2xl text-sky-600"></i>
           <h3 class="font-bold text-lg">العمل ضمن بيئة عالمية</h3>

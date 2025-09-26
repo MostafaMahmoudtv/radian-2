@@ -76,7 +76,7 @@ body {
   top: 100%; /* ينزل تحت الكلمة */
   right: 0;
   margin-top: 0.5rem;
-}
+} /* القائمة تطلع وتنزل */
 .dropdown-content {
   opacity: 0;
   visibility: hidden;
@@ -90,17 +90,41 @@ body {
   transform: translateY(0);
 }
 
+/* خيار اللغة */
 .language-option {
+  position: relative;
   transition: background-color 0.2s ease;
 }
 
-.language-option:hover {
-  background-color: #f3f4f6;
+.language-option span {
+  display: inline-block; /* ضروري علشان يقبل ::before */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.language-option span::before {
+  content: "ــ"; /* الشرطة */
+  opacity: 0; /* مخفية في الطبيعي */
+  font-size: 20px; /* كبرناها شوية */
+  margin-right: 0;
+  padding-left: 0.3rem;
+  color: #000;
+  transition: opacity 0.3s ease, margin-right 0.3s ease;
+}
+
+/* وقت الهوفر */
+.language-option:hover span {
+  transform: translateX(5px); /* الكلمة تتحرك يمين */
+}
+
+.language-option:hover span::before {
+  opacity: 1; /* الشرطة تظهر */
+  margin-right: 8px; /* تيجي جنب الكلمة */
 }
 
 .dropdown-dropdown-m {
   left: -190px;
-  top: -40px;
+  top: -25px;
   padding: 0.5rem;
 }
 
@@ -120,6 +144,7 @@ body {
   padding: 1rem !important;
   font-size: 12px;
 }
+
 @media (max-width: 1024px) {
   .header .nav {
     display: none; /* اخفي القايمة العادية */
@@ -209,3 +234,88 @@ body {
   color: #1da1f2;
   margin-bottom: 1rem;
 }
+/* للموبايل والتابلت لحد 1023px */
+@media (max-width: 1023px) {
+  #about .absolute {
+    position: relative !important; /* بدل ما تبقى فوق الصورة */
+    top: auto !important;
+    right: auto !important;
+    margin: 1rem 0 0 0 !important; /* يشيل السالب margin */
+    width: 100% !important; /* ياخد العرض كله */
+    padding: 2rem 1.5rem !important; /* padding أصغر يناسب الموبايل */
+    border-radius: 1rem !important; /* زوايا أنعم */
+  }
+
+  #about h2 {
+    font-size: 1.75rem !important; /* أصغر عشان ما يكسرش */
+    line-height: 2.25rem !important;
+  }
+
+  #about p {
+    font-size: 1rem !important;
+    line-height: 1.75rem !important;
+  }
+}
+@media (max-width: 1023px) {
+  /* الصورة */
+  .bg-white img {
+    height: auto !important; /* خلي الصورة تاخد حجمها الطبيعي */
+    max-height: 300px !important; /* حد أقصى عشان ما تغطيش الشاشة */
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+  /* النص */
+  .bg-white h2 {
+    font-size: 1.75rem !important; /* أصغر شوية */
+    line-height: 2.25rem !important;
+  }
+
+  .bg-white p {
+    font-size: 1rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  /* الكروت */
+  .bg-white .max-w-4xl {
+    margin-top: 2rem !important; /* شيل السالب margin */
+    margin-inline-start: 0 !important; /* شيل الإزاحة */
+    grid-template-columns: 1fr !important; /* خليها عمود واحد */
+    text-align: center;
+  }
+
+  .bg-white .max-w-4xl > div {
+    padding: 1.5rem !important;
+  }
+}
+/* الريسبونسف للشبكة */
+@media (max-width: 1024px) {
+  section .grid {
+    grid-template-columns: repeat(2, 1fr); /* تابلت: عمودين */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section .grid {
+    grid-template-columns: 1fr; /* موبايل: عمود واحد */
+    gap: 1.25rem;
+  }
+
+  section .grid > div {
+    border-left: none; /* نشيل البوردر على الموبايل */
+    border-bottom: 1px solid #d1d5db; /* نحط خط فاصل تحت كل كارت */
+    padding: 1.5rem;
+  }
+
+  section .grid > div:last-child {
+    border-bottom: none; /* آخر كارت من غير خط */
+  }
+
+  section h2 {
+    font-size: 2rem; /* العنوان يصغر على الموبايل */
+    line-height: 1.4;
+  }
+}
+
+/* الهوفر يفضل شغال زي ما هو */
