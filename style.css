@@ -122,10 +122,8 @@ body {
   margin-right: 8px; /* تيجي جنب الكلمة */
 }
 
-
-
 /* خيار اللغة */
-.language-option ul li{
+.language-option ul li {
   position: relative;
   transition: background-color 0.2s ease;
 }
@@ -133,7 +131,6 @@ body {
 .language-option ul li {
   position: relative;
   transition: transform 0.3s ease;
-
 }
 
 .language-option ul li::before {
@@ -158,7 +155,7 @@ body {
 
 .dropdown-dropdown-m {
   left: -190px;
-  top: -35px !important;
+  top: -5px !important;
   padding: 0.5rem;
 }
 
@@ -364,7 +361,7 @@ body {
     line-height: 1.4;
   }
 }
-aside{
+aside {
   justify-content: start !important;
   z-index: 10000 !important;
 }
@@ -387,9 +384,9 @@ aside{
   .dropdown-dropdown-m {
     display: block;
   }
-.nav{
-  margin-top: 0 !important;
-}
+  .nav {
+    margin-top: 0 !important;
+  }
   .dropdown-dropdown-m ul {
     background-color: white !important;
     width: 100%;
@@ -422,23 +419,23 @@ aside{
   .language-option a:hover {
     color: rgb(11, 11, 180);
   }
-.language-option span,
-.language-option span:hover {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 10px !important;   /* مسافة ثابتة بين الكلمة والسهم */
-  width: 100vw !important; /* خليه ياخد عرض الكلمة + الأيقونة فقط */
-  transition: none !important;
-}
+  .language-option span,
+  .language-option span:hover {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important; /* مسافة ثابتة بين الكلمة والسهم */
+    width: 100vw !important; /* خليه ياخد عرض الكلمة + الأيقونة فقط */
+    transition: none !important;
+  }
 
   .language-option {
     padding-top: 1rem;
   }
-aside{
-  justify-content: start !important;
-  z-index: 10000 !important;
-}
+  aside {
+    justify-content: start !important;
+    z-index: 10000 !important;
+  }
   .nav ul li {
     width: 100%;
     border-bottom: #1e293b;
@@ -609,8 +606,8 @@ aside{
   .language-option ul li,
   .language-option ul li::before {
     content: "";
-    margin:0 !important;
-    padding:0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     padding-top: 0.5rem !important;
     padding-right: 0.3rem !important;
     transition: none !important;
@@ -625,4 +622,14 @@ aside{
     opacity: 1 !important;
     margin-right: 0 !important;
   }
+}
+.language-option ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important; /* يشيل البولتس الافتراضية */
+}
+
+.language-option ul li {
+  margin: 0 !important; /* يشيل أي مسافة افتراضية */
+  padding: 0.3rem 0.6rem !important; /* تحكم يدوي في المسافة بين العناصر */
 }
