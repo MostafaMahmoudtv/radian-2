@@ -35,7 +35,11 @@
       <div class="nav flex justify-center">
         <ul class="flex font-medium space-x-8">
           <li class="relative group cursor-pointer language-dropdown">
-            <span class="flex items-center"> من نحن </span>
+            <span class="flex items-center">
+              <a href="/ar/about/about.html"> من نحن </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
             <span
               class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -48,18 +52,25 @@
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="ar"
               >
-                <span>نبذة عن راديان</span>
+                <a href="about/about.html" class="decoration-none">
+                  <span>نبذة عن راديان</span>
+                </a>
               </div>
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="en"
               >
-                <span>الإستدامة</span>
+                <span><a href="#">الإستدامة</a></span>
               </div>
             </div>
           </li>
+
           <li class="relative group cursor-pointer language-dropdown">
-            <span class="flex items-center"> الخدمات </span>
+            <span class="flex items-center">
+              <a href="#"> الخدمات </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
             <span
               class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -72,13 +83,13 @@
                 class="language-option flex items-center text-black"
                 data-lang="ar"
               >
-                <span>الإستدامة</span>
+                <span><a href="#">الإستدامة</a></span>
               </div>
               <div
                 class="language-option flex items-center text-black"
                 data-lang="en"
               >
-                <span>التخطيط العمراني</span>
+                <span><a href="#">التخطيط العمراني</a></span>
               </div>
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
@@ -87,24 +98,27 @@
                 <button
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="ml-[5.4rem] w-100">الدراسات الهندسية</span>
+                  <span class="ml-[5.4rem] flex w-100">
+                    <a href="#"> الدراسات الهندسية </a>
+                    <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  </span>
                 </button>
-                <i class="fa-regular fa-greater-than"></i>
+                <i class="fa-regular fa-greater-than arrow"></i>
                 <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       الدراسات المرورية
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       الدراسات الهيدرولوجية
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       الدراسات البيئية
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       الدراسات الجيوتقنية
                     </li>
                   </ul>
@@ -118,25 +132,28 @@
                 <button
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="ml-[7.5rem] w-100"> البنية التحتية</span>
+                  <span class="ml-[7.5rem] w-100">
+                    البنية التحتية
+                    <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  </span>
                   <!-- أيقونة سهم -->
                 </button>
-                <i class="fa-regular fa-greater-than"></i>
+                <i class="fa-regular fa-greater-than arrow"></i>
                 <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       الطرق,الجسور ,الأنفاق
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       المياه وشبكات الصرف الصحي
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       درء اخطار السبول
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       الدراسات الجيوتقنية
                     </li>
                   </ul>
@@ -151,42 +168,43 @@
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
                   <span class="ml-[2rem] w-100">
-                    الهندسة المعمارية والإنشائية</span
-                  >
+                    الهندسة المعمارية والإنشائية
+                    <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  </span>
                   <!-- أيقونة سهم -->
                 </button>
-                <i class="fa-regular fa-greater-than"></i>
+                <i class="fa-regular fa-greater-than arrow"></i>
 
                 <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       التصاميم المعمارية
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       تصميم المساحات الداخلية
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       تصميم المساحات الخارجية
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       التصميم الهيكلي
                     </li>
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       تصميم الأنظمة الكهربائية والميكانيكية والصحية(MEP)
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div
+              <button
                 class="language-option py-2 flex items-center text-black"
                 data-lang="en"
               >
-                <span> الدعم والإدارة</span>
-              </div>
+                <span><a href="#"> الدعم والإستدامة</a></span>
+              </button>
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
@@ -194,15 +212,18 @@
                 <button
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="ml-[5.4rem] w-100"> الإشراف الهندسي</span>
+                  <span class="ml-[5.4rem] w-100">
+                    الإشراف الهندسي
+                    <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  </span>
                 </button>
-                <i class="fa-regular fa-greater-than"></i>
+                <i class="fa-regular fa-greater-than arrow"></i>
                 <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <li class="px-4 hover:bg-gray-100 cursor-pointer">
+                    <li class="px-4   cursor-pointer">
                       إدارة المرافق
                     </li>
                   </ul>
@@ -229,7 +250,11 @@
             ></span>
           </li>
           <li class="relative group cursor-pointer language-dropdown">
-            <span class="flex items-center"> اللغة </span>
+            <span class="flex items-center">
+              اللغة
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
             <span
               class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
             ></span>
@@ -242,13 +267,13 @@
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="ar"
               >
-                <span>العربية</span>
+                <span><a href="#">العربية</a></span>
               </div>
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="en"
               >
-                <span>English</span>
+                <span><a href="#">English</a></span>
               </div>
             </div>
           </li>
@@ -267,10 +292,17 @@
     <!-- side panel (من الشمال) -->
     <aside
       id="sidePanel"
-      class="fixed top-0 left-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 overflow-auto flex flex-col"
+      class="fixed top-0 left-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 overflow-auto flex flex-col justify-between"
     >
       <!-- زر الإغلاق -->
-      <div class="p-5 border-b flex justify-end">
+      <div class="p-5  border-b flex justify-end">
+        <div class="ml-8">
+          <img
+            src="/assets/Logo-Dark.webp"
+            class="w-60 h-full lg:hidden"
+            alt="Radian-Logo"
+          />
+        </div>
         <button
           id="closeBtn"
           aria-label="Close menu"
@@ -282,7 +314,7 @@
 
       <!-- body -->
       <div
-        class="flex-1 flex flex-col items-center justify-start p-6 space-y-4 text-slate-700 text-center"
+        class="flex-1 flex flex-col items-center justify-start p-6 space-y-4 text-slate-700 text-center hidden md:block"
       >
         <!-- اللوجو كصورة -->
         <img
@@ -303,7 +335,7 @@
         <p>مكتب بريدة - منطقة القصيم</p>
         <p>فرع حائل - مدينة حائل</p>
 
-        <div class="flex gap-3 mt-4">
+        <div class="flex gap-3 mt-4 justify-center">
           <a
             href="#"
             class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white"
