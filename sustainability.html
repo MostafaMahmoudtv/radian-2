@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Radian</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div id="preloader">
+      <div class="loader-text text-center">
+        <h2>جار التحميل...</h2>
+        <div class="loading-line">
+          <div class="progress" id="progress-bar"></div>
+        </div>
+        <h3 class="mt-4 text-[#1E4A6E] text-4xl">التميز الهندسي</h3>
+      </div>
+    </div>
+    <div class="header z-50" id="header">
+      <div class="logo">
+        <a href="index.html" class="cursor-pointer">
+          <img src="/assets/Radian-Logo.webp" alt="Logo" id="logo" />
+        </a>
+      </div>
+      <div class="nav flex justify-center">
+        <ul class="flex font-medium">
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              <a href="about.html"> من نحن </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span>
+                  <a href="about.html"> نبذة عن راديان </a>
+                </span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="sustainability.html">الإستدامة</a></span>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              <a href="services.html"> الخدمات </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full pr-2 right-0 mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="ar"
+              >
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span><a href="sustainability.html">الإستدامة</a></span>
+                </button>
+              </div>
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="en"
+              >
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span
+                    ><a href="urban-planning.html">التخطيط العمراني</a></span
+                  >
+                </button>
+              </div>
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a href="engineering-studies.html" class="ml-[4rem]">
+                      الدراسات الهندسية
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
+                </button>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 py-8">
+                    <a href="services/traffic-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات المرورية</li>
+                    </a>
+                    <a href="services/hydrological-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات الهيدرولوجية</li>
+                    </a>
+                    <a href="services/environmental-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات البيئية</li>
+                    </a>
+                    <a href="services/geotechnical.html">
+                      <li class="px-4 cursor-pointer">الدراسات الجيوتقنية</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a href="infrastructure.html" class="ml-[6.5rem]"
+                      >البنية التحتية</a
+                    >
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
+                </button>
+                <!-- أيقونة سهم -->
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/bridges.html">
+                      <li class="px-4 cursor-pointer">الطرق,الجسور ,الأنفاق</li>
+                    </a>
+                    <a href="services/water.html">
+                      <li class="px-4 cursor-pointer">
+                        المياه وشبكات الصرف الصحي
+                      </li>
+                    </a>
+                    <a href="services/flood.html">
+                      <li class="px-4 cursor-pointer">درء اخطار السبول</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper dropdownBtn"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a
+                      href="architectural-and-structural.html"
+                      class="ml-[0.2rem]"
+                    >
+                      الهندسة المعمارية والإنشائية
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
+                </button>
+
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/arcdesigns.html">
+                      <li class="px-4 cursor-pointer">التصاميم المعمارية</li>
+                    </a>
+                    <a href="services/InteriorDesigns.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم المساحات الداخلية
+                      </li>
+                    </a>
+                    <a href="services/landscapeDesigne.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم المساحات الخارجية
+                      </li>
+                    </a>
+                    <a href="services/structuralDesigns.html">
+                      <li class="px-4 cursor-pointer">التصميم الهيكلي</li>
+                    </a>
+                    <a href="services/mep.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم الأنظمة الكهربائية والميكانيكية والصحية(MEP)
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <button
+                class="language-option py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="support.html"> الدعم والإدارة</a></span>
+              </button>
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a href="engineering-supervision.html" class="ml-[4.2rem]">
+                      الإشراف الهندسي
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
+                </button>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/facilities-management.html">
+                      <li class="px-4 cursor-pointer">إدارة المرافق</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span> <a href="MediaCenter.html"> المركز الاعلامي </a> </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span>
+              <a href="careers.html">الوظائف</a>
+            </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span>
+              <a href="ContactUs.html"> تواصل معنا </a>
+            </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              اللغة
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span><a href="index.html">العربية</a></span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="#">English</a></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="menuIcon" class="icon">
+        <button
+          class="icon-square w-7 h-7 flex items-center justify-center p-0 hidden md:block"
+        >
+          <div class="grid grid-cols-3 grid-rows-3 gap-[6px]">
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+          </div>
+        </button>
+        <button
+          class="elementskit-menu-hamburger elementskit-menu-toggler md:hidden"
+          type="button"
+          aria-label="همبرغر-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <g id="Frame 6">
+              <rect
+                id="Rectangle 4"
+                x="2"
+                y="9"
+                width="27"
+                height="3"
+                fill="white"
+              ></rect>
+              <rect
+                id="Rectangle 5"
+                x="2"
+                y="21"
+                width="27"
+                height="3"
+                fill="white"
+              ></rect>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 z-[1000] bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <!-- side panel (من الشمال) -->
+    <aside
+      id="sidePanel"
+      class="fixed top-0 left-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 overflow-auto flex flex-col justify-between sidePanel"
+    >
+      <!-- زر الإغلاق -->
+      <div class="p-5 flex justify-end top-aside">
+        <button
+          id="closeBtn"
+          aria-label="Close menu"
+          class="text-2xl text-slate-500 hover:text-slate-700"
+        >
+          ✕
+        </button>
+        <div class="ml-8">
+          <a href="index.html" class="cursor-pointer">
+            <img
+              src="/assets/Logo-Dark.webp"
+              class="w-60 sm:w-40 md:w-48 lg:hidden"
+              alt="Radian-Logo"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div
+        class="flex-1 flex flex-col items-center justify-start p-6 space-y-8 text-slate-700 text-center hidden md:block aside-content"
+      >
+        <!-- اللوجو كصورة -->
+
+        <a href="index.html" class="cursor-pointer">
+          <img
+            src="/assets/Logo-Dark.webp"
+            alt="Radian Logo"
+            class="w-64 h-auto m-2 mb-[100px]"
+        /></a>
+        <h3 class="text-2xl my-16 text-[#1A4E81]">معلومات الاتصال</h3>
+        <p class="hover:text-blue-400 my-4 cursor-pointer">
+          <i class="fa-solid fa-envelope fa-2xl"></i>
+          <a href="mailto:info@radian.sa" class="px-2 text-xl"
+            >info@radian.sa</a
+          >
+        </p>
+        <p class="text-xl my-4 hover:text-blue-400 cursor-pointer">
+          <i class="fa-solid fa-phone"></i>
+          <span class="px-2"> 920010805</span>
+        </p>
+
+        <div class="hover:text-blue-400 text-2xl cursor-pointer">
+          <h3 class="mt-8 mb-4 text-3xl font-semibold text-blue-700">
+            عنوان المكتب
+          </h3>
+          <p>المقر الرئيسي لشركة راديان - الرياض</p>
+          <p>مكتب بريدة - منطقة القصيم</p>
+          <p>فرع حائل - مدينة حائل</p>
+        </div>
+        <div class="flex gap-3 mt-[100px] justify-center">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- أيقونة LinkedIn -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#1a4e81]"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- النص F -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#1a4e81]"
+            >
+              <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <section class="relative h-[500px] w-full">
+      <!-- الصورة -->
+      <img
+        src="/assets/sustainability-1.webp"
+        class="w-full h-[82vh] brightness-[65%] object-cover"
+        alt="about"
+      />
+
+      <!-- النص فوق الصورة -->
+      <div
+        class="absolute top-1/3 right-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700 z-10"
+      >
+        <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
+          الاستدامة
+        </h2>
+      </div>
+    </section>
+    <section class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- النص الكبير على اليمين -->
+
+        <h3 dir="rtl" class="text-[2.5rem] max-w-xl text-[#1A4E81]">
+          <span class="text-[#4BA1F7] italic inline">في راديان، </span>
+          <div class="inline">
+            نؤمن في شركة راديان بأن بناء مستقبل مستدام يبدأ من تصاميم ذكية
+            تتناغم مع الطبيعة وتقلل من الأثر البيئي.
+          </div>
+        </h3>
+        <!-- النص الشرح على الشمال -->
+        <div class="text-gray-500 leading-8 text-xl text-justify md:text-right">
+          <h3>الاستدامة</h3>
+          <p>
+            نلتزم في شركة راديان بتطبيق مبادئ الاستدامة في جميع مشاريعنا، حيث
+            نعمل على تصميم وتنفيذ حلول معمارية تقلل من التأثيرات البيئية وتعزز
+            كفاءة استخدام الطاقة. يعتمد فريقنا على استخدام مواد وتقنيات مستدامة
+            تُسهم في تحسين جودة الحياة والحفاظ على الموارد الطبيعية، سواء في
+            تطوير مبانٍ جديدة أو تحسين الهياكل القائمة، كما أننا نحرص دائمًا على
+            تحقيق التوازن بين الجمال والابتكار والاستدامة من أجل مستقبل أفضل.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="text-center py-12">
+      <div class="inline text-[4rem] text-[#4BA1F7]">شهادة</div>
+      <span class="text-[#4BA1F7] italic text-[4rem]"> المباني الخضراء </span>
+      <div
+        class="text-gray-500 leading-8 mt-4 mb-12 text-xl text-justify md:text-center"
+      >
+        <p>
+          شهادة صادرة عن مجلس المباني الخضراء الأمريكي، تُمنح للمشاريع التي
+          تلتزم بمعايير البناء المستدام وتحقيق كفاءة بيئية عالية.
+        </p>
+      </div>
+      <div class="image">
+        <img
+          src="/assets/Green-Building-Certification-1.webp"
+          alt="cirtificate"
+        />
+      </div>
+    </section>
+    <footer class="bg-[#17314b] text-white py-10 mt-auto">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- اللوجو -->
+        <div class="flex justify-center mb-6">
+          <img src="/assets/Radian-Logo.webp" alt="Radian Logo" class="h-12" />
+        </div>
+
+        <!-- الروابط -->
+        <div
+          class="flex flex-wrap justify-center gap-8 mb-6 text-sm md:text-base pages-links"
+        >
+          <a href="about.html" class="hover:text-sky-400">من نحن</a>
+          <a href="services.html" class="hover:text-sky-400">الخدمات</a>
+          <a href="careers.html" class="hover:text-sky-400">الوظائف</a>
+          <a href="ContactUs.html" class="hover:text-sky-400">تواصل معنا</a>
+          <a href="terms.html" class="hover:text-sky-400">الشروط</a>
+        </div>
+
+        <!-- أيقونات السوشيال -->
+        <div class="flex gap-3 m-4 justify-center">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- أيقونة LinkedIn -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- النص F -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
+            >
+              <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+        </div>
+
+        <!-- النص -->
+        <p class="text-center text-xl text-gray-300">جميع الحقوق محفوظة ©</p>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button with Progress Circle -->
+    <a
+      href="#"
+      id="scrollToTop"
+      class="fixed bottom-6 left-6 w-12 h-12 rounded-full border-2 border-white flex items-center justify-center z-999 bg-black"
+    >
+      <svg
+        class="rotate-circle absolute"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          id="progressPath"
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          stroke="#fff"
+          stroke-width="2"
+          fill="none"
+        />
+      </svg>
+      <i class="fa-solid fa-arrow-up-long text-white fa-xl float-icon"></i>
+    </a>
+
+    <script src="index.js"></script>
+  </body>
+</html>

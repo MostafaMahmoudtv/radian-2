@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Radian</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+      <div id="preloader">
+    <div class="loader-text text-center">
+      <h2  >جار التحميل...</h2>
+      <div  class="loading-line">
+        <div  class="progress" id="progress-bar"></div>
+      </div>
+      <h3 class="mt-4 text-[#1E4A6E] text-4xl">التميز الهندسي</h3>
+    </div>
+  </div>
+    <div class="header z-50" id="header">
+      <div class="logo">
+        <a href="index.html" class="cursor-pointer">
+          <img src="/assets/Radian-Logo.webp" alt="Logo" id="logo" />
+        </a>
+      </div>
+      <div class="nav flex justify-center">
+        <ul class="flex font-medium">
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              <a href="about.html"> من نحن </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span>
+                  <a href="about.html"> نبذة عن راديان </a>
+                </span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="sustainability.html">الإستدامة</a></span>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              <a href="services.html"> الخدمات </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full pr-2 right-0 mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="ar"
+              >
+              <button class="dropdownBtn inline-flex items-center py-2 w-100 transition">                <span><a href="sustainability.html">الإستدامة</a></span>
+</button>
+              </div>
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="en"
+              >
+              <button class="dropdownBtn inline-flex items-center py-2 w-100 transition">                <span><a href="urban-planning.html">التخطيط العمراني</a></span>
+</button>
+              </div>
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a href="engineering-studies.html" class="ml-[4rem]">
+                      الدراسات الهندسية
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                   <i class="fa-solid fa-angle-left arrow"></i>
+
+                </button>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 py-8">
+                    <a href="services/traffic-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات المرورية</li>
+                    </a>
+                    <a href="services/hydrological-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات الهيدرولوجية</li>
+                    </a>
+                    <a href="services/environmental-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات البيئية</li>
+                    </a>
+                    <a href="services/geotechnical.html">
+                      <li class="px-4 cursor-pointer">الدراسات الجيوتقنية</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a href="infrastructure.html" class="ml-[6.5rem]"
+                      >البنية التحتية</a
+                    >
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                   <i class="fa-solid fa-angle-left arrow"></i>
+
+                </button>
+                <!-- أيقونة سهم -->
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/bridges.html">
+                      <li class="px-4 cursor-pointer">الطرق,الجسور ,الأنفاق</li>
+                    </a>
+                    <a href="services/water.html">
+                      <li class="px-4 cursor-pointer">
+                        المياه وشبكات الصرف الصحي
+                      </li>
+                    </a>
+                    <a href="services/flood.html">
+                      <li class="px-4 cursor-pointer">درء اخطار السبول</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper dropdownBtn"
+              >
+                <!-- الزر -->
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a
+                      href="architectural-and-structural.html"
+                      class="ml-[0.2rem]"
+                    >
+                      الهندسة المعمارية والإنشائية
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                   <i class="fa-solid fa-angle-left arrow"></i>
+
+                </button>
+
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/arcdesigns.html">
+                      <li class="px-4 cursor-pointer">التصاميم المعمارية</li>
+                    </a>
+                    <a href="services/InteriorDesigns.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم المساحات الداخلية
+                      </li>
+                    </a>
+                    <a href="services/landscapeDesigne.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم المساحات الخارجية
+                      </li>
+                    </a>
+                    <a href="services/structuralDesigns.html">
+                      <li class="px-4 cursor-pointer">التصميم الهيكلي</li>
+                    </a>
+                    <a href="services/mep.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم الأنظمة الكهربائية والميكانيكية والصحية(MEP)
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <button
+                class="language-option py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="support.html"> الدعم والإدارة</a></span>
+              </button>
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span class="w-100">
+                    <a href="engineering-supervision.html" class="ml-[4.2rem]">
+                      الإشراف الهندسي
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+
+                  <!-- أيقونة سهم -->
+                   <i class="fa-solid fa-angle-left arrow"></i>
+
+                </button>
+                <!-- القائمة -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/facilities-management.html">
+                      <li class="px-4 cursor-pointer">إدارة المرافق</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span> <a href="MediaCenter.html"> المركز الاعلامي </a> </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span> <a href="careers.html">الوظائف</a> </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer">
+            <span>
+              <a href="ContactUs.html"> تواصل معنا </a>
+            </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              اللغة
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span><a href="index.html">العربية</a></span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="#">English</a></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="menuIcon" class="icon">
+        <button
+          class="icon-square w-7 h-7 flex items-center justify-center p-0 hidden md:block"
+        >
+          <div class="grid grid-cols-3 grid-rows-3 gap-[6px]">
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+          </div>
+        </button>
+        <button
+          class="elementskit-menu-hamburger elementskit-menu-toggler md:hidden"
+          type="button"
+          aria-label="همبرغر-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <g id="Frame 6">
+              <rect
+                id="Rectangle 4"
+                x="2"
+                y="9"
+                width="27"
+                height="3"
+                fill="white"
+              ></rect>
+              <rect
+                id="Rectangle 5"
+                x="2"
+                y="21"
+                width="27"
+                height="3"
+                fill="white"
+              ></rect>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 z-[1000] bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <!-- side panel (من الشمال) -->
+    <aside
+      id="sidePanel"
+      class="fixed top-0 left-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 overflow-auto flex flex-col justify-between sidePanel"
+    >
+      <!-- زر الإغلاق -->
+      <div class="p-5 flex justify-end top-aside">
+        <button
+          id="closeBtn"
+          aria-label="Close menu"
+          class="text-2xl text-slate-500 hover:text-slate-700"
+        >
+          ✕
+        </button>
+        <div class="ml-8">
+          <a href="index.html" class="cursor-pointer">
+            <img
+              src="/assets/Logo-Dark.webp"
+              class="w-60 sm:w-40 md:w-48 lg:hidden"
+              alt="Radian-Logo"
+          /></a>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div
+        class="flex-1 flex flex-col items-center justify-start p-6 space-y-8 text-slate-700 text-center hidden md:block aside-content"
+      >
+        <!-- اللوجو كصورة -->
+
+        <a href="index.html" class="cursor-pointer">
+          <img
+            src="/assets/Logo-Dark.webp"
+            alt="Radian Logo"
+            class="w-64 h-auto m-2 mb-[100px]"
+        /></a>
+        <h3 class="text-2xl my-16 text-[#1A4E81]">معلومات الاتصال</h3>
+        <p class="hover:text-blue-400 my-4 cursor-pointer">
+          <i class="fa-solid fa-envelope fa-2xl"></i>
+          <a href="mailto:info@radian.sa" class="px-2 text-xl"
+            >info@radian.sa</a
+          >
+        </p>
+        <p class="text-xl my-4 hover:text-blue-400 cursor-pointer">
+          <i class="fa-solid fa-phone"></i>
+          <span class="px-2"> 920010805</span>
+        </p>
+
+        <div class="hover:text-blue-400 text-2xl cursor-pointer">
+          <h3 class="mt-8 mb-4 text-3xl font-semibold text-blue-700">
+            عنوان المكتب
+          </h3>
+          <p>المقر الرئيسي لشركة راديان - الرياض</p>
+          <p>مكتب بريدة - منطقة القصيم</p>
+          <p>فرع حائل - مدينة حائل</p>
+        </div>
+        <div class="flex gap-3 mt-[100px] justify-center">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- أيقونة LinkedIn -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#1a4e81]"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- النص F -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#1a4e81]"
+            >
+              <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <section class="relative h-[500px] w-full">
+      <!-- الصورة -->
+      <img
+        src="/assets/career.jpg"
+        class="w-full h-[82vh] brightness-[65%] object-cover"
+        alt="about"
+      />
+
+      <!-- النص فوق الصورة -->
+      <div
+        class="absolute top-1/3 right-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700 z-10"
+      >
+        <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
+          الوظائف
+        </h2>
+        <a
+          id="sliderBtn"
+          href="#myform"
+          class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+        >
+          <span>قدم على وظيفة 🡤</span>
+        </a>
+      </div>
+    </section>
+    <section class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- النص الكبير على اليمين -->
+
+        <h3 dir="rtl" class="text-[2.5rem] max-w-xl text-[#1A4E81]">
+          <div class="black">انضم إلى شركة رائدة عالمياً في</div>
+          <span class="text-[#4BA1F7] italic inline">التميز الهندسي </span>
+        </h3>
+        <!-- النص الشرح على الشمال -->
+        <div class="text-gray-500 leading-8 text-xl text-justify md:text-right">
+          <p>
+            نلتزم في شركة راديان للاستشارات الهندسية بصناعة المستقبل من خلال
+            الابتكار والخبرة. نعمل في 28 دولة حول العالم ونتميّز بتقديم الحلول
+            الهندسية عبر خدمات مكتب إدارة المشاريع المتميزة لتشغيل وصيانة مشاريع
+            شركة المياه الوطنية في جميع وحدات الأعمال داخل المملكة العربية
+            السعودية.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="stats" class="py-20 mx-4 mt-16 bg-[#CCE4FF]">
+      <h2 class="text-[3rem] mb-16 text-center text-white">
+        <div>لماذا <span class="text-[#4BA1F7] italic">راديان </span></div>
+      </h2>
+      <div class="grid grid-cols-3 gap-6 px-6 pb-16 career-icons-section">
+        <!-- الكارت 1 -->
+        <div
+          class="p-8 bg-transparent h-[100%] items-center bg-white rounded-lg border text-center space-y-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="45"
+            viewBox="0 0 49 45"
+            fill="none"
+          >
+            <g id="Icons" clip-path="url(#clip0_341_2999)">
+              <path
+                id="Vector"
+                d="M12.8423 16.3684C13.2706 12.6845 14.8352 9.22537 17.3188 6.47115C19.8025 3.71692 23.082 1.80426 26.7021 0.998675C30.3222 0.193087 34.1034 0.534541 37.5206 1.97563C40.9379 3.41673 43.8217 5.88597 45.7717 9.04057C47.7218 12.1952 48.6414 15.8786 48.4028 19.5796C48.1642 23.2806 46.7793 26.8156 44.4403 29.6937C42.1014 32.5718 38.9244 34.6503 35.3504 35.6407C31.7764 36.6311 27.9827 36.4842 24.496 35.2205"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_2"
+                d="M43.5084 30.5991C40.3903 27.2656 36.1062 25.2639 31.5487 25.0111C26.9912 24.7583 22.512 26.274 19.0444 29.2423"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_3"
+                d="M17.6795 6.22363C19.3348 7.99331 21.3359 9.40428 23.5587 10.3691C25.7815 11.334 28.1787 11.8321 30.6019 11.8328C33.0251 11.8382 35.4235 11.346 37.6486 10.3867C39.8738 9.42737 41.8782 8.02132 43.5377 6.25569"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_4"
+                d="M38.2758 18.4194C38.2879 8.54613 34.8596 0.538048 30.6185 0.532866C26.3773 0.527685 22.9295 8.52737 22.9174 18.4007C22.9053 28.2739 26.3337 36.282 30.5748 36.2872C34.8159 36.2924 38.2637 28.2927 38.2758 18.4194Z"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_5"
+                d="M48.2548 18.4329L16.4722 18.3955"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_6"
+                d="M6.08459 25.4149C6.08459 28.6068 8.48852 31.1923 11.4266 31.1923C14.3648 31.1923 16.7687 28.6068 16.7687 25.4149C16.7687 22.223 14.3648 19.6401 11.4266 19.6401C8.48852 19.6401 6.08459 22.2257 6.08459 25.4149Z"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_7"
+                d="M16.7527 34.3867H6.14334C4.6557 34.3867 3.22899 34.9777 2.17706 36.0296C1.12514 37.0815 0.53418 38.5082 0.53418 39.9959V43.6712H22.3698V40.0039C22.3709 39.2659 22.2263 38.535 21.9444 37.853C21.6625 37.1711 21.2488 36.5514 20.727 36.0296C20.2051 35.5078 19.5855 35.0941 18.9035 34.8122C18.2215 34.5302 17.4906 34.3857 16.7527 34.3867Z"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_341_2999">
+                <rect width="49" height="44.2055" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <h3 class="text-gray-800 text-right text-xl">
+            العمل ضمن بيئة عالمية
+          </h3>
+          <p class="text-gray-700 text-right text-lg">
+            تعاون مع فرق عمل متنوعة من 18 دولة، وشارك في تبادل الخبرات لتعزيز
+            الابتكار.
+          </p>
+        </div>
+
+        <!-- الكارت 2 -->
+        <div
+          class="p-8 bg-transparent h-[100%] items-center bg-white rounded-lg border text-center space-y-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 43 44"
+            width="43"
+            height="44"
+          >
+            <title>Global Collaboration-svg</title>
+            <style>
+              .s0 {
+                fill: none;
+                stroke: #4ba1f7;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              }
+            </style>
+            <g id="Global Collaboration">
+              <path
+                id="Vector"
+                fill-rule="evenodd"
+                class="s0"
+                d="m42.5 42.9h-38.8"
+              ></path>
+              <path
+                id="Vector_2"
+                fill-rule="evenodd"
+                class="s0"
+                d="m34.5 21.8v21.1"
+              ></path>
+              <path
+                id="Vector_3"
+                fill-rule="evenodd"
+                class="s0"
+                d="m40.7 42.9v-24.9"
+              ></path>
+              <path
+                id="Vector_4"
+                fill-rule="evenodd"
+                class="s0"
+                d="m28.3 26.4v16.5"
+              ></path>
+              <path
+                id="Vector_5"
+                fill-rule="evenodd"
+                class="s0"
+                d="m22.1 29.5v13.4"
+              ></path>
+              <path
+                id="Vector_6"
+                fill-rule="evenodd"
+                class="s0"
+                d="m40.7 14.5v-6.3h-6.2"
+              ></path>
+              <path
+                id="Vector_7"
+                fill-rule="evenodd"
+                class="s0"
+                d="m17.9 27c9-4.1 16.8-10.5 22.6-18.5"
+              ></path>
+              <path
+                id="Vector_8"
+                fill-rule="evenodd"
+                class="s0"
+                d="m6.7 5.4c0 2.4 1.8 4.3 4 4.3 2.2 0 3.9-1.9 3.9-4.3 0-2.4-1.7-4.3-3.9-4.3-2.2 0-4 1.9-4 4.3z"
+              ></path>
+              <path
+                id="Vector_9"
+                fill-rule="evenodd"
+                class="s0"
+                d="m5.3 18v12.2l1.1 12.7"
+              ></path>
+              <path
+                id="Vector_10"
+                fill-rule="evenodd"
+                class="s0"
+                d="m5.3 30.3h-1.1c-0.8 0-1.5-0.3-2.1-0.9-0.5-0.6-0.9-1.3-0.9-2.1v-10.3c0-1.3 0.6-2.5 1.4-3.4 0.9-0.8 2.1-1.3 3.4-1.3h22.9l-0.1 0.7c-0.2 1-0.6 1.9-1.4 2.6-0.7 0.7-1.7 1.1-2.7 1.2l-8.7 0.6v12.8l-1 12.7"
+              ></path>
+              <path
+                id="Vector_11"
+                fill-rule="evenodd"
+                class="s0"
+                d="m10.7 31v11.9"
+              ></path>
+            </g>
+          </svg>
+          <h3 class="text-gray-800 text-right text-xl">الأثر المستدام</h3>
+          <p class="text-gray-700 text-right text-lg">
+            ساهم في مشاريع تضع الاستدامة طويلة الأمد والممارسات الهندسية
+            المسؤولة في المقدمة.
+          </p>
+        </div>
+
+        <!-- الكارت 3 -->
+        <div
+          class="p-8 bg-transparent h-[100%] items-center bg-white rounded-lg border text-center space-y-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="45"
+            height="42"
+            viewBox="0 0 45 42"
+            fill="none"
+          >
+            <g id="Icons" clip-path="url(#clip0_341_3028)">
+              <path
+                id="Vector"
+                d="M31.9301 22.4518C29.4065 19.4255 28.0243 15.6098 28.0243 11.6692H31.9475L22.5 0.538574L13.0525 11.6692H16.9757C16.9757 15.6098 15.5935 19.4255 13.0699 22.4518"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_2"
+                d="M30.498 41.2619V35.3448C30.498 34.8276 30.3961 34.3154 30.198 33.8376C29.9999 33.3597 29.7095 32.9257 29.3436 32.5601C28.9776 32.1946 28.5431 31.9048 28.0651 31.7073C27.587 31.5098 27.0747 31.4085 26.5574 31.4092H18.445C17.9277 31.4085 17.4154 31.5098 16.9374 31.7073C16.4593 31.9048 16.0249 32.1946 15.6589 32.5601C15.2929 32.9257 15.0025 33.3597 14.8045 33.8376C14.6064 34.3154 14.5044 34.8276 14.5044 35.3448V41.2619"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_3"
+                d="M18.4326 24.3684C18.4326 26.7701 20.255 28.7192 22.5 28.7192C24.745 28.7192 26.5699 26.7701 26.5699 24.3684C26.5699 21.9667 24.7475 20.0176 22.5 20.0176C20.2525 20.0176 18.4326 21.9643 18.4326 24.3684Z"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_4"
+                d="M33.4442 34.3901H40.5647C41.0819 34.3898 41.5942 34.4914 42.0721 34.6892C42.55 34.887 42.9843 35.1771 43.3501 35.5429C43.7158 35.9086 44.0059 36.3429 44.2037 36.8208C44.4015 37.2988 44.5031 37.811 44.5028 38.3283V41.262"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_5"
+                d="M33.2552 27.6554C33.2552 29.8929 34.9334 31.7029 37.0044 31.7029C39.0754 31.7029 40.7536 29.8905 40.7536 27.6554C40.7536 25.4203 39.0729 23.6104 37.0044 23.6104C34.9359 23.6104 33.2552 25.4228 33.2552 27.6554Z"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_6"
+                d="M0.497192 41.2619V38.3282C0.49851 37.2841 0.914342 36.2834 1.65328 35.5458C2.39221 34.8083 3.39378 34.3944 4.4378 34.395H11.5582"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                id="Vector_7"
+                d="M4.2489 27.6554C4.2489 29.8929 5.92708 31.7029 7.99807 31.7029C10.0691 31.7029 11.7472 29.8905 11.7472 27.6554C11.7472 25.4203 10.0691 23.6104 7.99807 23.6104C5.92708 23.6104 4.2489 25.4228 4.2489 27.6554Z"
+                stroke="#4BA1F7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_341_3028">
+                <rect
+                  width="45"
+                  height="41.7182"
+                  fill="white"
+                  transform="translate(0 0.0410156)"
+                ></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <h3 class="text-gray-800 text-right text-xl">النمو المهني</h3>
+          <p class="text-gray-700 text-right text-lg">
+            طوّر مسيرتك المهنية ضمن بيئة ديناميكية تُقدّر التعلم والتطور
+            المستمر.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section dir="ltr" class="container mt-8 mx-auto px-6 py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- النصوص -->
+        <div class="text-right mr-16">
+          <!-- العنوان الرئيسي -->
+
+          <h2 class="text-[3rem] mb-16 text-end text-gray-900">
+            <div>
+              جاهز
+              <span class="text-[#4BA1F7] italic">لتشاركنا بناء المستقبل؟</span>
+            </div>
+          </h2>
+          <!-- وصف -->
+          <p class="text-gray-600 mb-8 text-base leading-relaxed">
+            ابدأ رحلتك المهنية معنا اليوم وكن جزءًا من فريق عمل مبدع يصنع
+            المستقبل. في شركة راديان، نحن أكثر من مجرد شركة هندسية — نحن مجتمع
+            يلتزم بالتميز والنمو المشترك.
+          </p>
+
+          <!-- عناوين فرعية -->
+          <div class="space-y-6 text-base">
+            <div>
+              <h3 class="text-xl text-gray-800 mb-2">النمو المهني</h3>
+              <p class="text-gray-600 leading-relaxed">
+                نلتزم في شركة راديان بتطوير الكفاءات المهنية لموظفينا حيث نوفر
+                برامج تدريبية وتوجيه وظيفي، وفرص للترقي ضمن شبكتنا العالمية.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl text-gray-800 mb-2">مزايا تنافسية</h3>
+              <p class="text-gray-600 leading-relaxed">
+                نُقدّم مزايا شاملة تضم رواتب تنافسية، برامج صحية، ومزايا أخرى
+                تدعم التوازن بين الحياة والعمل.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl text-gray-800 mb-2">أعمال مؤثرة</h3>
+              <p class="text-gray-600 leading-relaxed">
+                انضم الى شركة راديان وساهم في مشاريع تحدث فرقًا حقيقيًا وتُسهم
+                أعمالك في بناء بنية تحتية تخدم المجتمعات وتدفع عجلة التقدّم.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- الصور -->
+        <div class="relative m-2 mt-16 flex justify-center">
+          <!-- الصورة الأساسية -->
+          <img
+            src="/assets/Future.webp"
+            alt="Main Image"
+            class="w-full h-[450px] object-cover"
+          />
+
+          <!-- الصورة المتداخلة -->
+          <img
+            src="/assets/Future-2.webp"
+            alt="Overlay Image"
+            class="absolute top-[-60px] right-[-20px] w-2/3 md:w-1/2 h-[250px] object-cover"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#CCE4FF] py-32 px-6 md:px-16" id="myform">
+      <div
+        dir="ltr"
+        class="flex flex-col-reverse md:flex-row justify-between items-start gap-10"
+      >
+        <!-- form -->
+        <div dir="rtl" class="w-full md:w-1/2">
+          <form class="space-y-6">
+            <!-- الاسم + البريد -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="w-full md:w-1/2">
+                <label for="name" class="block mb-2 text-gray-700 font-medium"
+                  >الاسم</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+                />
+              </div>
+              <div class="w-full md:w-1/2">
+                <label for="email" class="block mb-2 text-gray-700 font-medium"
+                  >البريد الإلكتروني</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="w-full md:w-1/2">
+                <label for="name" class="block mb-2 text-gray-700 font-medium"
+                  >رقم الهاتف</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+                />
+              </div>
+              <div class="w-full md:w-1/2">
+                <label for="email" class="block mb-2 text-gray-700 font-medium"
+                  >أعلى مؤهل علمي
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+                />
+              </div>
+            </div>
+            <!-- الرسالة -->
+            <div>
+              <label for="email" class="block mb-2 text-gray-700 font-medium"
+                >المسمى الوظيفي الأخير
+              </label>
+              <input
+                type="text"
+                id="email"
+                class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+              />
+            </div>
+            <div>
+              <label for="email" class="block mb-2 text-gray-700 font-medium"
+                >رابط ملفك على لينكدإن
+              </label>
+              <input
+                type="text"
+                id="email"
+                class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+              />
+            </div>
+            <div>
+              <label for="resume" class="block mb-2 text-gray-700 font-medium">
+                تحميل السيرة الذاتية
+              </label>
+              <div class="relative w-full">
+                <!-- input مخفي -->
+                <input type="file" id="resume" class="hidden" />
+
+                <!-- الزر المخصص -->
+
+                <!-- اسم الملف -->
+                <span id="file-name" class="ml-4 text-gray-600 text-sm"
+                  >NO FILE CHOOSEN</span
+                >
+              </div>
+            </div>
+            <!-- زر الإرسال -->
+            <a
+              href="#"
+              class="block bg-[#3779BB] text-white px-[0px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[25%] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 choosen-radian-btn"
+            >
+              🡤 إرسال
+            </a>
+          </form>
+        </div>
+
+        <!-- text -->
+        <div class="w-full md:w-1/2 text-right space-y-4">
+          <span
+            class="inline-block bg-blue-50 px-3 py-1 rounded text-gray-700 text-sm"
+          >
+            قدّم على وظيفة
+          </span>
+          <h3 dir="rtl" class="text-[2.5rem] max-w-xl ml-16 text-[#1A4E81]">
+            <div class="inline">نرحب بكم</div>
+            <span class="text-[#4BA1F7] italic inline"
+              >ضمن عائلة راديان للاستشارات الهندسية (RECC)
+            </span>
+          </h3>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#17314b] text-white py-10 mt-auto">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- اللوجو -->
+        <div class="flex justify-center mb-6">
+          <img src="/assets/Radian-Logo.webp" alt="Radian Logo" class="h-12" />
+        </div>
+
+        <!-- الروابط -->
+        <div
+          class="flex flex-wrap justify-center gap-8 mb-6 text-sm md:text-base pages-links"
+        >
+          <a href="about.html" class="hover:text-sky-400">من نحن</a>
+          <a href="services.html" class="hover:text-sky-400">الخدمات</a>
+          <a href="careers.html" class="hover:text-sky-400">الوظائف</a>
+          <a href="ContactUs.html" class="hover:text-sky-400">تواصل معنا</a>
+          <a href="terms.html" class="hover:text-sky-400">الشروط</a>
+        </div>
+
+        <!-- أيقونات السوشيال -->
+        <div class="flex gap-3 m-4 justify-center">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- أيقونة LinkedIn -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- النص F -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
+            >
+              <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+        </div>
+
+        <!-- النص -->
+        <p class="text-center text-xl text-gray-300">جميع الحقوق محفوظة ©</p>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button with Progress Circle -->
+    <a
+      href="#"
+      id="scrollToTop"
+      class="fixed bottom-6 left-6 w-12 h-12 rounded-full border-2 border-white flex items-center justify-center z-50 bg-black"
+    >
+      <svg
+        class="rotate-circle absolute"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          id="progressPath"
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          stroke="#fff"
+          stroke-width="2"
+          fill="none"
+        />
+      </svg>
+      <i class="fa-solid fa-arrow-up-long text-white fa-xl float-icon"></i>
+    </a>
+
+    <script src="index.js"></script>
+  </body>
+</html>
