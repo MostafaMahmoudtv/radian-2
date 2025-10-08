@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="en/style.css" />
+    <link rel="stylesheet" href="/ar/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,11 +30,11 @@
   <body class="min-h-screen flex flex-col">
     <div id="preloader">
       <div class="loader-text text-center">
-        <h2>Loading...</h2>
+        <h2>جار التحميل...</h2>
         <div class="loading-line">
-          <div class="progress text-c'" id="progress-bar"></div>
+          <div class="progress" id="progress-bar"></div>
         </div>
-        <h3 class="mt-4 text-[#1E4A6E] text-4xl">Engineering Excellence</h3>
+        <h3 class="mt-4 text-[#1E4A6E] text-4xl">التميز الهندسي</h3>
       </div>
     </div>
 
@@ -44,12 +44,11 @@
           <img src="/assets/Radian-Logo.webp" alt="Logo" id="logo" />
         </a>
       </div>
-
       <div class="nav flex justify-center">
         <ul class="flex font-medium">
           <li class="relative group cursor-pointer language-dropdown">
             <span class="flex items-center">
-              <a href="en/about.html"> About Us </a>
+              <a href="about.html"> من نحن </a>
               <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
             </span>
 
@@ -66,21 +65,21 @@
                 data-lang="ar"
               >
                 <span>
-                  <a href="en/about.html"> Overview</a>
+                  <a href="about.html"> نبذة عن راديان </a>
                 </span>
               </div>
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="en"
               >
-                <span><a href="en/sustainability.html">Sustainability</a></span>
+                <span><a href="sustainability.html">الإستدامة</a></span>
               </div>
             </div>
           </li>
 
           <li class="relative group cursor-pointer language-dropdown">
             <span class="flex items-center">
-              <a href="en/services.html"> Services </a>
+              <a href="services.html"> الخدمات </a>
               <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
             </span>
 
@@ -90,7 +89,7 @@
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown-content absolute top-full right-0 mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+              class="dropdown-content absolute top-full pr-2 right-0 mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
             >
               <div
                 class="language-option flex items-center text-black"
@@ -99,9 +98,7 @@
                 <button
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span
-                    ><a href="en/sustainability.html">Sustainability</a></span
-                  >
+                  <span><a href="sustainability.html">الإستدامة</a></span>
                 </button>
               </div>
               <div
@@ -112,42 +109,41 @@
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
                   <span
-                    ><a href="en/urban-planning.html">Urban Planning</a></span
+                    ><a href="urban-planning.html">التخطيط العمراني</a></span
                   >
                 </button>
               </div>
-
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
-                <!-- Button -->
+                <!-- الزر -->
                 <button
-                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="w-[100%] text-left">
-                    <a href="en/engineering-studies.html" class="">
-                      Engineering Studies
-                    </a>
+                  <span class="w-100">
+                    <a href="engineering-studies.html"> الدراسات الهندسية </a>
                   </span>
                   <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
-                  <i class="fa-solid fa-angle-right arrow"></i>
+
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
                 </button>
-                <!-- Submenu -->
+                <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 py-8">
-                    <a href="en/services/traffic-studies.html">
-                      <li class="px-4 cursor-pointer">Traffic Studies</li>
+                    <a href="services/traffic-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات المرورية</li>
                     </a>
-                    <a href="en/services/hydrological-studies.html">
-                      <li class="px-4 cursor-pointer">Hydrological Studies</li>
+                    <a href="services/hydrological-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات الهيدرولوجية</li>
                     </a>
-                    <a href="en/services/environmental-studies.html">
-                      <li class="px-4 cursor-pointer">Environmental Studies</li>
+                    <a href="services/environmental-studies.html">
+                      <li class="px-4 cursor-pointer">الدراسات البيئية</li>
                     </a>
-                    <a href="en/services/geotechnical.html">
-                      <li class="px-4 cursor-pointer">Geotechnical Studies</li>
+                    <a href="services/geotechnical.html">
+                      <li class="px-4 cursor-pointer">الدراسات الجيوتقنية</li>
                     </a>
                   </ul>
                 </div>
@@ -156,73 +152,81 @@
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
+                <!-- الزر -->
                 <button
-                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="w-[100%] text-left">
-                    <a href="en/infrastructure.html" class="">
-                      Infrastructure
-                    </a>
+                  <span class="w-100">
+                    <a href="infrastructure.html">البنية التحتية</a>
                   </span>
                   <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
-                  <i class="fa-solid fa-angle-right arrow"></i>
-                </button>
 
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
+                </button>
+                <!-- أيقونة سهم -->
+                <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <a href="en/services/bridges.html">
+                    <a href="services/bridges.html">
+                      <li class="px-4 cursor-pointer">الطرق,الجسور ,الأنفاق</li>
+                    </a>
+                    <a href="services/water.html">
                       <li class="px-4 cursor-pointer">
-                        Roads, Bridges, and Tunnels
+                        المياه وشبكات الصرف الصحي
                       </li>
                     </a>
-                    <a href="en/services/water.html">
-                      <li class="px-4 cursor-pointer">
-                        Water and Sanitation Networks
-                      </li>
-                    </a>
-                    <a href="en/services/flood.html">
-                      <li class="px-4 cursor-pointer">Flood Risk Mitigation</li>
+                    <a href="services/flood.html">
+                      <li class="px-4 cursor-pointer">درء اخطار السبول</li>
                     </a>
                   </ul>
                 </div>
               </div>
 
               <div
-                class="relative language-option w-100 flex items-center text-black dropdownWrapper dropdownBtn"
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
+                <!-- الزر -->
                 <button
-                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="w-[100%] text-left">
-                    <a href="en/architectural-and-structural.html" class="">
-                      Architectural & Structural
-                    </a>
+                  <span class="w-100">
+                    <a href="infrastructure.html">
+                      الهندسة المعمارية والإنشائية</a
+                    >
                   </span>
                   <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
-                  <i class="fa-solid fa-angle-right arrow"></i>
+
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
                 </button>
 
+                <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <a href="en/services/arcdesigns.html">
-                      <li class="px-4 cursor-pointer">Architectural Designs</li>
+                    <a href="services/arcdesigns.html">
+                      <li class="px-4 cursor-pointer">التصاميم المعمارية</li>
                     </a>
-                    <a href="en/services/InteriorDesigns.html">
-                      <li class="px-4 cursor-pointer">Interior Design</li>
-                    </a>
-                    <a href="en/services/landscapeDesigne.html">
-                      <li class="px-4 cursor-pointer">Landscape Design</li>
-                    </a>
-                    <a href="en/services/structuralDesigns.html">
-                      <li class="px-4 cursor-pointer">Structural Design</li>
-                    </a>
-                    <a href="en/services/mep.html">
+                    <a href="services/InteriorDesigns.html">
                       <li class="px-4 cursor-pointer">
-                        Electrical, Mechanical & Plumbing Design (MEP)
+                        تصميم المساحات الداخلية
+                      </li>
+                    </a>
+                    <a href="services/landscapeDesigne.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم المساحات الخارجية
+                      </li>
+                    </a>
+                    <a href="services/structuralDesigns.html">
+                      <li class="px-4 cursor-pointer">التصميم الهيكلي</li>
+                    </a>
+                    <a href="services/mep.html">
+                      <li class="px-4 cursor-pointer">
+                        تصميم الأنظمة الكهربائية والميكانيكية والصحية(MEP)
                       </li>
                     </a>
                   </ul>
@@ -233,67 +237,60 @@
                 class="language-option py-2 flex items-center text-black"
                 data-lang="en"
               >
-                <span
-                  ><a href="en/support.html"> Support & Management </a></span
-                >
+                <span><a href="support.html"> الدعم والإدارة</a></span>
               </button>
-
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
                 <button
-                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
-                  <span class="w-[100%] text-left">
-                    <a href="en/engineering-supervision.html" class="">
-                      Engineering Supervision
-                    </a>
+                  <span class="w-100">
+                    <a href="engineering-supervision.html"> الإشراف الهندسي </a>
                   </span>
                   <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
-                  <i class="fa-solid fa-angle-right arrow"></i>
-                </button>
 
+                  <!-- أيقونة سهم -->
+                  <i class="fa-solid fa-angle-left arrow"></i>
+                </button>
+                <!-- القائمة -->
                 <div
                   class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
                 >
                   <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
-                    <a href="en/services/facilities-management.html">
-                      <li class="px-4 cursor-pointer">Facilities Management</li>
+                    <a href="services/facilities-management.html">
+                      <li class="px-4 cursor-pointer">إدارة المرافق</li>
                     </a>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
-
           <li class="relative group cursor-pointer">
-            <span> <a href="en/MediaCenter.html"> Media Center </a> </span>
+            <span> <a href="MediaCenter.html"> المركز الاعلامي </a> </span>
             <span
               class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
             ></span>
           </li>
-
           <li class="relative group cursor-pointer">
             <span>
-              <a href="en/careers.html">Careers</a>
+              <a href="careers.html">الوظائف</a>
             </span>
             <span
               class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
             ></span>
           </li>
-
           <li class="relative group cursor-pointer">
             <span>
-              <a href="en/ContactUs.html"> Contact Us </a>
+              <a href="ContactUs.html"> تواصل معنا </a>
             </span>
             <span
               class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
             ></span>
           </li>
-
           <li class="relative group cursor-pointer language-dropdown">
             <span class="flex items-center">
-              Language
+              اللغة
               <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
             </span>
 
@@ -309,13 +306,13 @@
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="ar"
               >
-                <span><a href="ar/index.html">Arabic</a></span>
+                <span><a href="index.html">العربية</a></span>
               </div>
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
                 data-lang="en"
               >
-                <span><a href="index.html">English</a></span>
+                <span><a href="../index.html">English</a></span>
               </div>
             </div>
           </li>
@@ -359,7 +356,7 @@
         <button
           class="elementskit-menu-hamburger elementskit-menu-toggler md:hidden"
           type="button"
-          aria-label="hamburger-icon"
+          aria-label="همبرغر-icon"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -400,7 +397,7 @@
     <!-- side panel (من الشمال) -->
     <aside
       id="sidePanel"
-      class="fixed top-0 right-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform translate-x-full transition-transform duration-300 overflow-auto flex flex-col justify-between sidePanel"
+      class="fixed top-0 left-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 overflow-auto flex flex-col justify-between sidePanel"
     >
       <!-- زر الإغلاق -->
       <div class="p-5 flex justify-end top-aside">
@@ -435,7 +432,7 @@
           />
         </a>
 
-        <h3 class="text-2xl my-16 text-[#1A4E81]">Contact Info</h3>
+        <h3 class="text-2xl my-16 text-[#1A4E81]">معلومات الاتصال</h3>
         <p class="hover:text-blue-400 my-4 cursor-pointer">
           <i class="fa-solid fa-envelope fa-2xl"></i>
           <a href="mailto:info@radian.sa" class="px-2 text-xl"
@@ -449,11 +446,11 @@
 
         <div class="hover:text-blue-400 text-2xl cursor-pointer">
           <h3 class="mt-8 mb-4 text-3xl font-semibold text-blue-700">
-            Office Address
+            عنوان المكتب
           </h3>
-          <p>RADIAN Head office – Riyadh</p>
-          <p>RADIAN Buraidah office – Qassim</p>
-          <p>RADIAN Hail Branch – Hail</p>
+          <p>المقر الرئيسي لشركة راديان - الرياض</p>
+          <p>مكتب بريدة - منطقة القصيم</p>
+          <p>فرع حائل - مدينة حائل</p>
         </div>
         <div class="flex gap-3 mt-[100px] justify-center">
           <a
@@ -496,41 +493,36 @@
     </aside>
 
     <div class="slider-section">
-      <!-- Slider Container -->
+      <!-- حاوية السلايدر -->
       <div id="slider" class="relative h-screen w-full overflow-hidden">
-        <!-- Image Overlay (Zoom effect background) -->
+        <!-- الصورة اللي بتعمل عليها Zoom -->
         <div id="sliderWrapper" class="absolute inset-0 bg-black/20"></div>
 
-        <!-- Text + Button -->
+        <!-- النص + الزر -->
         <div
           id="sliderContent"
-          class="absolute top-1/3 left-10 max-w-lg text-white drop-shadow-lg space-y-6 opacity-0 translate-y-5 transition-all duration-700 z-10"
+          class="absolute top-1/3 right-10 max-w-lg text-white drop-shadow-lg space-y-6 opacity-0 translate-y-5 transition-all duration-700 z-10"
         >
-          <h2 id="sliderText" 
-          class="text-[4rem] w-[40vw] leading-tight slider-top"
-          >
-            Engineering
+          <h2 id="sliderText" class="text-[4rem] leading-tight">
             <span
               class="text-blue-400 italic"
               style="font-style: italic !important"
+              >التميّز</span
             >
-              Excellence</span
-            >
-            across continents
+            الهندسي عبر القارات
           </h2>
 
           <a
             id="sliderBtn"
-            href="en/about.html"
+            href="about.html"
             class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
           >
-            <span>Learn more about Radian</span>
+            <span>اعرف المزيد عن راديان </span>
           </a>
         </div>
-
-        <!-- Controls (Side Dots) -->
+        <!-- عناصر التحكم (دوائر جانبية) -->
         <div
-          class="absolute right-[8%] top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 z-10"
+          class="absolute left-[8%] top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 z-10"
         >
           <h3 class="text-white">01</h3>
           <button
@@ -545,56 +537,55 @@
         </div>
       </div>
     </div>
-
     <section
       id="about"
-      dir="rtl"
-      class="relative flex flex-col md:flex-row items-stretch w-full my-[8rem] px-4 md:px-0 about-section"
+      class="relative flex flex-col md:flex-row-reverse items-stretch w-full my-[8rem] px-4 md:px-0 about-section"
     >
-      <!-- Image -->
+      <!-- الصورة -->
       <div
         class="w-full md:w-[53.5%] h-[400px] md:h-[500px] relative z-0 about-section-image"
       >
         <img
           src="/assets/About.webp"
           alt="about image"
-          class="w-full h-full object-cover  md:rounded-none"
+          class="w-full h-full object-cover rounded-l-3xl md:rounded-none"
         />
       </div>
 
-      <!-- Text -->
+      <!-- النص -->
       <div
-        dir="ltr"
-        class="absolute left-0 top-20 items-start w-[55%] bg-[#CCE4FF] py-[4rem] pl-32 flex flex-col justify-center rounded-3xl md:rounded-r-3xl md:rounded-l-none space-y-4 z-10 about-section-content"
+        class="absolute right-0 top-20 w-[55%] bg-[#CCE4FF] py-[4rem] pr-32 flex flex-col justify-center rounded-3xl md:rounded-l-3xl md:rounded-r-none space-y-4 z-10 about-section-content"
+        style="margin-right: -40px"
       >
         <span
           class="text-sm text-black py-[0.1rem] px-[0.4rem] bg-[#3779BB3B] w-fit"
-          >About Us</span
+          >من نحن</span
         >
         <h2 class="text-[3.5rem] text-gray-900">
-          <div>Transforming</div>
-          <div>Concepts into</div>
-          <span class="text-[#4BA1F7] italic">Global Milestones</span>
+          <div>نُحوّل المفاهيم إلى</div>
+          <span class="text-[#4BA1F7] italic">إنجازات عالمية</span>
         </h2>
-        <p class="text-black-700 leading-relaxed py-2 text-[18px] w-[90%]">
-          A global engineering firm serving 28 countries across all continents,
-          dedicated to delivering sustainable solutions through a cohesive team
-          of engineers, technicians, and administrators, turning client visions
-          into reality.
+        <p class="text-black-700 leading-relaxed py-4 text-[18px] w-[90%]">
+          نحن شركة هندسية عالمية نقدم خدماتنا في 28 دولة في مختلف أنحاء العالم.
+          نكرس جهودنا لتقديم حلول مستدامة من خلال فريق متكامل من المهندسين
+          والفنيين والإداريين لنحوّل رؤى عملائنا إلى واقع ملموس.
         </p>
 
         <a
-          href="en/about.html"
-          class="block bg-[#3779BB] inline-flex text-white px-[15px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[190px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 Be-Part-of-Radian"
+          href="about.html"
+          class="block bg-[#3779BB] inline-flex text-white px-[40px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[42%] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600"
         >
-          More About Radian
+          اعرف المزيد عن راديان
+
           <svg
-            class="w-6 h-6 fill-current"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+              d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"
               fill="currentColor"
             />
           </svg>
@@ -606,7 +597,7 @@
     <section id="stats" class="py-8 mt-16 bg-white icons-section">
       <div
         class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-center items-stretch stats-container"
-        dir="rtl"
+        dir="ltr"
       >
         <!-- Box 1 -->
         <div
@@ -717,14 +708,14 @@
           </div>
           <div class="iconssvg-content">
             <div class="flex items-center justify-center gap-1 mt-2">
-              <span class="text-base text-[#3779BB] mb-[-1.7rem]">KM</span>
+              <span class="text-base text-[#3779BB] mb-[-1.7rem]">كم</span>
 
               <span class="counter text-6xl text-[#3779BB]" data-target="3000"
                 >0</span
               >
               <span class="text-6xl text-[#3779BB]">+</span>
             </div>
-            <p class="mt-2 text-lg">Designs and supervision of road projects</p>
+            <p class="mt-2 text-lg">إشراف وتصميم مشاريع طرق مختلفة</p>
           </div>
         </div>
 
@@ -773,7 +764,7 @@
               >
             </div>
             <p class="mt-2 text-lg">
-              Ministries and government agencies in K.S.A. trust Radian.
+              جهة حكومية سعودية تعتمد على خبرات شركة راديان
             </p>
           </div>
         </div>
@@ -840,7 +831,7 @@
               >
             </div>
             <p class="mt-2 text-lg">
-              Cities and governates in the kingdom work and employ Radian Team
+              مدينة ومحافظة سعودية يعمل بها فريق شركة راديان
             </p>
           </div>
         </div>
@@ -866,17 +857,14 @@
           </div>
           <div class="iconssvg-content">
             <div class="flex items-center justify-center gap-1 mt-2">
-              <span class="text-base text-[#3779BB] mb-[-1.7rem]">KM</span>
+              <span class="text-base text-[#3779BB] mb-[-1.7rem]">كم</span>
 
               <span class="counter text-6xl text-[#3779BB]" data-target="5000"
                 >0</span
               >
               <span class="text-6xl text-[#3779BB]">+</span>
             </div>
-            <p class="mt-2 text-lg">
-              Design and supervision of networks of water, sewage and torrents
-              lines
-            </p>
+            <p class="mt-2 text-lg">تنفيذ وتصميم شبكات المياه والصرف والسيول</p>
           </div>
         </div>
 
@@ -1073,9 +1061,7 @@
               >
               <span class="text-6xl text-[#3779BB]">+</span>
             </div>
-            <p class="mt-2 text-lg">
-              Designs and supervision of bridge intersections
-            </p>
+            <p class="mt-2 text-lg">مشروع تصميم وإشراف لتقاطعات جسور متنوعة</p>
           </div>
         </div>
 
@@ -1244,9 +1230,7 @@
               >
               <span class="text-6xl text-[#3779BB]">+</span>
             </div>
-            <p class="mt-2 text-lg">
-              Designs and supervision of bridge intersections
-            </p>
+            <p class="mt-2 text-lg">مشروع تصميم وإشراف لتقاطعات جسور متنوعة</p>
           </div>
         </div>
 
@@ -1313,8 +1297,7 @@
               <span class="text-6xl text-[#3779BB]">+</span>
             </div>
             <p class="mt-2 text-lg">
-              Locations where Radian’s office teams have worked and continue to
-              operate
+              موقع عملت به شركة راديان ويتواصل فرق عملها لانجاز الاعمال
             </p>
           </div>
         </div>
@@ -1521,17 +1504,16 @@
           </div>
           <div class="iconssvg-content">
             <div class="flex items-center justify-center gap-1 mt-2">
-              <span class="text-base text-[#3779BB] mb-[-1.7rem]"> M m2 </span>
+              <span class="text-base text-[#3779BB] mb-[-1.7rem]"
+                >مليون متر مربع</span
+              >
 
               <span class="counter text-6xl text-[#3779BB]" data-target="50"
                 >0</span
               >
               <span class="text-6xl text-[#3779BB]">+</span>
             </div>
-            <p class="mt-2 mx-4 text-lg">
-              Locations where Radian’s office teams have worked and continue to
-              operate
-            </p>
+            <p class="mt-2 mx-4 text-lg">أراضٍ تم أو يتم العمل على تخطيطها</p>
           </div>
         </div>
       </div>
@@ -1543,283 +1525,302 @@
         class="bg-[#3779bb] text-white rounded-[40px] w-[97%] py-[4.1rem] px-[8rem] text-center"
       >
         <p class="text-[2.1rem] leading-relaxed mb-8">
-          “Our ambition is for our economy to grow beyond where it is today,
-          creating an attractive, good, and remarkable environment in our
-          homeland, fostering pride in our nation, and making our country a
-          contributing part of global progress—whether in economic,
-          environmental, cultural, or intellectual development.”
+          طموحنا أن يكون اقتصادنا أكبر مما نحن فيه اليوم، كيف نخلق بيئة جاذبة
+          وجيدة ورائعة في وطننا، كيف نكون فخورين في وطننا، كيف يكون وطننا جزءًا
+          مساهماً في تنمية وحراك العالم سواء على المستوى الاقتصادي أو البيئي أو
+          الحضاري أو الفكري.
         </p>
         <p class="text-lg font-medium">
           <span class="text-2xl mb-[1rem] block">
-            H.R.H Mohammed bin Salman Al Saud
+            صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز آل سعود
           </span>
-          <span> Crown Prince of Saudi Arabia </span>
+          <span> ولي العهد ورئيس مجلس الوزراء، حفظه الله </span>
         </p>
       </div>
     </section>
     <section class="bg-[#CCE4FF] py-20">
-      <!-- Title -->
+      <!-- العنوان -->
       <div class="max-w-6xl mx-auto text-center mb-12">
         <span
           class="text-sm m-auto mb-2 text-black py-[0.1rem] px-[0.4rem] bg-[#aacbef] w-fit block text-center"
         >
-          Our Services
+          خدماتنا
         </span>
         <h2 class="text-6xl">
-          What <span class="text-sky-500 italic">we excel in</span>
+          فيما <span class="text-sky-500 italic">نتميز</span>
         </h2>
       </div>
 
-      <!-- Scrollable Cards Grid -->
+      <!-- الشبكة (قابلة للسحب) -->
       <div
         id="cardsWrapper"
         dir="ltr"
         class="flex md:px-[0.1rem] overflow-x-hidden cursor-grab active:cursor-grabbing select-none cardsWrapper-slides"
       >
-        <!-- Card 1 -->
+        <!-- كارت 1 -->
         <div
-          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-r border-gray-300 text-left"
+          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-l border-gray-300 text-right"
         >
-          <!-- Normal content -->
+          <!-- المحتوى العادي (العنوان + الوصف) -->
+          <!-- المحتوى العادي (العنوان + الوصف) -->
           <div
-            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-start w-full relative"
+            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-end w-full relative"
           >
             <h3
               class="text-[1.7rem] mb-4 w-[100vw] transition-colors duration-300 group-hover:text-white"
             >
-              Flood Risk Mitigation
+              درء أخطار السيول
             </h3>
             <p
               class="text-gray-600 text-base w-[130%] transition-colors duration-300 group-hover:text-white"
             >
-              At Radian, we deliver flexible engineering solutions for flood
-              risk management and community safety.
+              في راديان، حلول هندسية مرنة لإدارة مخاطر السيول وسلامة المجتمعات
             </p>
           </div>
 
-          <!-- Overlay -->
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20"
           ></div>
 
-          <!-- Button -->
-          <div class="z-10 mb-6 flex justify-start">
+          <!-- الزر -->
+          <div class="z-10 mb-6 flex justify-end">
             <a
-              href="en/services/flood.html"
+              href="services/flood.html"
               class="flex items-center justify-center bg-[#CCE4FF] w-10 h-10 rounded-full border border-gray-700 hover:bg-sky-600 hover:text-white transition group-hover:opacity-0"
             >
               <i class="fa-solid fa-plus text-gray-600 fa-xl"></i>
             </a>
           </div>
 
-          <!-- Background image -->
+          <!-- صورة الخلفية -->
           <img
             src="/assets/Main-Banner-1-480x466.webp"
-            alt="Flood Risk Management"
+            alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-500 group-hover:opacity-40"
           />
 
-          <!-- Hover Details -->
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           >
             <a
-              href="en/services/flood.html"
-              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] mr-[5rem] border border-white text-white rounded-full transition duration-300"
+              href="services/flood.html"
+              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] ml-[5rem] border border-white text-white rounded-full transition duration-300"
             >
+              <span class="text-white text-base">استعرض التفاصيل</span>
               <span
                 class="text-lg font-light leading-none transition duration-800 transform hover:rotate-90 origin-center"
               >
                 <i class="fa-solid fa-plus text-white"></i>
               </span>
-              <span class="text-white text-base">View Details</span>
             </a>
           </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- كارت 2 -->
         <div
-          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-r-2 border-gray-500 text-left"
+          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-l-2 border-gray-500 text-right"
         >
+          <!-- المحتوى العادي (العنوان + الوصف) -->
+          <!-- المحتوى العادي (العنوان + الوصف) -->
           <div
-            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-start w-full relative"
+            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-end w-full relative"
           >
             <h3
               class="text-[1.7rem] mb-4 w-[100vw] transition-colors duration-300 group-hover:text-white"
             >
-              Facilities Management
+              إدارة المرافق
             </h3>
             <p
               class="text-gray-600 text-base w-[130%] transition-colors duration-300 group-hover:text-white"
             >
-              At Radian, we enhance facility performance through sustainable
-              solutions that ensure smooth, efficient, and safe environments.
+              في راديان: نُحسّن أداء المرافق من خلال حلول مستدامة تضمن بيئات
+              سلسة وفعّالة وآمنة
             </p>
           </div>
 
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           ></div>
 
-          <div class="z-10 mb-6 flex justify-start">
+          <!-- الزر -->
+          <div class="z-10 mb-6 flex justify-end">
             <a
-              href="en/services/facilities-management.html"
+              href="services/facilities-management.html"
               class="flex items-center justify-center bg-[#CCE4FF] w-10 h-10 rounded-full border border-gray-700 hover:bg-sky-600 hover:text-white transition group-hover:opacity-0"
             >
               <i class="fa-solid fa-plus text-gray-600 fa-xl"></i>
             </a>
           </div>
 
+          <!-- صورة الخلفية -->
           <img
             src="/assets/enginerr1.webp"
-            alt="Facilities Management"
+            alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-500 group-hover:opacity-40"
           />
 
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           >
             <a
-              href="en/services/facilities-management.html"
-              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] mr-[5rem] border border-white text-white rounded-full transition duration-300"
+              href="services/facilities-management.html"
+              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] ml-[5rem] border border-white text-white rounded-full transition duration-300"
             >
+              <span class="text-white text-base">استعرض التفاصيل</span>
               <span
                 class="text-lg font-light leading-none transition duration-800 transform hover:rotate-90 origin-center"
               >
                 <i class="fa-solid fa-plus text-white"></i>
               </span>
-              <span class="text-white text-base">View Details</span>
             </a>
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- كارت 3 -->
         <div
-          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-r-2 border-gray-500 text-left"
+          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-l-2 border-gray-500 text-right"
         >
+          <!-- المحتوى العادي (العنوان + الوصف) -->
+          <!-- المحتوى العادي (العنوان + الوصف) -->
           <div
-            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-start w-full relative"
+            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-end w-full relative"
           >
             <h3
               class="text-[1.7rem] mb-4 w-[100vw] transition-colors duration-300 group-hover:text-white"
             >
-              Environmental Studies
+              الدراسات البيئية
             </h3>
             <p
               class="text-gray-600 text-base w-[130%] transition-colors duration-300 group-hover:text-white"
             >
-              At Radian, we provide sustainable solutions built on accurate
-              environmental studies and innovative practices.
+              في راديان: نقدّم حلول مستدامة تبدأ من دراسات بيئية دقيقة وترتكز
+              على ممارسات مبتكرة
             </p>
           </div>
 
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           ></div>
 
-          <div class="z-10 mb-6 flex justify-start">
+          <!-- الزر -->
+          <div class="z-10 mb-6 flex justify-end">
             <a
-              href="en/services/environmental-studies.html"
+              href="services/environmental-studies.html"
               class="flex items-center justify-center bg-[#CCE4FF] w-10 h-10 rounded-full border border-gray-700 hover:bg-sky-600 hover:text-white transition group-hover:opacity-0"
             >
               <i class="fa-solid fa-plus text-gray-600 fa-xl"></i>
             </a>
           </div>
 
+          <!-- صورة الخلفية -->
           <img
             src="/assets/phone1.webp"
-            alt="Environmental Studies"
+            alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-500 group-hover:opacity-40"
           />
 
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           >
             <a
-              href="en/services/environmental-studies.html"
-              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] mr-[5rem] border border-white text-white rounded-full transition duration-300"
+              href="services/environmental-studies.html"
+              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] ml-[5rem] border border-white text-white rounded-full transition duration-300"
             >
+              <span class="text-white text-base">استعرض التفاصيل</span>
               <span
                 class="text-lg font-light leading-none transition duration-800 transform hover:rotate-90 origin-center"
               >
                 <i class="fa-solid fa-plus text-white"></i>
               </span>
-              <span class="text-white text-base">View Details</span>
             </a>
           </div>
         </div>
 
-        <!-- Card 4 -->
+        <!-- كارت 4 -->
         <div
-          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-r-2 border-gray-500 text-left"
+          class="relative group flex flex-col justify-between min-h-[430px] w-[33vw] flex-shrink-0 snap-start overflow-hidden transition-all duration-500 border-l-2 border-gray-500 text-right"
         >
+          <!-- المحتوى العادي (العنوان + الوصف) -->
+          <!-- المحتوى العادي (العنوان + الوصف) -->
           <div
-            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-start w-full relative"
+            class="z-50 mt-16 transition-opacity duration-500 group-hover:opacity-100 flex flex-col items-end w-full relative"
           >
             <h3
               class="text-[1.7rem] mb-4 w-[100vw] transition-colors duration-300 group-hover:text-white"
             >
-              Architectural Designs
+              التصاميم المعمارية
             </h3>
             <p
               class="text-gray-600 text-base w-[130%] transition-colors duration-300 group-hover:text-white"
             >
-              At Radian, we excel in delivering innovative architectural designs
-              that transform ideas into timeless landmarks.
+              في راديان: نُبدع في تقديم تصاميم معمارية مبتكرة تُحوّل الأفكار إلى
+              شواهد خالدة
             </p>
           </div>
 
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           ></div>
 
-          <div class="z-10 mb-6 flex justify-start">
+          <!-- الزر -->
+          <div class="z-10 mb-6 flex justify-end">
             <a
-              href="en/services/arcdesigns.html"
+              href="services/arcdesigns.html"
               class="flex items-center justify-center bg-[#CCE4FF] w-10 h-10 rounded-full border border-gray-700 hover:bg-sky-600 hover:text-white transition group-hover:opacity-0"
             >
               <i class="fa-solid fa-plus text-gray-600 fa-xl"></i>
             </a>
           </div>
 
+          <!-- صورة الخلفية -->
           <img
             src="/assets/Main-Banner-480x466.webp"
-            alt="Architectural Designs"
+            alt=""
             class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-500 group-hover:opacity-40"
           />
 
+          <!-- overlay -->
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 z-20 details-btn"
           >
             <a
-              href="en/services/arcdesigns.html"
-              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] mr-[5rem] border border-white text-white rounded-full transition duration-300"
+              href="services/arcdesigns.html"
+              class="flex items-center gap-2 px-5 py-2 mt-[21.8rem] ml-[5rem] border border-white text-white rounded-full transition duration-300"
             >
+              <span class="text-white text-base">استعرض التفاصيل</span>
               <span
                 class="text-lg font-light leading-none transition duration-800 transform hover:rotate-90 origin-center"
               >
                 <i class="fa-solid fa-plus text-white"></i>
               </span>
-              <span class="text-white text-base">View Details</span>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- View All Services Button -->
+      <!-- زر استعرض جميع الخدمات -->
       <div class="text-center mt-12 flex justify-center items-center">
         <a
-          href="en/services.html"
-          class="block bg-[#3779BB] inline-flex text-white px-6 py-3 rounded-full shadow-lg transition duration-500 w-full max-w-[200px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 text-base hover:text-blue-600"
+          href="services.html"
+          class="block bg-[#3779BB] inline-flex text-white px-6 py-3 rounded-full shadow-lg transition duration-500 w-full max-w-[235px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 text-base hover:text-blue-600"
         >
-          View All Services
+          استعرض جميع الخدمات
           <svg
-            class="w-6 h-6 fill-current"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+              d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"
               fill="currentColor"
             />
           </svg>
@@ -1829,62 +1830,60 @@
 
     <section class="bg-white py-20 radian-choosen-section">
       <div
-        class="max-w-7xl mx-auto mb-8 grid md:grid-cols-2 gap-12 items-center radian-choosen-image"
+        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center radian-choosen-image"
       >
-        <!-- Image -->
+        <!-- الصورة -->
         <div>
           <img
             src="/assets/careers2.webp"
-            alt="Building the Future"
+            alt="بناء المستقبل"
             class="w-[120%] shadow-md h-[80vh] object-cover"
           />
         </div>
-
-        <!-- Text -->
+        <!-- النص -->
         <div
           class="space-y-8 flex flex-col justify-between radian-choosen-contetn"
         >
           <span
             class="text-sm text-black py-[0.2rem] px-[0.4rem] bg-[#3779BB3B] w-fit"
-            >Why Choose Radian?</span
+            >لماذا تختار راديان؟</span
           >
           <h2 class="text-3xl md:text-5xl text-gray-700 leading-relaxed">
-            <span class="text-sky-600 italic">Build</span> Your Global
-            <div>Career Future</div>
+            <span class="text-sky-600 italic">قم ببناء</span> مستقبلك
+            <div>المهني عالميا</div>
           </h2>
           <p class="text-gray-800 text-lg leading-relaxed">
-            We believe in excellence, innovation, and sustainability, and we
-            strive to attract talented engineers, technicians, and
-            administrators to help realize our clients’ visions and turn them
-            into reality.
+            نحن نؤمن بالتميز والابتكار والاستدامة ونسعى إلى استقطاب المهندسين
+            والفنيين والإداريين الموهوبين لتحقيق رؤى عملائنا وتحويلها إلى واقع.
           </p>
-         
-          <a
-            href="en/careers.html"
-          class="block bg-[#3779BB] inline-flex text-white px-[20px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[190px] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 Be-Part-of-Radian"
-          >
-            Be Part of Radian
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
-                fill="white"
-              />
-            </svg>
-          </a>
+         <a
+  href="careers.html"
+  class="flex items-center justify-center gap-2 bg-[#3779BB] text-white px-8 py-3 text-sm md:text-base rounded-full shadow-lg transition duration-500 w-fit text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 choosen-radian-btn ml-auto"
+>
+  <span>كن جزءًا من راديان</span>
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="transition-transform duration-300 group-hover:translate-x-1"
+  >
+    <path
+      d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"
+      fill="currentColor"
+    />
+  </svg>
+</a>
+
         </div>
       </div>
 
-      <!-- Cards -->
+      <!-- الكروت -->
       <div
         class="max-w-4xl mt-[-5rem] ms-[21rem] grid grid-cols-1 md:grid-cols-3 gap-8 px-6 radian-choosen"
       >
-        <!-- Card 1 -->
+        <!-- الكارت 1 -->
         <div
           class="p-8 bg-transparent bg-white bg-opacity-70 rounded-lg border text-center space-y-4"
         >
@@ -1952,14 +1951,13 @@
               </clipPath>
             </defs>
           </svg>
-          <h3 class="font-bold text-lg">Professional Growth</h3>
+          <h3 class="font-bold text-lg">النمو المهني</h3>
           <p class="text-gray-600 text-sm">
-            Advance your career in a dynamic environment that values continuous
-            learning and development.
+            طور مسيرتك المهنية ضمن بيئة ديناميكية تقدّر التعلّم والتطور المستمر.
           </p>
         </div>
 
-        <!-- Card 2 -->
+        <!-- الكارت 2 -->
         <div
           class="p-8 bg-white rounded-lg bg-opacity-70 border text-center space-y-4"
         >
@@ -2047,14 +2045,14 @@
               ></path>
             </g>
           </svg>
-          <h3 class="font-bold text-lg">Sustainable Impact</h3>
+          <h3 class="font-bold text-lg">الأثر المستدام</h3>
           <p class="text-gray-600 text-sm">
-            Contribute to projects that prioritize long-term sustainability and
-            responsible engineering practices.
+            ساهم في مشاريع تضع الاستدامة طويلة الأمد والممارسات الهندسية
+            المسؤولة في المقدمة.
           </p>
         </div>
 
-        <!-- Card 3 -->
+        <!-- الكارت 3 -->
         <div
           class="p-8 bg-white rounded-lg bg-opacity-70 border text-center space-y-4"
         >
@@ -2127,227 +2125,213 @@
               </clipPath>
             </defs>
           </svg>
-          <h3 class="font-bold text-lg">Work in a Global Environment</h3>
+          <h3 class="font-bold text-lg">العمل ضمن بيئة عالمية</h3>
           <p class="text-gray-600 text-sm">
-            Collaborate with diverse teams from 18 countries and share knowledge
-            to drive innovation.
+            تعاون مع فرق عمل متنوعة من 18 دولة وشارك في تبادل الخبرات لتعزيز
+            الابتكار.
           </p>
         </div>
       </div>
     </section>
-
     <section class="text-center">
       <h2 class="text-3xl font-bold py-6">
         <span
           class="text-sm text-gray-700 py-[0.1rem] px-[0.4rem] bg-[#3779BB3B] w-fit"
         >
-          Our Global Service Scope
+          نطاق خدماتنا العالمي
         </span>
       </h2>
       <div class="image">
-        <img src="/assets/Map-1.webp" alt="Global Service Map" />
+        <img src="/assets/Map-1.webp" alt="" />
       </div>
     </section>
-
     <section class="bg-white py-12">
       <div class="max-w-7xl mx-auto px-6">
-        <!-- List -->
+        <!-- القائمة -->
         <div
           id="projects-list"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center"
         >
-          <!-- Items -->
+          <!-- العناصر -->
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
               <span class="text-4xl">• </span>
-              New York (USA)
+              نيويورك (الولايات المتحدة الأمريكية)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Amsterdam (Netherlands)
+              <span class="text-4xl">• </span> أمستردام (هولندا)
             </h3>
-            <p class="text-gray-600 text-sm">Design and Supervision</p>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Nouakchott (Mauritania)
+              <span class="text-4xl">• </span> نواكشوط (موريتانيا)
             </h3>
-            <p class="text-gray-600 text-sm">Design and Supervision</p>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Saudi Arabia
+              <span class="text-4xl">• </span> المملكة العربية السعودية
             </h3>
-            <p class="text-gray-600 text-sm">
-              Studies, Design, and Supervision
-            </p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
               <span class="text-4xl">• </span>
-              Washington (USA)
+              واشنطن (الولايات المتحدة الأمريكية)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 text-base text-base font-medium">
+              <span class="text-4xl">• </span> دبلن (أيرلندا)
+            </h3>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
+          </div>
+          <div class="hidden">
+            <h3 class="text-sky-700 text-base text-base font-medium">
+              <span class="text-4xl">• </span> أكرا (غانا)
+            </h3>
+            <p class="text-gray-600 text-sm">إشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Dublin (Ireland)
+              <span class="text-4xl">• </span> كابول (أفغانستان)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Accra (Ghana)
+              <span class="text-4xl">• </span> مكسيكو سيتي (المكسيك)
             </h3>
-            <p class="text-gray-600 text-sm">Supervision</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Kabul (Afghanistan)
+              <span class="text-4xl">• </span> برن (سويسرا)
             </h3>
-            <p class="text-gray-600 text-sm">Design and Supervision</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Mexico City (Mexico)
+              <span class="text-4xl">• </span> أبوجا (نيجيريا)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Bern (Switzerland)
+              <span class="text-4xl">• </span> أستانا (كازاخستان)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">التصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Abuja (Nigeria)
+              <span class="text-4xl">• </span> كراكاس (فنزويلا)
             </h3>
-            <p class="text-gray-600 text-sm">
-              Studies, Design, and Supervision
-            </p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Astana (Kazakhstan)
+              <span class="text-4xl">• </span> سانتياغو (إسبانيا)
             </h3>
-            <p class="text-gray-600 text-sm">Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Caracas (Venezuela)
+              <span class="text-4xl">• </span> كانو (نيجيريا)
             </h3>
-            <p class="text-gray-600 text-sm">
-              Studies, Design, and Supervision
-            </p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Santiago (Spain)
+              <span class="text-4xl">• </span> سيول (كوريا الجنوبية)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Kano (Nigeria)
+              <span class="text-4xl">• </span> ستوكهولم (السويد)
             </h3>
-            <p class="text-gray-600 text-sm">
-              Studies, Design, and Supervision
-            </p>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Seoul (South Korea)
+              <span class="text-4xl">• </span> روما (إيطاليا)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Stockholm (Sweden)
+              <span class="text-4xl">• </span> الخرطوم (السودان)
             </h3>
-            <p class="text-gray-600 text-sm">Design and Supervision</p>
+            <p class="text-gray-600 text-sm">تصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Rome (Italy)
+              <span class="text-4xl">• </span> بيشكك (قيرغيزستان)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">التصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Khartoum (Sudan)
+              <span class="text-4xl">• </span> وارسو (بولندا)
             </h3>
-            <p class="text-gray-600 text-sm">Design and Supervision</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Bishkek (Kyrgyzstan)
+              <span class="text-4xl">• </span> هلسنكي (فنلندا)
             </h3>
-            <p class="text-gray-600 text-sm">Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Warsaw (Poland)
+              <span class="text-4xl">• </span> نيامي (النيجر)
             </h3>
-            <p class="text-gray-600 text-sm">
-              Studies, Design, and Supervision
-            </p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم وإشراف</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Helsinki (Finland)
+              <span class="text-4xl">• </span> بوخارست (رومانيا)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Niamey (Niger)
+              <span class="text-4xl">• </span> موسكو (روسيا)
             </h3>
-            <p class="text-gray-600 text-sm">
-              Studies, Design, and Supervision
-            </p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Bucharest (Romania)
+              <span class="text-4xl">• </span> أسمرة (إريتريا)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Moscow (Russia)
+              <span class="text-4xl">• </span> مانيلا (الفلبين)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
           <div class="hidden">
             <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Asmara (Eritrea)
+              <span class="text-4xl">• </span> كولومبو (سريلانكا)
             </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
-          </div>
-          <div class="hidden">
-            <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Manila (Philippines)
-            </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
-          </div>
-          <div class="hidden">
-            <h3 class="text-sky-700 text-base font-medium">
-              <span class="text-4xl">• </span> Colombo (Sri Lanka)
-            </h3>
-            <p class="text-gray-600 text-sm">Studies and Design</p>
+            <p class="text-gray-600 text-sm">دراسات وتصميم</p>
           </div>
         </div>
 
-        <!-- Button -->
+        <!-- الزر -->
         <div class="text-center mt-8">
           <button
             id="toggle-btn"
             class="text-sky-600 hover:underline font-medium"
           >
-            Show More
+            عرض المزيد
           </button>
         </div>
       </div>
@@ -2355,351 +2339,344 @@
 
     <section class="bg-white py-16">
       <div class="max-w-7xl mx-auto text-center px-6 brands">
-        <!-- Title -->
-        <span
-          class="text-gray-700 text-sm py-[0.3rem] px-[0.4rem] bg-[#3779BB3B] w-fit"
+        <!-- العنوان -->
+        <span class="text-black py-[0.3rem] px-[0.4rem] bg-[#3779BB3B] w-fit"
+          >شركاء النجاح</span
         >
-          SUCCESS PARTNERS
-        </span>
-        <h2 class="text-2xl md:text-3xl text-sky-700 my-6">
-          Government Sector
-        </h2>
+        <h2 class="text-2xl md:text-3xl text-sky-700 my-6">القطاع الحكومي</h2>
 
-        <!-- Government Slider -->
+        <!-- السلايدر الحكومي -->
         <div class="swiper mySwiper mb-12">
           <div class="swiper-wrapper flex items-center">
-            <!-- Logos -->
+            <!-- اللوجوهات -->
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Minisrty-of-Health.svg"
-                alt="Ministry of Health"
+                alt="وزارة الصحة"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/monstiyof-ewa.webp"
-                alt="Ministry of Environment"
+                alt=" وزارة البيئة"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/monistory-of-education.svg"
-                alt="Ministry of Education"
+                alt="وزارة التعليم"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img
-                src="/assets/moj.svg"
-                alt="Ministry of Justice"
-                class="h-20"
-              />
+              <img src="/assets/moj.svg" alt="وزارة العدل" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/omeelqura.webp"
-                alt="Umm Al-Qura University"
+                alt="جامعة أم القرى"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/wafi-svg.webp" alt="Wafi" class="h-20" />
+              <img src="/assets/wafi-svg.webp" alt="وافي" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/amanh-hael.webp"
-                alt="Hail Municipality"
+                alt="امانة منطقة حائل"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/amanh-reyadh.webp"
-                alt="Riyadh Municipality"
+                alt="امانة الرياض"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Ministry-Traffic.svg"
-                alt="Traffic and Safety"
+                alt="الامن والمرور"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/neom.webp" alt="NEOM" class="h-20" />
+              <img src="/assets/neom.webp" alt="نيوم" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/monistory-of-education.svg"
-                alt="Ministry of Education"
+                alt="وزارة التعليم"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/wataniah.webp"
-                alt="National Housing Company"
+                alt="الوطنية للإسكان"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/amanh-qaseem.webp"
-                alt="Qassim Municipality"
+                alt="امانة القسيم"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/alahasa-municipality.webp"
-                alt="Al-Ahsa Municipality"
+                alt="امانة الاحساء"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/islamic-cares.svg"
-                alt="Ministry of Islamic Affairs"
+                alt="وزارة الشؤن الإسلامية"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/space-geology.svg"
-                alt="Geological Survey Authority"
+                alt="هيئة المساحة البيولوجية"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img
-                src="/assets/morafic-banner.webp"
-                alt="Morafiq"
-                class="h-20"
-              />
+              <img src="/assets/morafic-banner.webp" alt="مرافق" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Ministry-of-FA.svg"
-                alt="Ministry of Foreign Affairs"
+                alt="وزارة  الخارجية"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Elec-componeysa.svg"
-                alt="Saudi Electricity Company"
+                alt="الشركة السعودية للكهرباء"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/baladiat-wezarah.webp"
-                alt="Ministry of Municipal Affairs"
+                alt="وزارة البلديات"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Technical-vtc.svg"
-                alt="Technical and Vocational Training Corporation"
+                alt="المؤسسة العامة التقنية والمهنية"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/National-center-E.webp"
-                alt="National Center for Environmental Compliance"
+                alt="المركز التقني للرقابة على الإلتزام البيئي "
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/amanh-mokadash.webp"
-                alt="Holy Capital Municipality"
+                alt="امان العاصمة المقدسة"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/monstry-of-t.webp"
-                alt="Ministry of Transport and Logistics Services"
+                alt="وزارة النقل والخدمات اللوجيستية"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/water-companey.webp"
-                alt="National Water Company"
+                alt="شركة المياه الوطنية"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Aramco.svg" alt="Saudi Aramco" class="h-20" />
+              <img
+                src="/assets/Aramco.svg"
+                alt="ارامكوا السعودية"
+                class="h-20"
+              />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/modon.svg" alt="MODON" class="h-20" />
+              <img src="/assets/modon.svg" alt="مدن" class="h-20" />
             </div>
           </div>
         </div>
 
-        <!-- Private Sector -->
-        <h2 class="text-2xl md:text-3xl text-sky-700 my-6">Private Sector</h2>
+        <!-- القطاع الخاص -->
+        <h2 class="text-2xl md:text-3xl text-sky-700 my-6">القطاع الخاص</h2>
 
-        <!-- Private Sector Slider -->
+        <!-- السلايدر الخاص -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper flex items-center">
             <div class="swiper-slide flex justify-center">
-              <img
-                src="/assets/manafea-hold.webp"
-                alt="Manafea Holding"
-                class="h-20"
-              />
+              <img src="/assets/manafea-hold.webp" alt="منافع" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/qtaf.webp" alt="Qitaf" class="h-20" />
+              <img src="/assets/qtaf.webp" alt="قطاف" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/alaqtar.webp" alt="Alaqtar" class="h-20" />
+              <img src="/assets/alaqtar.webp" alt="العقتر" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/othem.webp" alt="Othaim" class="h-20" />
+              <img src="/assets/othem.webp" alt="العثيم" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/alestedamh.webp"
-                alt="Al Estidama Holding"
+                alt="الاستدامة القابضة"
                 class="h-20"
               />
             </div>
+
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Rajhi-development.webp"
-                alt="Al Rajhi Development"
+                alt="الراجحي للتطوير"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Herfy-01.svg" alt="Herfy" class="h-20" />
+              <img src="/assets/Herfy-01.svg" alt="مرفي" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Rag.webp" alt="RAG Company" class="h-20" />
+              <img src="/assets/Rag.webp" alt="شركة راج" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/anan.webp" alt="Anan" class="h-20" />
+              <img src="/assets/anan.webp" alt="عنان" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Movenpick.webp" alt="Mövenpick" class="h-20" />
+              <img src="/assets/Movenpick.webp" alt="موفنبك" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Saudi-tum.webp" alt="Saudi Tum" class="h-20" />
+              <img
+                src="/assets/Saudi-tum.webp"
+                alt="sudiatumpane"
+                class="h-20"
+              />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/abyatona.webp" alt="Abyatona" class="h-20" />
+              <img src="/assets/abyatona.webp" alt="ابياتنا" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/manafea-hold.webp"
-                alt="Manafea Holding"
+                alt="منافع القابضة"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Etehad-elrajehi.webp"
-                alt="Al Rajhi Real Estate Union"
+                alt="الاتحاد الراجحي العقاري"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/fadl-low.webp" alt="Fadl" class="h-20" />
+              <img src="/assets/fadl-low.webp" alt="فضل" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/Ao-Pur-Sitelogo-1-1.webp"
-                alt="Othaim"
+                alt="العثيم"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/ilf.webp" alt="ILF" class="h-20" />
+              <img src="/assets/ilf.webp" alt="ilf" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Ledar.webp" alt="Ledar" class="h-20" />
+              <img src="/assets/Ledar.webp" alt="ledar" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/alfanar.webp" alt="Alfanar" class="h-20" />
+              <img src="/assets/alfanar.webp" alt="alfanar" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/JADWA_LOGO_ARABIC.svg"
-                alt="Jadwa"
+                alt="jadwa"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/daam.webp" alt="Daam" class="h-20" />
+              <img src="/assets/daam.webp" alt="daam" class="h-20" />
             </div>
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/m-rajechi-co.webp"
-                alt="M. Rajhi Co."
+                alt="m-rajechi-co"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/Zood.webp" alt="Zood" class="h-20" />
+              <img src="/assets/Zood.webp" alt="زود" class="h-20" />
             </div>
+
             <div class="swiper-slide flex justify-center">
               <img
                 src="/assets/abdollah-salleh.webp"
-                alt="Abdullah Saleh"
+                alt="عبد الله صالح"
                 class="h-20"
               />
             </div>
             <div class="swiper-slide flex justify-center">
-              <img src="/assets/alaqtar.webp" alt="Alaqtar" class="h-20" />
+              <img src="/assets/alaqtar.webp" alt="الاقتار" class="h-20" />
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="bg-[#17314b] text-white py-10 mt-auto">
       <div class="max-w-7xl mx-auto px-6">
-        <!-- Logo -->
+        <!-- اللوجو -->
         <div class="flex justify-center mb-6">
           <img src="/assets/Radian-Logo.webp" alt="Radian Logo" class="h-12" />
         </div>
 
-        <!-- Links -->
+        <!-- الروابط -->
         <div
           class="flex flex-wrap justify-center gap-8 mb-6 text-sm md:text-base pages-links"
         >
-          <a href="en/about.html" class="hover:text-sky-400">About Us</a>
-          <a href="en/services.html" class="hover:text-sky-400">Services</a>
-          <a href="en/careers.html" class="hover:text-sky-400">Careers</a>
-          <a href="en/ContactUs.html" class="hover:text-sky-400">Contact Us</a>
-          <a href="en/terms.html" class="hover:text-sky-400">Terms</a>
+          <a href="about.html" class="hover:text-sky-400">من نحن</a>
+          <a href="services.html" class="hover:text-sky-400">الخدمات</a>
+          <a href="careers.html" class="hover:text-sky-400">الوظائف</a>
+          <a href="ContactUs.html" class="hover:text-sky-400">تواصل معنا</a>
+          <a href="terms.html" class="hover:text-sky-400">الشروط</a>
         </div>
 
-        <!-- Social Icons -->
+        <!-- أيقونات السوشيال -->
         <div class="flex gap-3 m-4 justify-center">
           <a
             href="https://www.linkedin.com/"
             target="_blank"
             class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
           >
-            <!-- LinkedIn Icon -->
+            <!-- أيقونة LinkedIn -->
             <span
               class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
             >
               <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
             </span>
 
-            <!-- White Circle -->
+            <!-- الدائرة البيضاء -->
             <span
               class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
             ></span>
@@ -2710,25 +2687,24 @@
             target="_blank"
             class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
           >
-            <!-- Facebook Icon -->
+            <!-- النص F -->
             <span
               class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
             >
               <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
             </span>
 
-            <!-- White Circle -->
+            <!-- الدائرة البيضاء -->
             <span
               class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
             ></span>
           </a>
         </div>
 
-        <!-- Footer Text -->
-        <p class="text-center text-xl text-gray-300">All rights reserved ©</p>
+        <!-- النص -->
+        <p class="text-center text-xl text-gray-300">جميع الحقوق محفوظة ©</p>
       </div>
     </footer>
-
     <!-- Scroll to Top Button with Progress Circle -->
     <a
       href="#"
@@ -2752,6 +2728,6 @@
       <i class="fa-solid fa-arrow-up-long text-white fa-xl float-icon"></i>
     </a>
 
-    <script src="en/index.js"></script>
+    <script src="/ar/index.js"></script>
   </body>
 </html>

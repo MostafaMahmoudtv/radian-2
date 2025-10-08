@@ -11,13 +11,13 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  direction: ltr;
+  direction: rtl;
   overflow-x: hidden;
   font-family: "Almarai", sans-serif;
   font-size: 12px;
 }
 
-.container {
+.contianer {
   max-width: 1400px;
   margin: auto;
 }
@@ -33,14 +33,14 @@ body {
   top: 0;
   background: transparent;
   color: white;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.5px solid rgba(255, 255, 2551, 0.2);
   z-index: 999;
 }
 
 .header .logo {
   flex: 1;
   padding: 1.5rem;
-  border-right: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 
 .header .logo img {
@@ -49,7 +49,7 @@ body {
 }
 
 .header .nav {
-  border-right: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.2);
   flex: 4;
   justify-content: center !important;
   display: flex;
@@ -69,13 +69,13 @@ body {
   cursor: pointer;
   font-size: 14px;
   text-align: center;
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .header .nav > ul > li > ul {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   margin-top: 0.5rem;
 }
 
@@ -91,11 +91,11 @@ body {
 }
 
 .header.fixed .logo {
-  border-right: 0.5px solid #0000001c;
+  border-left: 0.5px solid #0000001c;
 }
 
 .header.fixed .nav {
-  border-right: 0.5px solid #0000001c;
+  border-left: 0.5px solid #0000001c;
 }
 
 .header.fixed .points {
@@ -107,8 +107,13 @@ body {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  width: 17vw !important;
 }
-
+.dropdownMenu {
+  position: absolute;
+  right: 210px !important;
+  top: -15px !important;
+}
 .language-dropdown:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
@@ -124,28 +129,29 @@ body {
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
-  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 .language-option span::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 62%;
-  transform: translateY(-50%) translateX(-10px);
+  transform: translateY(-50%) translateX(10px);
   opacity: 0;
   color: #000;
-  font-weight: bold;
+    font-weight: bold;
   height: 1px;
   width: 12px;
   background-color: rgb(0, 0, 0);
+  opacity: 0;
   border-radius: 2px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .language-option:hover span {
-  transform: translateX(10px);
+  transform: translateX(-10px);
 }
 
 .language-option:hover span::before {
@@ -153,7 +159,6 @@ body {
   transform: translateY(-50%) translateX(0);
 }
 
-/* Submenu items */
 .language-option ul li {
   position: relative;
   transition: background-color 0.2s ease;
@@ -168,31 +173,27 @@ body {
   content: "";
   opacity: 0;
   font-size: 20px;
-  margin-left: 0 !important;
-  padding-right: 0.3rem;
+  margin-right: 0 !important;
+  padding-left: 0.3rem;
   color: #000;
-  font-weight: bold;
+    font-weight: bold;
   height: 1px;
   width: 12px;
   background-color: rgb(0, 0, 0);
+  opacity: 0;
   border-radius: 2px;
-  transition: opacity 0.3s ease, margin-left 0.3s ease;
+  transition: opacity 0.3s ease, margin-right 0.3s ease;
 }
 
 .language-option ul li:hover::before {
   opacity: 1;
-  margin-left: 8px;
+  margin-right: 8px;
 }
-.dropdownMenu {
-  position: absolute !important;
-  right: -197px !important;
-}
-.dropdownMenu ul li {
-  text-align: left;
-}
+
 .dropdown-dropdown-m {
-  right: -190px;
+  left: -150px;
   top: -5px !important;
+  padding: 0.5rem;
 }
 
 .dropdown-dropdown-m ul {
@@ -211,13 +212,19 @@ body {
 }
 
 .dropdown-dropdown-m ul li:hover {
-  transform: translateX(-5px);
+  transform: translateX(10px);
 }
+
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
+.dropdownBtn{
+  width: 100%;
+  padding: 0.4rem;
+  display: flex !important;
+  justify-content: space-between !important;
+}
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -229,7 +236,7 @@ body {
 
 .dropdown-content .language-option ul li {
   position: relative;
-  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
   transition: transform 0.3s ease;
   padding-top: 0.5rem;
   font-size: 14px;
@@ -238,9 +245,9 @@ body {
 .dropdown-content .language-option ul li::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 62%;
-  transform: translateY(-50%) translateX(-10px);
+  transform: translateY(-50%) translateX(10px);
   opacity: 0;
   color: #000;
   font-size: 16px;
@@ -249,28 +256,20 @@ body {
   height: 1px;
   width: 12px;
   background-color: rgb(0, 0, 0);
+  opacity: 0;
   border-radius: 2px;
 }
 
 .dropdown-content .language-option ul li:hover {
-  transform: translateX(5px);
+  transform: translateX(-5px);
 }
 
 .dropdown-content .language-option ul li:hover::before {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
-.stats-container {
-  align-items: center;
-}
-.stats-container > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 210px;
-  align-items: center;
-}
+
+
 #scrollToTop {
   opacity: 0;
   pointer-events: none;
@@ -568,6 +567,7 @@ aside {
 }
 
 @media (max-width: 1024px) {
+  /* نخلي الناف عمودية */
   .nav ul {
     flex-direction: column;
     align-items: stretch;
@@ -741,14 +741,18 @@ aside {
   .about-section {
     margin: 0 !important;
     padding: 0 !important;
- 
+    margin-top: 240px !important;
+    height: 70vh !important;
   }
   .about-section .about-section-content {
     width: 100vw;
     margin: 0 !important;
     padding: 0;
   }
-
+  .about-section .about-section-content a {
+    min-width: 250px !important;
+    font-size: 16px;
+  }
   .about-section > .about-section-image img {
     width: 100vw !important;
     height: 300px !important;
@@ -794,9 +798,6 @@ aside {
     align-items: center;
   }
 
-  .radian-choosen-contetn {
-    padding-left: 20px;
-  }
   .radian-choosen-contetn h2 {
     line-height: 1.2 !important;
     font-size: 40px !important;
@@ -808,9 +809,6 @@ aside {
   .radian-choosen {
     display: flex !important;
     justify-content: space-between !important;
-  }
-  .Be-Part-of-Radian {
-    max-width: 200px;
   }
   .brands {
     width: 100vw !important;
@@ -835,9 +833,7 @@ aside {
     margin-top: 210px;
     margin-right: -23px;
   }
-  .choosen-radian-btn {
-    width: 600px !important;
-  }
+ 
   #projects-list {
     display: flex;
     flex-direction: row;
@@ -860,14 +856,14 @@ aside {
   }
 
   .icons-section > div > div {
-    width: 90% !important;
+    width: 100% !important;
     margin: auto !important;
   }
   .icons-section > div > div {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    text-align: left !important;
+    text-align: right !important;
     gap: 10px !important;
     margin: auto !important;
     flex-direction: row-reverse !important; /* الايقونة يمين */
@@ -885,7 +881,7 @@ aside {
   }
   .icons-section .icons-svg {
     width: 30%;
-    margin-right: 30px;
+    margin-left: 30px;
   }
 
   .icons-section .icons-svg svg {
@@ -915,7 +911,9 @@ aside {
     margin: 3px 0 0 !important;
     color: #333 !important;
   }
-
+  .about-section {
+    margin-top: 300px !important;
+  }
   #cardsWrapper h3 {
     font-size: 1.3rem !important;
   }
@@ -997,6 +995,7 @@ aside {
     font-size: 20px !important;
     margin-top: 15px;
   }
+
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
@@ -1082,6 +1081,11 @@ aside {
   .slider-about > h2 {
     text-align: center;
   }
+  .dropdownMenu {
+    position:relative !important;
+  top: 0 !important;
+  right: 0 !important;
+  }
 }
 @media (max-width: 1024px) {
   .nav li span {
@@ -1113,9 +1117,6 @@ aside {
   .header.fixed {
     display: none;
   }
-.slider-top{
-  font-size: 50px !important;
-}
 }
 
 @media (max-width: 1024px) {
@@ -1266,60 +1267,59 @@ aside {
   opacity: 1;
   transition-delay: 0.3s; /* يبدأ بعد ما زر + يخلص */
 }
-#preloader {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
 
-/* النص */
-.loader-text h2 {
-  font-size: 33px !important;
-  color: #1e4a6e;
-  margin: 0.5rem 0;
-}
+    /* النص */
+    .loader-text h2 {
+      font-size: 33px !important;
+      color: #1E4A6E;
+      margin: 0.5rem 0;
+    }
 
-/* الخط الخارجي */
-.loading-line {
-  position: relative;
-  width: 200px;
-  height: 4px;
-  background: rgba(30, 74, 110, 0.2);
-  border-radius: 2px;
-  overflow: hidden;
-  margin: auto;
-  margin-top: 12px;
-}
+    /* الخط الخارجي */
+    .loading-line {
+      position: relative;
+      width: 200px;
+      height: 4px;
+      background: rgba(30, 74, 110, 0.2);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
 
-/* شريط التقدم الحقيقي */
-.progress {
-  position: absolute;
-  left: 0; /* بدل right */
-  top: 0;
-  height: 100%;
-  width: 0%;
-  background: #1a4e81;
-  transition: width 0.3s ease;
-  transform-origin: right; /* بدل left */
-}
+    /* شريط التقدم الحقيقي */
+    .progress {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 0%;
+      background: #1A4E81;
+      transition: width 0.3s ease;
+      transform-origin: left;
+    }
 
-/* إخفاء عند الانتهاء */
-#preloader.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
+    /* إخفاء عند الانتهاء */
+    #preloader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
 
 /* =========================================
    تثبيت تأثير hover على الصفحة الحالية
    ========================================= */
 .language-option.active span {
-  transform: translateX(5px) !important;
+  transform: translateX(-5px) !important;
 }
 
 .language-option.active span::before {
@@ -1328,7 +1328,7 @@ aside {
 }
 
 .dropdown-dropdown-m ul li.active {
-  transform: translateX(5px) !important;
+  transform: translateX(-5px) !important;
 }
 
 .dropdown-dropdown-m ul li.active::before {

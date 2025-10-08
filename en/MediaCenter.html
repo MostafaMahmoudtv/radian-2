@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <title>Radian</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div id="preloader">
+      <div class="loader-text text-center">
+        <h2>Loading...</h2>
+        <div class="loading-line">
+          <div class="progress text-c'" id="progress-bar"></div>
+        </div>
+        <h3 class="mt-4 text-[#1E4A6E] text-4xl">Engineering Excellence</h3>
+      </div>
+    </div>
+
+    <div class="header z-50" id="header">
+      <div class="logo">
+        <a href="../index.html" class="cursor-pointer">
+          <img src="/assets/Radian-Logo.webp" alt="Logo" id="logo" />
+        </a>
+      </div>
+
+      <div class="nav flex justify-center">
+        <ul class="flex font-medium">
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              <a href="about.html"> About Us </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span>
+                  <a href="about.html"> Overview</a>
+                </span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="sustainability.html">Sustainability</a></span>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              <a href="services.html"> Services </a>
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="ar"
+              >
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span><a href="sustainability.html">Sustainability</a></span>
+                </button>
+              </div>
+              <div
+                class="language-option flex items-center text-black"
+                data-lang="en"
+              >
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                >
+                  <span><a href="urban-planning.html">Urban Planning</a></span>
+                </button>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <!-- Button -->
+                <button
+                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                >
+                  <span class="w-[100%] text-left">
+                    <a href="engineering-studies.html" class="">
+                      Engineering Studies
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  <i class="fa-solid fa-angle-right arrow"></i>
+                </button>
+                <!-- Submenu -->
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 py-8">
+                    <a href="services/traffic-studies.html">
+                      <li class="px-4 cursor-pointer">Traffic Studies</li>
+                    </a>
+                    <a href="services/hydrological-studies.html">
+                      <li class="px-4 cursor-pointer">Hydrological Studies</li>
+                    </a>
+                    <a href="services/environmental-studies.html">
+                      <li class="px-4 cursor-pointer">Environmental Studies</li>
+                    </a>
+                    <a href="services/geotechnical.html">
+                      <li class="px-4 cursor-pointer">Geotechnical Studies</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <button
+                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                >
+                  <span class="w-[100%] text-left">
+                    <a href="infrastructure.html" class=""> Infrastructure </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  <i class="fa-solid fa-angle-right arrow"></i>
+                </button>
+
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/bridges.html">
+                      <li class="px-4 cursor-pointer">
+                        Roads, Bridges, and Tunnels
+                      </li>
+                    </a>
+                    <a href="services/water.html">
+                      <li class="px-4 cursor-pointer">
+                        Water and Sanitation Networks
+                      </li>
+                    </a>
+                    <a href="services/flood.html">
+                      <li class="px-4 cursor-pointer">Flood Risk Mitigation</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper dropdownBtn"
+              >
+                <button
+                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                >
+                  <span class="w-[100%] text-left">
+                    <a href="architectural-and-structural.html" class="">
+                      Architectural & Structural
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  <i class="fa-solid fa-angle-right arrow"></i>
+                </button>
+
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/arcdesigns.html">
+                      <li class="px-4 cursor-pointer">Architectural Designs</li>
+                    </a>
+                    <a href="services/InteriorDesigns.html">
+                      <li class="px-4 cursor-pointer">Interior Design</li>
+                    </a>
+                    <a href="services/landscapeDesigne.html">
+                      <li class="px-4 cursor-pointer">Landscape Design</li>
+                    </a>
+                    <a href="services/structuralDesigns.html">
+                      <li class="px-4 cursor-pointer">Structural Design</li>
+                    </a>
+                    <a href="services/mep.html">
+                      <li class="px-4 cursor-pointer">
+                        Electrical, Mechanical & Plumbing Design (MEP)
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+
+              <button
+                class="language-option py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="support.html"> Support & Management </a></span>
+              </button>
+
+              <div
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
+              >
+                <button
+                  class="dropdownBtn inline-flex justify-between pr-2 py-2 w-[100%] transition"
+                >
+                  <span class="w-[100%] text-left">
+                    <a href="engineering-supervision.html" class="">
+                      Engineering Supervision
+                    </a>
+                  </span>
+                  <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+                  <i class="fa-solid fa-angle-right arrow"></i>
+                </button>
+
+                <div
+                  class="dropdownMenu absolute w-48 hidden z-10 dropdown-dropdown-m"
+                >
+                  <ul class="py-2 text-right flex flex-col m-0 p-0 space-y-0">
+                    <a href="services/facilities-management.html">
+                      <li class="px-4 cursor-pointer">Facilities Management</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative group cursor-pointer">
+            <span> <a href="MediaCenter.html"> Media Center </a> </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+
+          <li class="relative group cursor-pointer">
+            <span>
+              <a href="careers.html">Careers</a>
+            </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+
+          <li class="relative group cursor-pointer">
+            <span>
+              <a href="ContactUs.html"> Contact Us </a>
+            </span>
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+
+          <li class="relative group cursor-pointer language-dropdown">
+            <span class="flex items-center">
+              Language
+              <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
+            </span>
+
+            <span
+              class="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-content absolute top-full right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+            >
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="ar"
+              >
+                <span><a href="../ar/index.html">Arabic</a></span>
+              </div>
+              <div
+                class="language-option px-4 py-2 flex items-center text-black"
+                data-lang="en"
+              >
+                <span><a href="../index.html">English</a></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="menuIcon" class="icon">
+        <button
+          class="icon-square w-7 h-7 flex items-center justify-center p-0 hidden md:block"
+        >
+          <div class="grid grid-cols-3 grid-rows-3 gap-[6px]">
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+            <span
+              class="block w-[4px] h-[4px] bg-white rounded-full points"
+            ></span>
+          </div>
+        </button>
+        <button
+          class="elementskit-menu-hamburger elementskit-menu-toggler md:hidden"
+          type="button"
+          aria-label="hamburger-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <g id="Frame 6">
+              <rect
+                id="Rectangle 4"
+                x="2"
+                y="9"
+                width="27"
+                height="3"
+                fill="white"
+              ></rect>
+              <rect
+                id="Rectangle 5"
+                x="2"
+                y="21"
+                width="27"
+                height="3"
+                fill="white"
+              ></rect>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 z-[1000] bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <!-- side panel (من الشمال) -->
+    <aside
+      id="sidePanel"
+      class="fixed top-0 right-0 z-50 h-full w-80 max-w-[92vw] bg-white shadow-xl transform translate-x-full transition-transform duration-300 overflow-auto flex flex-col justify-between sidePanel"
+    >
+      <!-- زر الإغلاق -->
+      <div class="p-5 flex justify-end top-aside">
+        <button
+          id="closeBtn"
+          aria-label="Close menu"
+          class="text-2xl text-slate-500 hover:text-slate-700"
+        >
+          ✕
+        </button>
+        <div class="ml-8">
+          <a href="../index.html" class="w-[100%] cursor-pointer">
+            <img
+              src="/assets/Logo-Dark.webp"
+              class="w-60 sm:w-40 md:w-48 lg:hidden"
+              alt="Radian-Logo"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div
+        class="flex-1 flex flex-col items-center justify-start p-6 space-y-8 text-slate-700 text-center hidden md:block aside-content"
+      >
+        <!-- اللوجو كصورة -->
+        <a href="../index.html" class="w-[100%] cursor-pointer">
+          <img
+            src="/assets/Logo-Dark.webp"
+            alt="Radian Logo"
+            class="w-64 h-auto m-2 mb-[100px]"
+          />
+        </a>
+
+        <h3 class="text-2xl my-16 text-[#1A4E81]">Contact Info</h3>
+        <p class="hover:text-blue-400 my-4 cursor-pointer">
+          <i class="fa-solid fa-envelope fa-2xl"></i>
+          <a href="mailto:info@radian.sa" class="px-2 text-xl"
+            >info@radian.sa</a
+          >
+        </p>
+        <p class="text-xl my-4 hover:text-blue-400 cursor-pointer">
+          <i class="fa-solid fa-phone"></i>
+          <span class="px-2"> 920010805</span>
+        </p>
+
+        <div class="hover:text-blue-400 text-2xl cursor-pointer">
+          <h3 class="mt-8 mb-4 text-3xl font-semibold text-blue-700">
+            Office Address
+          </h3>
+          <p>RADIAN Head office – Riyadh</p>
+          <p>RADIAN Buraidah office – Qassim</p>
+          <p>RADIAN Hail Branch – Hail</p>
+        </div>
+        <div class="flex gap-3 mt-[100px] justify-center">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- أيقونة LinkedIn -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#1a4e81]"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- النص F -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#1a4e81]"
+            >
+              <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
+            </span>
+
+            <!-- الدائرة البيضاء -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <section class="relative h-[500px] w-full">
+      <!-- Image -->
+      <img
+        src="/assets/Engineering-Studies-1.webp"
+        class="w-full h-[82vh] brightness-[65%] object-cover"
+        alt="media center"
+      />
+
+      <!-- Text over the image -->
+      <div
+        class="absolute top-1/3 left-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700 z-10"
+      >
+        <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
+          Media Center
+        </h2>
+        <a
+          id="sliderBtn"
+          href="#myform"
+          class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+        >
+          <span class="inline-flex">
+            Inquiry
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+                fill="white"
+              /></svg
+          ></span>
+        </a>
+      </div>
+    </section>
+
+    <section
+      class="grid w-full mt-16 py-12 px-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center text-center space-y-4 group">
+        <div class="relative w-full h-[500px] cursor-pointer">
+          <a href="services/water-and-sanitary.html" class="cursor-pointer">
+            <img
+              src="/assets/water.webp"
+              alt="water"
+              class="w-full h-full object-cover"
+            />
+          </a>
+          <!-- Blur overlay -->
+          <div
+            class="absolute inset-0 bg-white/30 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+          ></div>
+        </div>
+        <a href="services/water-and-sanitary.html" class="w-[100%] text-right">
+          <h2
+            class="text-xl w-[100%] text-left hover:text-sky-400 transition-text duration-500 cursor-pointer"
+          >
+            Qassim Municipality Launches a Pioneering Stormwater Drainage
+            Project
+          </h2>
+        </a>
+
+        <p class="text-gray-600 text-sm text-left">
+          The Qassim Municipality announced the implementation of a strategic
+          project for stormwater drainage using advanced horizontal drilling
+          technology...
+        </p>
+
+        <div class="w-full flex justify-start">
+          <a
+            href="services/water-and-sanitary.html"
+            class="text-base transition-transform duration-500 hover:rotate-180"
+          >
+            <i
+              class="fa-solid fa-plus text-black fa-sm inline-block transform origin-center hover:text-sky-400"
+            ></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center text-center space-y-4 group">
+        <div class="relative w-full h-[500px] cursor-pointer">
+          <a href="services/engSoltan.html" class="cursor-pointer">
+            <img
+              src="/assets/mediacenter2.webp"
+              alt="mediacenter2"
+              class="w-full h-full object-cover"
+            />
+          </a>
+          <!-- Blur overlay -->
+          <div
+            class="absolute inset-0 bg-white/30 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+          ></div>
+        </div>
+
+        <a href="services/engSoltan.html" class="w-[100%] text-right">
+          <h2
+            class="text-xl w-[100%] text-left hover:text-sky-400 transition-text duration-500 cursor-pointer"
+          >
+            Engineer Sultan Al-Aqab Elected Chairman of the National Committee
+            for Engineering Consulting Offices
+          </h2>
+        </a>
+
+        <p class="text-gray-600 text-sm text-left">
+          In a significant achievement for the engineering sector in Saudi
+          Arabia, Engineer Sultan Al-Aqab has been elected as Chairman of the
+          company...
+        </p>
+
+        <div class="w-full flex justify-start">
+          <a
+            href="services/engSoltan.html"
+            class="text-base transition-transform duration-500 hover:rotate-180"
+          >
+            <i
+              class="fa-solid fa-plus text-black fa-sm inline-block transform origin-center hover:text-sky-400"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[#CCE4FF] rounded-br-[100px] py-32 px-6 md:px-16 mt-16"
+      id="myform"
+    >
+      <div
+        dir="ltr"
+        class="flex flex-col md:flex-row justify-between items-start gap-10"
+      >
+        <!-- form -->
+
+        <!-- text -->
+        <div class="w-full md:w-1/2 text-left space-y-4">
+          <span
+            class="inline-block bg-blue-50 px-3 py-1 rounded text-gray-700 text-sm"
+          >
+            INQUIRE
+          </span>
+          <h3 class="text-[2.5rem] max-w-xl text-[#1A4E81]">
+            <div class="inline">
+              Do you have questions or need more information?
+            </div>
+            <span class="text-[#4BA1F7] italic inline"
+              >We’re here to help.</span
+            >
+          </h3>
+        </div>
+        <div class="w-full md:w-1/2">
+          <form dir="rtl" class="space-y-6">
+            <!-- name + email -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="w-full md:w-1/2">
+                <label for="name" class="block mb-2 text-gray-700 font-medium"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+                />
+              </div>
+              <div class="w-full md:w-1/2">
+                <label for="email" class="block mb-2 text-gray-700 font-medium"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2"
+                />
+              </div>
+            </div>
+
+            <!-- message -->
+            <div>
+              <label for="message" class="block mb-2 text-gray-700 font-medium"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                class="w-full border-b border-gray-600 bg-transparent focus:outline-none py-2 h-28 resize-none"
+              ></textarea>
+            </div>
+
+            <!-- send button -->
+            <a
+              href="#"
+              class="block bg-[#3779BB] text-white px-[0px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[25%] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 choosen-radian-btn"
+            >
+              🡥 Send
+            </a>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto text-center px-6 brands">
+        <!-- Title -->
+        <span
+          class="text-gray-700 text-sm py-[0.3rem] px-[0.4rem] bg-[#3779BB3B] w-fit"
+        >
+          SUCCESS PARTNERS
+        </span>
+        <h2 class="text-2xl md:text-3xl text-sky-700 my-6">
+          Government Sector
+        </h2>
+
+        <!-- Government Slider -->
+        <div class="swiper mySwiper mb-12">
+          <div class="swiper-wrapper flex items-center">
+            <!-- Logos -->
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Minisrty-of-Health.svg"
+                alt="Ministry of Health"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/monstiyof-ewa.webp"
+                alt="Ministry of Environment"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/monistory-of-education.svg"
+                alt="Ministry of Education"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/moj.svg"
+                alt="Ministry of Justice"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/omeelqura.webp"
+                alt="Umm Al-Qura University"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/wafi-svg.webp" alt="Wafi" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/amanh-hael.webp"
+                alt="Hail Municipality"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/amanh-reyadh.webp"
+                alt="Riyadh Municipality"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Ministry-Traffic.svg"
+                alt="Traffic and Safety"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/neom.webp" alt="NEOM" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/monistory-of-education.svg"
+                alt="Ministry of Education"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/wataniah.webp"
+                alt="National Housing Company"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/amanh-qaseem.webp"
+                alt="Qassim Municipality"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/alahasa-municipality.webp"
+                alt="Al-Ahsa Municipality"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/islamic-cares.svg"
+                alt="Ministry of Islamic Affairs"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/space-geology.svg"
+                alt="Geological Survey Authority"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/morafic-banner.webp"
+                alt="Morafiq"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Ministry-of-FA.svg"
+                alt="Ministry of Foreign Affairs"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Elec-componeysa.svg"
+                alt="Saudi Electricity Company"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/baladiat-wezarah.webp"
+                alt="Ministry of Municipal Affairs"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Technical-vtc.svg"
+                alt="Technical and Vocational Training Corporation"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/National-center-E.webp"
+                alt="National Center for Environmental Compliance"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/amanh-mokadash.webp"
+                alt="Holy Capital Municipality"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/monstry-of-t.webp"
+                alt="Ministry of Transport and Logistics Services"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/water-companey.webp"
+                alt="National Water Company"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Aramco.svg" alt="Saudi Aramco" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/modon.svg" alt="MODON" class="h-20" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Private Sector -->
+        <h2 class="text-2xl md:text-3xl text-sky-700 my-6">Private Sector</h2>
+
+        <!-- Private Sector Slider -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper flex items-center">
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/manafea-hold.webp"
+                alt="Manafea Holding"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/qtaf.webp" alt="Qitaf" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/alaqtar.webp" alt="Alaqtar" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/othem.webp" alt="Othaim" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/alestedamh.webp"
+                alt="Al Estidama Holding"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Rajhi-development.webp"
+                alt="Al Rajhi Development"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Herfy-01.svg" alt="Herfy" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Rag.webp" alt="RAG Company" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/anan.webp" alt="Anan" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Movenpick.webp" alt="Mövenpick" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Saudi-tum.webp" alt="Saudi Tum" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/abyatona.webp" alt="Abyatona" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/manafea-hold.webp"
+                alt="Manafea Holding"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Etehad-elrajehi.webp"
+                alt="Al Rajhi Real Estate Union"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/fadl-low.webp" alt="Fadl" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/Ao-Pur-Sitelogo-1-1.webp"
+                alt="Othaim"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/ilf.webp" alt="ILF" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Ledar.webp" alt="Ledar" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/alfanar.webp" alt="Alfanar" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/JADWA_LOGO_ARABIC.svg"
+                alt="Jadwa"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/daam.webp" alt="Daam" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/m-rajechi-co.webp"
+                alt="M. Rajhi Co."
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/Zood.webp" alt="Zood" class="h-20" />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img
+                src="/assets/abdollah-salleh.webp"
+                alt="Abdullah Saleh"
+                class="h-20"
+              />
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <img src="/assets/alaqtar.webp" alt="Alaqtar" class="h-20" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#17314b] text-white py-10 mt-auto">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Logo -->
+        <div class="flex justify-center mb-6">
+          <img src="/assets/Radian-Logo.webp" alt="Radian Logo" class="h-12" />
+        </div>
+
+        <!-- Links -->
+        <div
+          class="flex flex-wrap justify-center gap-8 mb-6 text-sm md:text-base pages-links"
+        >
+          <a href="about.html" class="hover:text-sky-400">About Us</a>
+          <a href="services.html" class="hover:text-sky-400">Services</a>
+          <a href="careers.html" class="hover:text-sky-400">Careers</a>
+          <a href="ContactUs.html" class="hover:text-sky-400">Contact Us</a>
+          <a href="terms.html" class="hover:text-sky-400">Terms</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex gap-3 m-4 justify-center">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- LinkedIn Icon -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin-in fa-2xl"></i>
+            </span>
+
+            <!-- White Circle -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="relative group w-[50px] h-[50px] rounded-full bg-[#5d6f81] flex items-center justify-center overflow-hidden"
+          >
+            <!-- Facebook Icon -->
+            <span
+              class="relative z-10 text-white transition-colors duration-300 group-hover:text-[#5d6f81]"
+            >
+              <i aria-hidden="true" class="fab fa-facebook-f fa-2xl"></i>
+            </span>
+
+            <!-- White Circle -->
+            <span
+              class="absolute inset-0 rounded-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"
+            ></span>
+          </a>
+        </div>
+
+        <!-- Text -->
+        <p class="text-center text-xl text-gray-300">All Rights Reserved ©</p>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button with Progress Circle -->
+    <a
+      href="#"
+      id="scrollToTop"
+      class="fixed bottom-6 left-6 w-12 h-12 rounded-full border-2 border-white flex items-center justify-center z-50 bg-black"
+    >
+      <svg
+        class="rotate-circle absolute"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          id="progressPath"
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          stroke="#fff"
+          stroke-width="2"
+          fill="none"
+        />
+      </svg>
+      <i class="fa-solid fa-arrow-up-long text-white fa-xl float-icon"></i>
+    </a>
+
+    <script src="/ar/index.js"></script>
+  </body>
+</html>
