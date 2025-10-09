@@ -947,6 +947,12 @@ aside {
   .radian-choosen div {
     margin-top: 20px;
   }
+  .object-cover{
+    height: 80vh;
+  }
+  #sliderText >div{
+font-size: 50px;
+  }
 }
 
 /* تابلت (من 641px لحد 1024px) */
@@ -1092,7 +1098,7 @@ aside {
     width: 17px;
   }
   .header .logo {
-    padding: 0.3rem 0;
+    padding: 0.7rem 0.7rem;
     flex: 4;
   }
   .slider-about {
@@ -1184,7 +1190,6 @@ aside {
   z-index: 999999;
   transition: opacity 0.2s ease, visibility 0.5s ease;
     font-family: "DM Sans";
-font-weight: 700;
 }
 
 /* النص */
