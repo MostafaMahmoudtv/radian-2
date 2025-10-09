@@ -947,11 +947,13 @@ aside {
   .radian-choosen div {
     margin-top: 20px;
   }
-  .object-cover{
-    height: 60vh !important;
-  }
+
   #sliderText >div{
-font-size: 40px;
+font-size: 2.4rem;
+  }
+  .first-section{
+height: 60vh !important;
+overflow: hidden !important;
   }
 }
 
