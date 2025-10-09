@@ -45,7 +45,7 @@ body {
 
 .header .logo img {
   width: 220px;
-  padding: 0.4rem 0;
+  padding: 0 0;
 }
 
 .header .nav {
@@ -1183,6 +1183,8 @@ aside {
   flex-direction: column;
   z-index: 999999;
   transition: opacity 0.2s ease, visibility 0.5s ease;
+    font-family: "DM Sans";
+font-weight: 700;
 }
 
 /* النص */

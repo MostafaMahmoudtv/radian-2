@@ -116,7 +116,7 @@ if (
       if (words.length > 1) {
         sliderText.innerHTML = `
           ${words[0]} 
-          <span class="text-blue-400 italic slider-home-colored">${words[1]}</span>
+          <span class="text-blue-400 italic font-bold slider-home-colored ">${words[1]}</span>
           ${words.slice(2).join(" ")}
         `;
       } else {
