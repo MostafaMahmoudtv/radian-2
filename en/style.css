@@ -948,7 +948,7 @@ aside {
     margin-top: 20px;
   }
   .object-cover{
-    height: 60vh;
+    height: 60vh !important;
   }
   #sliderText >div{
 font-size: 40px;
