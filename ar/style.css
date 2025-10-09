@@ -140,7 +140,7 @@ body {
   transform: translateY(-50%) translateX(10px);
   opacity: 0;
   color: #000;
-    font-weight: bold;
+  font-weight: bold;
   height: 1px;
   width: 12px;
   background-color: rgb(0, 0, 0);
@@ -176,7 +176,7 @@ body {
   margin-right: 0 !important;
   padding-left: 0.3rem;
   color: #000;
-    font-weight: bold;
+  font-weight: bold;
   height: 1px;
   width: 12px;
   background-color: rgb(0, 0, 0);
@@ -215,11 +215,10 @@ body {
   transform: translateX(10px);
 }
 
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-.dropdownBtn{
+.dropdownBtn {
   width: 100%;
   padding: 0.4rem;
   display: flex !important;
@@ -268,7 +267,6 @@ body {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
-
 
 #scrollToTop {
   opacity: 0;
@@ -816,10 +814,10 @@ aside {
   .brands div {
     display: flex;
   }
-    .icons2-about img {
+  .icons2-about img {
     width: 70px;
   }
-    .about-section-content {
+  .about-section-content {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -828,6 +826,17 @@ aside {
   .about-section-content h2 {
     text-align: center;
   }
+  #sliderText > div {
+    font-size: 2.4rem;
+  }
+  .first-section {
+    height: 60vh !important;
+    overflow: hidden !important;
+  }
+  .first-section h2 div div ,.first-section div h2{
+    font-size: 2rem !important;
+  }
+  .first-section div h2
 }
 
 @media (min-width: 1024px) {
@@ -845,7 +854,7 @@ aside {
     margin-top: 210px;
     margin-right: -23px;
   }
- 
+
   #projects-list {
     display: flex;
     flex-direction: row;
@@ -940,7 +949,7 @@ aside {
   .radian-choosen div {
     margin-top: 20px;
   }
-    .icons2-about img {
+  .icons2-about img {
     width: 70px;
   }
 }
@@ -1010,7 +1019,6 @@ aside {
     font-size: 20px !important;
     margin-top: 15px;
   }
-
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
@@ -1097,9 +1105,9 @@ aside {
     text-align: center;
   }
   .dropdownMenu {
-    position:relative !important;
-  top: 0 !important;
-  right: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
   }
 }
 @media (max-width: 1024px) {
@@ -1282,53 +1290,53 @@ aside {
   opacity: 1;
   transition-delay: 0.3s; /* يبدأ بعد ما زر + يخلص */
 }
-    #preloader {
-      position: fixed;
-      inset: 0;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 9999;
-      transition: opacity 0.6s ease, visibility 0.6s ease;
-    }
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
 
-    /* النص */
-    .loader-text h2 {
-      font-size: 33px !important;
-      color: #1E4A6E;
-      margin: 0.5rem 0;
-    }
+/* النص */
+.loader-text h2 {
+  font-size: 33px !important;
+  color: #1e4a6e;
+  margin: 0.5rem 0;
+}
 
-    /* الخط الخارجي */
-    .loading-line {
-      position: relative;
-      width: 200px;
-      height: 4px;
-      background: rgba(30, 74, 110, 0.2);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: 12px;
-    }
+/* الخط الخارجي */
+.loading-line {
+  position: relative;
+  width: 200px;
+  height: 4px;
+  background: rgba(30, 74, 110, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 12px;
+}
 
-    /* شريط التقدم الحقيقي */
-    .progress {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 0%;
-      background: #1A4E81;
-      transition: width 0.3s ease;
-      transform-origin: left;
-    }
+/* شريط التقدم الحقيقي */
+.progress {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #1a4e81;
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
 
-    /* إخفاء عند الانتهاء */
-    #preloader.fade-out {
-      opacity: 0;
-      visibility: hidden;
-    }
+/* إخفاء عند الانتهاء */
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
 
 /* =========================================
    تثبيت تأثير hover على الصفحة الحالية
@@ -1351,101 +1359,99 @@ aside {
   transform: translateY(-50%) translateX(0) !important;
 }
 
-       .slider-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .slider-indicator {
-    position: absolute;
-    right: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 10;
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
 }
 
 .border-frame {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid white;
-    border-radius: 50%;
-    transition: transform 0.5s ease; /* نرجع transform */
-    z-index: 1;
-        top: 17px;
-    left: 50%;
-    transform: translateX(-50%); /* توسيط أفقي */
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: transform 0.5s ease; /* نرجع transform */
+  z-index: 1;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%); /* توسيط أفقي */
 }
 
 .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: 17px 0;
-    position: relative;
-    z-index: 2;
-    transition: background-color 0.3s ease;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 17px 0;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
-    background-color: white;
+  background-color: white;
 }
 
 .slide-number {
-    color: white;
-    font-weight: bold;
-    margin: 8px 0;
-    position: relative;
-    z-index: 2;
-    font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin: 8px 0;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
 }
 
 .slide-content {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    color: white;
-    z-index: 5;
-    transition: all 0.5s ease;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  z-index: 5;
+  transition: all 0.5s ease;
 }
 
 .slider-home-colored {
-    color: #60a5fa;
-    font-style: italic;
+  color: #60a5fa;
+  font-style: italic;
 }
 
 .dots-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    height: 80px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  justify-content: space-between;
 }
 
 /* تأثير الضباب */
 .fog-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(226, 233, 227, 0.25); /* لون أبيض هادي منتشـر */
-    /* دعم للسفاري */
-    z-index: 20;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(226, 233, 227, 0.25); /* لون أبيض هادي منتشـر */
+  /* دعم للسفاري */
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
-
-
 .fog-overlay.active {
-    opacity: 1;
+  opacity: 1;
 }
