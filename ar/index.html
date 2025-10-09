@@ -524,16 +524,15 @@
         <div
           class="absolute left-[8%] top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 z-10"
         >
-          <h3 class="text-white">01</h3>
-          <button
-            class="dot w-4 h-4 rounded-full border-2 border-white"
-            data-slide="0"
-          ></button>
-          <button
-            class="dot w-4 h-4 rounded-full border-2 border-white"
-            data-slide="1"
-          ></button>
-          <h3 class="text-white">02</h3>
+             <div class="slider-indicator">
+            <h3 class="slide-number">01</h3>
+            <div class="dots-container">
+                <div class="border-frame" id="movingBorder"></div>
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+            </div>
+            <h3 class="slide-number">02</h3>
+        </div>
         </div>
       </div>
     </div>

@@ -52,7 +52,6 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeMenu();
 });
 
-// ========== Slider ==========
 const slides = [
   {
     img: "/assets/Slider-1.webp",
@@ -73,9 +72,26 @@ const sliderContent = document.getElementById("sliderContent");
 const sliderText = document.getElementById("sliderText");
 const sliderBtn = document.getElementById("sliderBtn");
 const dots = document.querySelectorAll(".dot");
+const movingBorder = document.getElementById("movingBorder");
+const slideNumbers = document.querySelectorAll(".slide-number");
 
-if (sliderWrapper && sliderContent && sliderText && sliderBtn && dots.length) {
+const fogOverlay = document.createElement("div");
+fogOverlay.className = "fog-overlay";
+document.body.appendChild(fogOverlay);
+
+if (
+  sliderWrapper &&
+  sliderContent &&
+  sliderText &&
+  sliderBtn &&
+  dots.length &&
+  movingBorder
+) {
+  const dotPositions = [0, 40]; 
+  
   function goToSlide(index) {
+    fogOverlay.classList.add("active");
+    
     sliderWrapper.innerHTML = "";
 
     const imgDiv = document.createElement("div");
@@ -95,19 +111,18 @@ if (sliderWrapper && sliderContent && sliderText && sliderBtn && dots.length) {
 
     setTimeout(() => {
       const fullText = slides[index].text;
-      const firstSpace = fullText.indexOf(" ");
-      let firstWord, restText;
-      if (firstSpace === -1) {
-        firstWord = fullText;
-        restText = "";
+
+      const words = fullText.split(" ");
+      if (words.length > 1) {
+        sliderText.innerHTML = `
+          ${words[0]} 
+          <span class="text-blue-400 italic slider-home-colored">${words[1]}</span>
+          ${words.slice(2).join(" ")}
+        `;
       } else {
-        firstWord = fullText.slice(0, firstSpace);
-        restText = fullText.slice(firstSpace);
+        sliderText.innerHTML = fullText;
       }
 
-      sliderText.innerHTML = `<span class="text-blue-400 italic ">${firstWord}</span>${restText}`;
-
-      // ✅ هنا التعديل: الزرار يحتوي على النص + SVG
       sliderBtn.innerHTML = `
         ${slides[index].btnText}
         <svg
@@ -124,19 +139,29 @@ if (sliderWrapper && sliderContent && sliderText && sliderBtn && dots.length) {
       sliderBtn.href = slides[index].btnLink;
 
       sliderContent.classList.remove("opacity-0", "translate-x-20");
+      
+      setTimeout(() => {
+        fogOverlay.classList.remove("active");
+      }, 300);
+      
     }, 500);
 
-    dots.forEach((dot) => dot.classList.remove("bg-white"));
-    dots[index].classList.add("bg-white");
+    const topOffset = dotPositions[index] - 9.5; // 25/2 - 6/2 = 12.5 - 3 = 9.5
+    movingBorder.style.transform = `translateY(${topOffset}px) translateX(-50%)`;
+
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[index].classList.add("active");
   }
 
   dots.forEach((dot) => {
-    dot.addEventListener("click", () => goToSlide(dot.dataset.slide));
+    dot.addEventListener("click", () => goToSlide(parseInt(dot.dataset.slide)));
   });
 
+  const initialOffset = dotPositions[0] - 9.5;
+  movingBorder.style.transform = `translateY(${initialOffset}px) translateX(-50%)`;
   goToSlide(0);
-}
 
+}
 // ========== Counter ==========
 function animateCounter(counter) {
   const target = +counter.getAttribute("data-target");
@@ -287,35 +312,36 @@ document.querySelectorAll(".nav ul li").forEach((item) => {
 });
 
 // Preloader
-  const progressBar = document.getElementById("progress-bar");
-    const preloader = document.getElementById("preloader");
-    const mainContent = document.getElementById("main-content");
+const progressBar = document.getElementById("progress-bar");
+const preloader = document.getElementById("preloader");
+const mainContent = document.getElementById("main-content");
 
-    let progress = 0;
+let progress = 0;
 
-    // نحاكي التحميل التدريجي
-    const fakeLoading = setInterval(() => {
-      if (progress < 90) { // يتوقف عند 90% إلى أن الصفحة تكمل
-        progress += Math.random() * 10;
-        if (progress > 90) progress = 90;
-        progressBar.style.width = progress + "%";
-      }
-    }, 200);
+// نحاكي التحميل التدريجي
+const fakeLoading = setInterval(() => {
+  if (progress < 90) {
+    // يتوقف عند 90% إلى أن الصفحة تكمل
+    progress += Math.random() * 10;
+    if (progress > 90) progress = 90;
+    progressBar.style.width = progress + "%";
+  }
+}, 200);
 
-    // عند اكتمال تحميل الصفحة فعليًا
-    window.addEventListener("load", () => {
-      clearInterval(fakeLoading);
-      progressBar.style.width = "100%";
+// عند اكتمال تحميل الصفحة فعليًا
+window.addEventListener("load", () => {
+  clearInterval(fakeLoading);
+  progressBar.style.width = "100%";
 
-      // نديه نص ثانية علشان المستخدم يشوف الاكتمال
-      setTimeout(() => {
-        preloader.classList.add("fade-out");
-        setTimeout(() => {
-          preloader.style.display = "none";
-          mainContent.classList.remove("hidden");
-        }, 600);
-      }, 500);
-    });
+  // نديه نص ثانية علشان المستخدم يشوف الاكتمال
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+    setTimeout(() => {
+      preloader.style.display = "none";
+      mainContent.classList.remove("hidden");
+    }, 600);
+  }, 500);
+});
 // Links
 document.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", function (e) {
@@ -328,7 +354,11 @@ document.querySelectorAll("a").forEach((link) => {
     } catch (err) {
       return;
     }
-    if (url.origin === location.origin && url.pathname === location.pathname && url.hash) {
+    if (
+      url.origin === location.origin &&
+      url.pathname === location.pathname &&
+      url.hash
+    ) {
       return;
     }
     if (this.target === "_blank" || this.hasAttribute("download")) return;
@@ -433,7 +463,9 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".dropdownMenu").forEach((m) => {
         if (m !== menu) m.classList.add("hidden");
       });
-      document.querySelectorAll(".arrow").forEach((a) => a.classList.remove("rotate-90"));
+      document
+        .querySelectorAll(".arrow")
+        .forEach((a) => a.classList.remove("rotate-90"));
 
       // لو مش مفتوح → افتحه
       if (!isOpen) {
@@ -449,14 +481,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // اقفل الكل لما تضغط برا
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".dropdownWrapper")) {
-      document.querySelectorAll(".dropdownMenu").forEach((m) => m.classList.add("hidden"));
-      document.querySelectorAll(".arrow").forEach((a) => a.classList.remove("rotate-90"));
+      document
+        .querySelectorAll(".dropdownMenu")
+        .forEach((m) => m.classList.add("hidden"));
+      document
+        .querySelectorAll(".arrow")
+        .forEach((a) => a.classList.remove("rotate-90"));
     }
   });
 });
- // تحديد الصفحة الحالية (الملف المفتوح)
+// تحديد الصفحة الحالية (الملف المفتوح)
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
   const allLinks = document.querySelectorAll(
     ".language-option a, .nav a, .dropdown-dropdown-m ul li a"

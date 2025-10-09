@@ -54,40 +54,51 @@ document.addEventListener("keydown", (e) => {
 
 // ========== Slider (مُحدّث) ==========
 const slides = [
-  {
+    // استخدم backticks علشان HTML multi-line، هنا النص + sv
+   {
     img: "/assets/Slider-1.webp",
     text: "التميّز الهندسي عبر القارات",
-    // استخدم backticks علشان HTML multi-line، هنا النص + svg
-    btnHTML: `
-      <span>اعرف المزيد عن راديان</span>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2">
-        <path d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"/>
-      </svg>
-    `,
+    btnText: "اعرف المزيد عن راديان",
     btnLink: "about.html",
   },
   {
     img: "/assets/Slider-2.webp",
     text: "تحويل الأفكار إلى تحف هندسية",
-    btnHTML: `
-      <span>استعرض خدماتنا</span>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2">
-        <path d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"/>
-      </svg>
-    `,
+    btnText: "استعرض خدماتنا",
     btnLink: "services.html",
   },
 ];
 
+
 const sliderWrapper = document.getElementById("sliderWrapper");
 const sliderContent = document.getElementById("sliderContent");
 const sliderText = document.getElementById("sliderText");
-const sliderBtn = document.getElementById("sliderBtn"); // <-- لازم يكون <a id="sliderBtn"></a> في HTML
+const sliderBtn = document.getElementById("sliderBtn");
 const dots = document.querySelectorAll(".dot");
+const movingBorder = document.getElementById("movingBorder");
+const slideNumbers = document.querySelectorAll(".slide-number");
 
-if (sliderWrapper && sliderContent && sliderText && sliderBtn && dots.length) {
-  function goToSlide(rawIndex) {
-    const index = Number(rawIndex) || 0; // تأكد انو عدد
+// إنشاء عنصر الضباب
+const fogOverlay = document.createElement("div");
+fogOverlay.className = "fog-overlay";
+document.body.appendChild(fogOverlay);
+
+if (
+  sliderWrapper &&
+  sliderContent &&
+  sliderText &&
+  sliderBtn &&
+  dots.length &&
+  movingBorder
+) {
+  // تحديد مواقع النقاط مسبقاً
+  const dotPositions = [0, 40]; // المسافات بين النقاط
+  
+  function goToSlide(index) {
+    // تفعيل تأثير الضباب
+    fogOverlay.classList.add("active");
+    
+    // تحديث الخلفية
     sliderWrapper.innerHTML = "";
 
     const imgDiv = document.createElement("div");
@@ -99,59 +110,75 @@ if (sliderWrapper && sliderContent && sliderText && sliderBtn && dots.length) {
 
     sliderWrapper.appendChild(imgDiv);
 
-    // scale animation
+    // حركة التكبير البسيطة
     setTimeout(() => {
       imgDiv.style.transform = "scale(1.23)";
     }, 50);
 
-    // hide content then show (animation)
+    // تحريك النص للخارج مؤقتًا
     sliderContent.classList.add("opacity-0", "translate-x-20");
 
     setTimeout(() => {
-      // تقسيم الكلمة الأولى لو حابب التأثير
       const fullText = slides[index].text;
-      const firstSpace = fullText.indexOf(" ");
-      let firstWord, restText;
-      if (firstSpace === -1) {
-        firstWord = fullText;
-        restText = "";
+
+      // ✨ تقسيم الجملة لكلمات وتلوين التانية فقط
+      const words = fullText.split(" ");
+      if (words.length > 1) {
+        sliderText.innerHTML = `
+          ${words[0]} 
+          <span class="text-blue-400 italic slider-home-colored">${words[1]}</span>
+          ${words.slice(2).join(" ")}
+        `;
       } else {
-        firstWord = fullText.slice(0, firstSpace);
-        restText = fullText.slice(firstSpace);
+        sliderText.innerHTML = fullText;
       }
 
-      sliderText.innerHTML = `<span class="text-blue-400 italic">${firstWord}</span>${restText}`;
+      sliderBtn.innerHTML = `
+        ${slides[index].btnText}
+        <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"
+                fill="white"
+              /></svg
+          >
+      `;
+      sliderBtn.href = slides[index].btnLink;
 
-      // هنا الضروري: لو btnHTML موجود نستخدم innerHTML عشان الـSVG يظهر
-      if (slides[index].btnHTML) {
-        // تأكد إن sliderBtn عنصر <a> أو عنصر يسمح بـ innerHTML
-        sliderBtn.innerHTML = slides[index].btnHTML;
-        sliderBtn.setAttribute("href", slides[index].btnLink || "#");
-      } else {
-        // fallback لو لسه btnText
-        sliderBtn.textContent = slides[index].btnText || "";
-        sliderBtn.setAttribute("href", slides[index].btnLink || "#");
-      }
-
+      // إعادة الظهور بانسيابية
       sliderContent.classList.remove("opacity-0", "translate-x-20");
-    }, 300);
+      
+      // إزالة تأثير الضباب
+      setTimeout(() => {
+        fogOverlay.classList.remove("active");
+      }, 300);
+      
+    }, 500);
 
-    // dots update
-    dots.forEach((dot) => dot.classList.remove("bg-white"));
-    const activeDot = dots[index];
-    if (activeDot) activeDot.classList.add("bg-white");
+    // تحريك الدائرة إلى النقطة المحددة
+    const topOffset = dotPositions[index] - 9.5; // 25/2 - 6/2 = 12.5 - 3 = 9.5
+    movingBorder.style.transform = `translateY(${topOffset}px) translateX(-50%)`;
+
+    // تحديث النقاط
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[index].classList.add("active");
   }
 
-  // إضافة listeners للدوتس (تأكد إن لكل dot فيه data-slide="0" أو "1"...)
+  // عند الضغط على أي نقطة
   dots.forEach((dot) => {
-    dot.addEventListener("click", (e) => {
-      const ds = dot.dataset.slide;
-      goToSlide(Number(ds));
-    });
+    dot.addEventListener("click", () => goToSlide(parseInt(dot.dataset.slide)));
   });
 
-  // افتح البداية
+  // أول سلايد - نحرك الدائرة للنقطة الأولى
+  const initialOffset = dotPositions[0] - 9.5;
+  movingBorder.style.transform = `translateY(${initialOffset}px) translateX(-50%)`;
   goToSlide(0);
+
 }
 
 // ========== Counter ==========
