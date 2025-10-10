@@ -746,6 +746,12 @@ aside {
     flex: 4;
     margin-right: 0.7rem;
   }
+  .slider-section {
+    height: 100vh;
+  }
+  .slider-home-container {
+    height: 100vh;
+  }
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
@@ -768,6 +774,7 @@ aside {
     height: 300px !important;
     margin: 0 !important;
     padding: 0 !important;
+    border-radius: 0 !important;
   }
   .about-section-image {
     margin: 0 !important;
@@ -835,8 +842,13 @@ aside {
   .icons2-about img {
     width: 70px;
   }
-  .radian-choosen-section .radian-choosen-contetn{
+  .radian-choosen-section .radian-choosen-contetn {
     padding-left: 1rem !important;
+  }
+
+  .view-details-section div > h2 {
+    font-size: 2.5rem !important;
+    margin-top: 2rem;
   }
 }
 
@@ -852,8 +864,7 @@ aside {
 /* موبايل (أقل من 640px) */
 @media (max-width: 768px) {
   #cardsWrapper .details-btn a {
-    margin-top: 210px;
-    margin-left: -70px !important;
+    margin-top: 13rem;
   }
 
   #projects-list {
@@ -965,8 +976,8 @@ aside {
 /* تابلت (من 641px لحد 1024px) */
 @media (max-width: 1024px) and (min-width: 641px) {
   #cardsWrapper .details-btn a {
-    margin-top: 247px;
-    margin-left: 5px;
+    margin-top: 16rem;
+    margin-left: -4rem;
   }
 
   #cardsWrapper > div {
@@ -1028,6 +1039,12 @@ aside {
   .pages-links a {
     font-size: 20px !important;
     margin-top: 15px;
+  }
+  #sliderContent {
+    max-width: 60vw;
+  }
+  #sliderContent h2 {
+    font-size: 2.5rem !important;
   }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */

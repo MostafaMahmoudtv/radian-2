@@ -729,6 +729,12 @@ aside {
     flex: 4;
     margin-right: 0.7rem;
   }
+  .slider-section {
+    height: 100vh;
+  }
+  .slider-home-container {
+    height: 100vh;
+  }
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
@@ -739,8 +745,6 @@ aside {
   .about-section {
     margin: 0 !important;
     padding: 0 !important;
-    margin-top: 240px !important;
-    height: 70vh !important;
   }
   .about-section .about-section-content {
     width: 100vw;
@@ -748,7 +752,7 @@ aside {
     padding: 0;
   }
   .about-section .about-section-content a {
-    min-width: 250px !important;
+    min-width: 260px !important;
     font-size: 16px;
   }
   .about-section > .about-section-image img {
@@ -756,6 +760,7 @@ aside {
     height: 300px !important;
     margin: 0 !important;
     padding: 0 !important;
+    border-radius: 0 !important;
   }
   .about-section-image {
     margin: 0 !important;
@@ -804,7 +809,7 @@ aside {
     font-size: 20px !important;
     width: 70%;
   }
-    .radian-choosen-section .radian-choosen-contetn{
+  .radian-choosen-section .radian-choosen-contetn {
     padding-right: 1rem !important;
   }
   .radian-choosen {
@@ -836,10 +841,10 @@ aside {
     height: 60vh !important;
     overflow: hidden !important;
   }
-  .first-section h2 div div ,.first-section div h2{
+  .first-section h2 div div,
+  .first-section div h2 {
     font-size: 2rem !important;
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -935,9 +940,7 @@ aside {
     margin: 3px 0 0 !important;
     color: #333 !important;
   }
-  .about-section {
-    margin-top: 300px !important;
-  }
+
   #cardsWrapper h3 {
     font-size: 1.3rem !important;
   }
@@ -955,7 +958,7 @@ aside {
   .icons2-about img {
     width: 70px;
   }
-    .choosen-radian-btn{
+  .choosen-radian-btn {
     min-width: 120px !important;
   }
 }
@@ -1003,7 +1006,7 @@ aside {
   .tomoh {
     width: 100vw;
     padding: 10px;
-    margin: 0;
+    margin: 0 !important;
   }
   .tomoh div {
     width: 100vw;
@@ -1025,9 +1028,16 @@ aside {
     font-size: 20px !important;
     margin-top: 15px;
   }
-  .container >div >div>h1, .container >div h3{
-  font-size: 2rem !important;
-}
+  .container > div > div > h1,
+  .container > div h3 {
+    font-size: 2rem !important;
+  }
+  #sliderContent {
+    max-width: 60vw;
+  }
+  #sliderContent h2 {
+    font-size: 2.5rem !important;
+  }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
@@ -1064,7 +1074,7 @@ aside {
     margin-top: 70px;
     height: 230px;
   }
-     .choosen-radian-btn{
+  .choosen-radian-btn {
     min-width: 120px !important;
   }
 }
