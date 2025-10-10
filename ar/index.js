@@ -54,8 +54,8 @@ document.addEventListener("keydown", (e) => {
 
 // ========== Slider (مُحدّث) ==========
 const slides = [
-    // استخدم backticks علشان HTML multi-line، هنا النص + sv
-   {
+  // استخدم backticks علشان HTML multi-line، هنا النص + sv
+  {
     img: "/assets/Slider-1.webp",
     text: "التميّز الهندسي عبر القارات",
     btnText: "اعرف المزيد عن راديان",
@@ -68,7 +68,6 @@ const slides = [
     btnLink: "services.html",
   },
 ];
-
 
 const sliderWrapper = document.getElementById("sliderWrapper");
 const sliderContent = document.getElementById("sliderContent");
@@ -93,11 +92,11 @@ if (
 ) {
   // تحديد مواقع النقاط مسبقاً
   const dotPositions = [0, 40]; // المسافات بين النقاط
-  
+
   function goToSlide(index) {
     // تفعيل تأثير الضباب
     fogOverlay.classList.add("active");
-    
+
     // تحديث الخلفية
     sliderWrapper.innerHTML = "";
 
@@ -123,13 +122,12 @@ if (
 
       // ✨ تقسيم الجملة لكلمات وتلوين التانية فقط
       const words = fullText.split(" ");
-      if (words.length > 1) {
-        sliderText.innerHTML = `
-          ${words[0]} 
-          <span class="text-blue-400 italic slider-home-colored">${words[1]}</span>
-          ${words.slice(2).join(" ")}
-        `;
-      } else {
+      if (words.length > 1){
+  sliderText.innerHTML = `
+    <span class="text-blue-400 italic slider-home-colored">${words[0]}</span>
+    ${words.slice(1).join(" ")}
+  `;
+}  else {
         sliderText.innerHTML = fullText;
       }
 
@@ -152,12 +150,11 @@ if (
 
       // إعادة الظهور بانسيابية
       sliderContent.classList.remove("opacity-0", "translate-x-20");
-      
+
       // إزالة تأثير الضباب
       setTimeout(() => {
         fogOverlay.classList.remove("active");
       }, 300);
-      
     }, 500);
 
     // تحريك الدائرة إلى النقطة المحددة
@@ -178,7 +175,6 @@ if (
   const initialOffset = dotPositions[0] - 9.5;
   movingBorder.style.transform = `translateY(${initialOffset}px) translateX(-50%)`;
   goToSlide(0);
-
 }
 
 // ========== Counter ==========
@@ -331,35 +327,36 @@ document.querySelectorAll(".nav ul li").forEach((item) => {
 });
 
 // Preloader
-  const progressBar = document.getElementById("progress-bar");
-    const preloader = document.getElementById("preloader");
-    const mainContent = document.getElementById("main-content");
+const progressBar = document.getElementById("progress-bar");
+const preloader = document.getElementById("preloader");
+const mainContent = document.getElementById("main-content");
 
-    let progress = 0;
+let progress = 0;
 
-    // نحاكي التحميل التدريجي
-    const fakeLoading = setInterval(() => {
-      if (progress < 90) { // يتوقف عند 90% إلى أن الصفحة تكمل
-        progress += Math.random() * 10;
-        if (progress > 90) progress = 90;
-        progressBar.style.width = progress + "%";
-      }
-    }, 200);
+// نحاكي التحميل التدريجي
+const fakeLoading = setInterval(() => {
+  if (progress < 90) {
+    // يتوقف عند 90% إلى أن الصفحة تكمل
+    progress += Math.random() * 10;
+    if (progress > 90) progress = 90;
+    progressBar.style.width = progress + "%";
+  }
+}, 200);
 
-    // عند اكتمال تحميل الصفحة فعليًا
-    window.addEventListener("load", () => {
-      clearInterval(fakeLoading);
-      progressBar.style.width = "100%";
+// عند اكتمال تحميل الصفحة فعليًا
+window.addEventListener("load", () => {
+  clearInterval(fakeLoading);
+  progressBar.style.width = "100%";
 
-      // نديه نص ثانية علشان المستخدم يشوف الاكتمال
-      setTimeout(() => {
-        preloader.classList.add("fade-out");
-        setTimeout(() => {
-          preloader.style.display = "none";
-          mainContent.classList.remove("hidden");
-        }, 600);
-      }, 500);
-    });
+  // نديه نص ثانية علشان المستخدم يشوف الاكتمال
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+    setTimeout(() => {
+      preloader.style.display = "none";
+      mainContent.classList.remove("hidden");
+    }, 600);
+  }, 500);
+});
 // Links
 document.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", function (e) {
@@ -372,7 +369,11 @@ document.querySelectorAll("a").forEach((link) => {
     } catch (err) {
       return;
     }
-    if (url.origin === location.origin && url.pathname === location.pathname && url.hash) {
+    if (
+      url.origin === location.origin &&
+      url.pathname === location.pathname &&
+      url.hash
+    ) {
       return;
     }
     if (this.target === "_blank" || this.hasAttribute("download")) return;
@@ -477,7 +478,9 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".dropdownMenu").forEach((m) => {
         if (m !== menu) m.classList.add("hidden");
       });
-      document.querySelectorAll(".arrow").forEach((a) => a.classList.remove("rotate-90"));
+      document
+        .querySelectorAll(".arrow")
+        .forEach((a) => a.classList.remove("rotate-90"));
 
       // لو مش مفتوح → افتحه
       if (!isOpen) {
@@ -493,14 +496,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // اقفل الكل لما تضغط برا
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".dropdownWrapper")) {
-      document.querySelectorAll(".dropdownMenu").forEach((m) => m.classList.add("hidden"));
-      document.querySelectorAll(".arrow").forEach((a) => a.classList.remove("rotate-90"));
+      document
+        .querySelectorAll(".dropdownMenu")
+        .forEach((m) => m.classList.add("hidden"));
+      document
+        .querySelectorAll(".arrow")
+        .forEach((a) => a.classList.remove("rotate-90"));
     }
   });
 });
- // تحديد الصفحة الحالية (الملف المفتوح)
+// تحديد الصفحة الحالية (الملف المفتوح)
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
   const allLinks = document.querySelectorAll(
     ".language-option a, .nav a, .dropdown-dropdown-m ul li a"
