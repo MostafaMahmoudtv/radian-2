@@ -946,14 +946,15 @@ aside {
     margin-top: 20px;
   }
 
-  #sliderText >div{
-font-size: 2.4rem;
+  #sliderText > div {
+    font-size: 2.4rem;
   }
-  .first-section{
-height: 60vh !important;
-overflow: hidden !important;
+  .first-section {
+    height: 60vh !important;
+    overflow: hidden !important;
   }
-    .first-section h2 div div ,.first-section div h2{
+  .first-section h2 div div,
+  .first-section div h2 {
     font-size: 2rem !important;
   }
 }
@@ -983,7 +984,6 @@ overflow: hidden !important;
   .brands img {
     width: 100px !important;
   }
- 
 }
 
 @media (max-width: 768px) {
@@ -1062,14 +1062,19 @@ overflow: hidden !important;
     margin-top: 70px;
     height: 230px;
   }
-       .choosen-radian-btn{
+  .choosen-radian-btn {
     min-width: 120px !important;
   }
-    .first-section{
-height: 60vh !important;
-overflow: hidden !important;
+  .first-section {
+    height: 60vh !important;
+    overflow: hidden !important;
   }
-    .first-section h2 div div ,.first-section div h2{
+  .first-section h2 div div,
+  .first-section div h2 {
+    font-size: 2rem !important;
+  }
+  .container > div > div > h1,
+  .container > div h3 {
     font-size: 2rem !important;
   }
 }
@@ -1203,7 +1208,7 @@ overflow: hidden !important;
   flex-direction: column;
   z-index: 999999;
   transition: opacity 0.2s ease, visibility 0.5s ease;
-    font-family: "DM Sans";
+  font-family: "DM Sans";
 }
 
 /* النص */

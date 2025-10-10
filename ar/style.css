@@ -1022,6 +1022,9 @@ aside {
     font-size: 20px !important;
     margin-top: 15px;
   }
+  .container >div >div>h1, .container >div h3{
+  font-size: 2rem !important;
+}
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
