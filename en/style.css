@@ -1089,6 +1089,11 @@ text-align: center;
     display: inline-flex;
     justify-content: space-between;
   }
+  #preloader {
+width: 100vw;
+font-weight: 200;
+}
+
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
