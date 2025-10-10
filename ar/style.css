@@ -842,7 +842,8 @@ aside {
     height: 33vh !important;
   }
   #sliderText > div {
-    font-size: 2.4rem;
+    font-size:1.7rem;
+    width: 70vw;
   }
   .first-section {
     height: 60vh !important;
