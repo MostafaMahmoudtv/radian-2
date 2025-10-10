@@ -965,17 +965,7 @@ aside {
   .choosen-radian-btn {
     min-width: 120px !important;
   }
-  #sliderContent {
-    max-width: 80vw;
-  }
-  #sliderContent h2 {
-    font-size: 2.5rem !important;
-  }
-  #sliderBtn {
-    width: fit-content;
-    display: inline-flex;
-    justify-content: space-between;
-  }
+
 
 }
 
@@ -1048,7 +1038,15 @@ aside {
     font-size: 2rem !important;
   }
   #sliderContent {
-    max-width: 60vw;
+    max-width: 80vw;
+  }
+  #sliderContent h2 {
+    font-size: 2.5rem !important;
+  }
+  #sliderBtn {
+    width: fit-content;
+    display: inline-flex;
+    justify-content: space-between;
   }
   #sliderContent h2 {
     font-size: 2.5rem !important;
