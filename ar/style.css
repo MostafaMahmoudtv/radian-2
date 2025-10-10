@@ -738,6 +738,8 @@ aside {
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
+    height: 85vh;
+
   }
   .about-section .about-section-image {
     width: 100vw;
@@ -769,7 +771,6 @@ aside {
   .icons-section {
     margin: 0 !important;
     padding: 0 !important;
-    margin-top: 40px !important;
   }
   .icons-section > div {
     width: 100vw !important;
@@ -880,9 +881,7 @@ aside {
     margin: 10px auto; /* مسافة بين الكروت */
     min-height: 300px; /* يقلل الطول شوية */
   }
-  .icons-section {
-    margin-top: 40px !important;
-  }
+
 
   .icons-section > div > div {
     width: 100% !important;
@@ -966,6 +965,7 @@ aside {
   display: inline-flex;
   justify-content: center;
   }
+
 }
 
 /* تابلت (من 641px لحد 1024px) */

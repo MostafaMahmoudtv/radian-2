@@ -755,7 +755,8 @@ aside {
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
-  }
+height: 85vh;
+}
   .about-section .about-section-image {
     width: 100vw;
   }
