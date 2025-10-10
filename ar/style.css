@@ -109,6 +109,7 @@ body {
   transition: all 0.3s ease;
   width: 17vw !important;
 }
+
 .dropdownMenu {
   position: absolute;
   right: 210px !important;
@@ -267,6 +268,7 @@ body {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
+
 
 #scrollToTop {
   opacity: 0;
@@ -642,8 +644,10 @@ aside {
   .nav ul li {
     width: 100%;
     border-bottom: #1e293b;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0rem;
     position: relative;
+    font-size: 1rem;
+
   }
 
   .nav ul li span.flex {
@@ -842,7 +846,7 @@ aside {
     height: 33vh !important;
   }
   #sliderText > div {
-    font-size:1.7rem;
+    font-size: 1.7rem;
     width: 70vw;
   }
   .first-section {
@@ -853,19 +857,19 @@ aside {
   .first-section div h2 {
     font-size: 2rem !important;
   }
-    .sus-section {
-padding: 0 1rem !important;
-margin: auto; 
-text-align: center;
-}
+  .sus-section {
+    padding: 0 1rem !important;
+    margin: auto;
+    text-align: center;
+  }
 
- .sus-section div p{
-  width: 100%;
-  text-align: center;
- }
-.sus-section span{
-  font-size: 2rem;
-}
+  .sus-section div p {
+    width: 100%;
+    text-align: center;
+  }
+  .sus-section span {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -902,19 +906,18 @@ text-align: center;
     min-height: 300px; /* يقلل الطول شوية */
   }
   .icons-section {
-        overflow: hidden;
+    overflow: hidden;
 
     padding-top: 2rem !important ;
     padding-bottom: 2rem !important ;
   }
-  section h2  {
+  section h2 {
     font-size: 2rem !important;
   }
-  h2{
-      font-size: 2rem !important;
-
+  h2 {
+    font-size: 2rem !important;
   }
- 
+
   .icons-section > div > div {
     width: 100% !important;
     margin: auto !important;
@@ -1031,7 +1034,6 @@ text-align: center;
     justify-content: center;
   }
 
-
   .brands img {
     width: 100px !important;
   }
@@ -1139,6 +1141,19 @@ text-align: center;
   .dropdown-content .language-option ul {
     padding: 0 !important;
     margin: 0 !important;
+      margin-top: 1rem !important;
+  }
+  .language-option{
+    padding-right: 0;
+  }
+  .nav ul{
+    padding-right: 1rem;
+  }
+  .dropdown-content .language-option ul li {
+    font-size: 1rem;
+    color: #262626 !important;
+
+
   }
   .dropdown-content .language-option ul li::before {
     content: none; /* يشيل الشرطة */

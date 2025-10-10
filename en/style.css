@@ -570,8 +570,8 @@ body {
   .about-section-content h2 {
     text-align: left;
   }
-  .about-section-image{
-    height:30vh;
+  .about-section-image {
+    height: 30vh;
   }
 }
 aside {
@@ -759,7 +759,6 @@ aside {
     display: flex !important;
     flex-direction: column-reverse !important;
     height: auto !important;
-    
   }
   .about-section .about-section-image {
     width: 100vw;
@@ -767,8 +766,7 @@ aside {
   .about-section {
     margin: 0 !important;
     padding: 0 !important;
-        overflow-y: hidden;
-
+    overflow-y: hidden;
   }
   .about-section .about-section-content {
     width: 100vw;
@@ -858,17 +856,17 @@ aside {
     margin-top: 2rem;
   }
   .sus-section {
-padding: 0 1rem !important;
-margin: auto; 
-text-align: center;
-}
- .sus-section div p{
-  width: 100%;
-  text-align: center;
- }
-.sus-section span{
-  font-size: 2rem;
-}
+    padding: 0 1rem !important;
+    margin: auto;
+    text-align: center;
+  }
+  .sus-section div p {
+    width: 100%;
+    text-align: center;
+  }
+  .sus-section span {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -905,20 +903,18 @@ text-align: center;
   }
   .icons-section {
     margin-top: 40px !important;
-    padding-top:2rem !important ;
-        padding-bottom:2rem !important ;
-
+    padding-top: 2rem !important ;
+    padding-bottom: 2rem !important ;
   }
-    h2{
-      font-size: 2rem !important;
-
+  h2 {
+    font-size: 2rem !important;
   }
-  .terms-section h2{
-          font-size: 1.6rem !important;
+  .terms-section h2 {
+    font-size: 1.6rem !important;
   }
- .icons-section h2{
-  font-size: 2rem;
- }
+  .icons-section h2 {
+    font-size: 2rem;
+  }
   .icons-section > div > div {
     width: 90% !important;
     margin: auto !important;
@@ -1006,7 +1002,7 @@ text-align: center;
   .slider-section #slider {
     height: 90vh;
   }
-    .slider-section {
+  .slider-section {
     height: 90vh;
   }
 }
@@ -1090,13 +1086,12 @@ text-align: center;
     justify-content: space-between;
   }
   #preloader {
-width: 90vw;
-font-weight: 400;
-}
-#preloader h3 {
-  font-size: 1.7rem;
-}
-
+    width: 90vw;
+    font-weight: 500;
+  }
+  #preloader h3 {
+    font-size: 1.7rem;
+  }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
@@ -1162,9 +1157,30 @@ font-weight: 400;
     padding: 0;
     margin: 0;
   }
+      .nav li span{
+        font-size: 1.1rem;
+        color: #262626;
+      }
+          .dropdownBtn{
+             font-size: 1.1rem;
+        color: #262626;
+          }
   .dropdown-content .language-option ul {
     padding: 0 !important;
     margin: 0 !important;
+      margin-top: 1rem !important;
+  }
+  .language-option{
+    padding-right: 0;
+  }
+  .nav ul{
+    padding-right: 1rem;
+  }
+  .dropdown-content .language-option ul li {
+    font-size: 1rem;
+    color: #262626 !important;
+
+
   }
   .dropdown-content .language-option ul li::before {
     content: none; /* يشيل الشرطة */
