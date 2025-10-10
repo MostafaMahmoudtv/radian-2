@@ -972,6 +972,9 @@ height: 85vh;
   .first-section div h2 {
     font-size: 2rem !important;
   }
+  .slider-section #slider{
+height: 90vh;
+  }
 }
 
 /* تابلت (من 641px لحد 1024px) */
@@ -1048,7 +1051,7 @@ height: 85vh;
     font-size: 2.5rem !important;
   }
     #sliderBtn{
-  width: 70vw;
+  width: 75vw;
   display: inline-flex;
   justify-content: center;
   }

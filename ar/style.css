@@ -738,8 +738,7 @@ aside {
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
-    height: 85vh;
-
+    height: 85vh !important;
   }
   .about-section .about-section-image {
     width: 100vw;
@@ -882,7 +881,9 @@ aside {
     min-height: 300px; /* يقلل الطول شوية */
   }
 
-
+  .slider-section #slider{
+height: 90vh;
+  }
   .icons-section > div > div {
     width: 100% !important;
     margin: auto !important;
