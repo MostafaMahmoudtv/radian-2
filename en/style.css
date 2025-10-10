@@ -985,6 +985,9 @@ overflow: hidden !important;
   .brands img {
     width: 100px !important;
   }
+      .choosen-radian-btn{
+    min-width: 120px !important;
+  }
 }
 
 @media (max-width: 768px) {
