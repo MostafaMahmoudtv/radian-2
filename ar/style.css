@@ -729,8 +729,11 @@ aside {
     flex: 4;
     margin-right: 0.7rem;
   }
-  .slider-section {
-    height: 100vh;
+    .slider-section #slider {
+    height: 90vh;
+  }
+    .slider-section {
+    height: 90vh;
   }
   .slider-home-container {
     height: 100vh;
@@ -738,7 +741,7 @@ aside {
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
-    height: 85vh !important;
+    height: auto !important;
   }
   .about-section .about-section-image {
     width: 100vw;
@@ -827,12 +830,12 @@ aside {
   }
   .about-section-content {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: right !important;
+    align-items: end !important;
     border-radius: 0 !important;
   }
   .about-section-content h2 {
-    text-align: center;
+    text-align: right;
   }
   #sliderText > div {
     font-size: 2.4rem;
@@ -881,9 +884,6 @@ aside {
     min-height: 300px; /* يقلل الطول شوية */
   }
 
-  .slider-section #slider{
-height: 90vh;
-  }
   .icons-section > div > div {
     width: 100% !important;
     margin: auto !important;
@@ -1043,6 +1043,12 @@ height: 90vh;
   }
   #sliderContent h2 {
     font-size: 2.5rem !important;
+  }
+    .slider-section #slider {
+    height: 90vh;
+  }
+    .slider-section {
+    height: 90vh;
   }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */

@@ -563,12 +563,12 @@ body {
   }
   .about-section-content {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: left !important;
+    align-items: start !important;
     border-radius: 0 !important;
   }
   .about-section-content h2 {
-    text-align: center;
+    text-align: left;
   }
 }
 aside {
@@ -747,7 +747,7 @@ aside {
     margin-right: 0.7rem;
   }
   .slider-section {
-    height: 100vh;
+    height: 90vh;
   }
   .slider-home-container {
     height: 100vh;
@@ -755,8 +755,9 @@ aside {
   .about-section {
     display: flex !important;
     flex-direction: column-reverse !important;
-height: 85vh;
-}
+    height: auto !important;
+    
+  }
   .about-section .about-section-image {
     width: 100vw;
   }
@@ -972,8 +973,11 @@ height: 85vh;
   .first-section div h2 {
     font-size: 2rem !important;
   }
-  .slider-section #slider{
-height: 90vh;
+  .slider-section #slider {
+    height: 90vh;
+  }
+    .slider-section {
+    height: 90vh;
   }
 }
 
@@ -1050,10 +1054,10 @@ height: 90vh;
   #sliderContent h2 {
     font-size: 2.5rem !important;
   }
-    #sliderBtn{
-  width: 75vw;
-  display: inline-flex;
-  justify-content: center;
+  #sliderBtn {
+    width: 75vw;
+    display: inline-flex;
+    justify-content: center;
   }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
