@@ -836,7 +836,7 @@ aside {
   .first-section h2 div div ,.first-section div h2{
     font-size: 2rem !important;
   }
-  .first-section div h2
+
 }
 
 @media (min-width: 1024px) {
@@ -951,6 +951,9 @@ aside {
   }
   .icons2-about img {
     width: 70px;
+  }
+    .choosen-radian-btn{
+    min-width: 120px !important;
   }
 }
 
