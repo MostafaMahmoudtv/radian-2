@@ -835,6 +835,9 @@ aside {
   .icons2-about img {
     width: 70px;
   }
+  .radian-choosen-section .radian-choosen-contetn{
+    padding-left: 1rem !important;
+  }
 }
 
 @media (min-width: 1024px) {

@@ -804,6 +804,9 @@ aside {
     font-size: 20px !important;
     width: 70%;
   }
+    .radian-choosen-section .radian-choosen-contetn{
+    padding-right: 1rem !important;
+  }
   .radian-choosen {
     display: flex !important;
     justify-content: space-between !important;
