@@ -1065,6 +1065,13 @@ overflow: hidden !important;
        .choosen-radian-btn{
     min-width: 120px !important;
   }
+    .first-section{
+height: 60vh !important;
+overflow: hidden !important;
+  }
+    .first-section h2 div div ,.first-section div h2{
+    font-size: 2rem !important;
+  }
 }
 /* وضع الموبايل */
 @media (max-width: 1024px) {
