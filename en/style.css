@@ -1153,35 +1153,7 @@ aside {
     width: 100% !important; /* تاخد عرض كامل */
     display: none; /* مقفولة افتراضياً */
   }
-  .dropdown-content {
-    padding: 0;
-    margin: 0;
-  }
-      .nav li span{
-        font-size: 1.1rem;
-        color: #262626;
-      }
-          .dropdownBtn{
-             font-size: 1.1rem;
-        color: #262626;
-          }
-  .dropdown-content .language-option ul {
-    padding: 0 !important;
-    margin: 0 !important;
-      margin-top: 1rem !important;
-  }
-  .language-option{
-    padding-right: 0;
-  }
-  .nav ul{
-    padding-right: 1rem;
-  }
-  .dropdown-content .language-option ul li {
-    font-size: 1rem;
-    color: #262626 !important;
-
-
-  }
+ 
   .dropdown-content .language-option ul li::before {
     content: none; /* يشيل الشرطة */
     padding: 0;
@@ -1269,6 +1241,20 @@ aside {
   .language-option ul li:hover::before {
     transform: none !important;
     opacity: 1 !important;
+  }
+   .language-option{
+    padding-left: 0 !important;
+  }
+  .nav ul li{
+    font-size: 1rem;
+    color: #262626;
+  }
+  .dropdownMenu{
+    margin-top: 0.7rem;
+    margin-left: 1.5rem;
+  }
+  .dropdownMenu ul li {
+    font-size: 1rem !important;
   }
 }
 .language-option > ul {
