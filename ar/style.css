@@ -749,6 +749,7 @@ aside {
   .about-section {
     margin: 0 !important;
     padding: 0 !important;
+    overflow-y: hidden;
   }
   .about-section .about-section-content {
     width: 100vw;
@@ -771,7 +772,6 @@ aside {
     padding: 0 !important;
   }
   .icons-section {
-    margin: 0 !important;
     padding: 0 !important;
   }
   .icons-section > div {
@@ -831,11 +831,14 @@ aside {
   .about-section-content {
     display: flex !important;
     justify-content: right !important;
-    align-items: end !important;
+    align-items: start !important;
     border-radius: 0 !important;
   }
   .about-section-content h2 {
     text-align: right;
+  }
+  .about-section-image{
+    height:30vh;
   }
   #sliderText > div {
     font-size: 2.4rem;

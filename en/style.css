@@ -570,6 +570,9 @@ body {
   .about-section-content h2 {
     text-align: left;
   }
+  .about-section-image{
+    height:30vh;
+  }
 }
 aside {
   justify-content: start !important;
@@ -764,6 +767,8 @@ aside {
   .about-section {
     margin: 0 !important;
     padding: 0 !important;
+        overflow-y: hidden;
+
   }
   .about-section .about-section-content {
     width: 100vw;
