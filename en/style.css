@@ -1054,15 +1054,15 @@ aside {
     margin-top: 15px;
   }
   #sliderContent {
-    max-width: 60vw;
+    max-width: 70vw;
   }
   #sliderContent h2 {
     font-size: 2.5rem !important;
   }
   #sliderBtn {
-    width: 75vw;
+    width: fit-content;
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
