@@ -793,7 +793,7 @@ aside {
     padding: 0 !important;
   }
   .icons-section > div {
-    width: 100vw !important;
+    width: 100% !important;
     align-items: center !important;
   }
   .icons-section > div > div {
@@ -893,8 +893,13 @@ aside {
   }
   .icons-section {
     margin-top: 40px !important;
-  }
+    padding-top:2rem !important ;
+        padding-bottom:2rem !important ;
 
+  }
+ .icons-section h2{
+  font-size: 2rem;
+ }
   .icons-section > div > div {
     width: 90% !important;
     margin: auto !important;

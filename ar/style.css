@@ -729,10 +729,10 @@ aside {
     flex: 4;
     margin-right: 0.7rem;
   }
-    .slider-section #slider {
+  .slider-section #slider {
     height: 90vh;
   }
-    .slider-section {
+  .slider-section {
     height: 90vh;
   }
   .slider-home-container {
@@ -776,7 +776,7 @@ aside {
     margin-top: 2rem;
   }
   .icons-section > div {
-    width: 100vw !important;
+    width: 100% !important;
     align-items: center !important;
   }
   .icons-section > div > div {
@@ -838,7 +838,7 @@ aside {
   .about-section-content h2 {
     text-align: right;
   }
-  .about-section-image{
+  .about-section-image {
     height: 33vh !important;
   }
   #sliderText > div {
@@ -887,7 +887,15 @@ aside {
     margin: 10px auto; /* مسافة بين الكروت */
     min-height: 300px; /* يقلل الطول شوية */
   }
+  .icons-section {
+        overflow: hidden;
 
+    padding-top: 2rem !important ;
+    padding-bottom: 2rem !important ;
+  }
+   .icons-section h2{
+  font-size: 2rem;
+ }
   .icons-section > div > div {
     width: 100% !important;
     margin: auto !important;
@@ -965,8 +973,6 @@ aside {
   .choosen-radian-btn {
     min-width: 120px !important;
   }
-
-
 }
 
 /* تابلت (من 641px لحد 1024px) */
@@ -1005,6 +1011,7 @@ aside {
   .career-icons-section {
     justify-content: center;
   }
+
 
   .brands img {
     width: 100px !important;
@@ -1051,10 +1058,10 @@ aside {
   #sliderContent h2 {
     font-size: 2.5rem !important;
   }
-    .slider-section #slider {
+  .slider-section #slider {
     height: 90vh;
   }
-    .slider-section {
+  .slider-section {
     height: 90vh;
   }
 }
