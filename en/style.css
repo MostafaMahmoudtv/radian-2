@@ -786,11 +786,11 @@ aside {
   .about-section-image {
     margin: 0 !important;
     padding: 0 !important;
+    height: 33vh !important;
   }
   .icons-section {
-    margin: 0 !important;
+    margin-top: 2rem;
     padding: 0 !important;
-    margin-top: 40px !important;
   }
   .icons-section > div {
     width: 100vw !important;
@@ -1030,7 +1030,6 @@ aside {
     width: 80vw !important;
     padding: 10px;
 
-    margin: auto;
   }
   .tomoh div {
     width: 100vw;
