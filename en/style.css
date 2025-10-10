@@ -852,9 +852,7 @@ aside {
     margin-top: 210px;
     margin-left: -70px !important;
   }
-  .choosen-radian-btn {
-    width: 600px !important;
-  }
+
   #projects-list {
     display: flex;
     flex-direction: row;
@@ -985,9 +983,7 @@ overflow: hidden !important;
   .brands img {
     width: 100px !important;
   }
-      .choosen-radian-btn{
-    min-width: 120px !important;
-  }
+ 
 }
 
 @media (max-width: 768px) {
@@ -1065,6 +1061,9 @@ overflow: hidden !important;
     max-width: 340px !important ;
     margin-top: 70px;
     height: 230px;
+  }
+       .choosen-radian-btn{
+    min-width: 120px !important;
   }
 }
 /* وضع الموبايل */

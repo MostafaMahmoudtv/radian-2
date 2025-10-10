@@ -1058,6 +1058,9 @@ aside {
     margin-top: 70px;
     height: 230px;
   }
+     .choosen-radian-btn{
+    min-width: 120px !important;
+  }
 }
 /* وضع الموبايل */
 @media (max-width: 1024px) {
