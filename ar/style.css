@@ -961,6 +961,11 @@ aside {
   .choosen-radian-btn {
     min-width: 120px !important;
   }
+  #sliderBtn{
+  width: 75vw;
+  display: inline-flex;
+  justify-content: center;
+  }
 }
 
 /* تابلت (من 641px لحد 1024px) */
