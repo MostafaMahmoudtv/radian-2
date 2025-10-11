@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
   const allLinks = document.querySelectorAll(
-    ".language-option a, .nav a, .dropdown-dropdown-m ul li a"
+    ".language-option a, .nav a, .dropdown-dropdown-m ul a"
   );
 
   allLinks.forEach((link) => {
@@ -507,15 +507,36 @@ document.addEventListener("DOMContentLoaded", function () {
       currentPage !== "" &&
       currentPage !== "index.html"
     ) {
-      // لو في language-option عادية
+      // فعّل اللينك نفسه (عشان li جوه a)
+      link.classList.add("active");
+
+      // لو جوه language-option
       const parentOption = link.closest(".language-option");
       if (parentOption) parentOption.classList.add("active");
 
-      // لو في dropdown فرعية (li داخل ul)
-      const li = link.closest("li");
-      if (li) li.classList.add("active");
+      // لو جوه dropdownMenu (زي traffic-studies)
+      const dropdownMenu = link.closest(".dropdownMenu");
+      if (dropdownMenu) {
+        const dropdownWrapper = dropdownMenu.closest(".dropdownWrapper");
+        if (dropdownWrapper) {
+          dropdownWrapper.classList.add("active");
+          const menu = dropdownWrapper.querySelector(".dropdownMenu");
+          if (menu) menu.classList.remove("hidden");
+          const arrow = dropdownWrapper.querySelector(".arrow");
+        }
 
-      // كمان نخلّي الخط بتاع الناف الرئيسية يظهر (لو فيه span.absolute)
+        // فعل Services الرئيسي فوق
+        const mainDropdown = dropdownMenu.closest(".dropdown-content");
+        if (mainDropdown) {
+          const mainGroup = mainDropdown.closest(".group");
+          if (mainGroup) {
+            const underline = mainGroup.querySelector("span.absolute");
+            if (underline) underline.style.width = "100%";
+          }
+        }
+      }
+
+      // لو اللينك الرئيسي (زي About, Media Center)
       const group = link.closest(".group");
       if (group) {
         const underline = group.querySelector("span.absolute");
@@ -524,6 +545,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

@@ -24,7 +24,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="/ar/style.css" />
-  <link rel="icon" type="image/png" href="../../assets/title.png" />
+    <link rel="icon" type="image/png" href="../../assets/title.png" />
 
     <title>MEP-Radian</title>
   </head>
@@ -159,9 +159,7 @@
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
                   <span class="w-100">
-                    <a href="../infrastructure.html" 
-                      >البنية التحتية</a
-                    >
+                    <a href="../infrastructure.html">البنية التحتية</a>
                   </span>
                   <i class="fa-solid fa-angle-down md:hidden inline ml-1"></i>
 
@@ -190,16 +188,14 @@
               </div>
 
               <div
-                class="relative language-option w-100 flex items-center text-black dropdownWrapper "
+                class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
                 <!-- الزر -->
                 <button
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
                   <span class="w-100">
-                    <a
-                      href="../architectural-and-structural.html"
-                    >
+                    <a href="../architectural-and-structural.html">
                       الهندسة المعمارية والإنشائية
                     </a>
                   </span>
@@ -238,13 +234,15 @@
                   </ul>
                 </div>
               </div>
+              <div class="language-option flex items-center text-black">
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                  data-lang="en"
+                >
+                  <span><a href="../support.html"> الدعم والإدارة</a></span>
+                </button>
+              </div>
 
-              <button
-                class="language-option py-2 flex items-center text-black"
-                data-lang="en"
-              >
-                <span><a href="../support.html"> الدعم والإدارة</a></span>
-              </button>
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
@@ -252,9 +250,7 @@
                   class="dropdownBtn inline-flex items-center py-2 w-100 transition"
                 >
                   <span class="w-100">
-                    <a
-                      href="../engineering-supervision.html"
-                    >
+                    <a href="../engineering-supervision.html">
                       الإشراف الهندسي
                     </a>
                   </span>
@@ -581,13 +577,16 @@
         </div>
       </div>
     </section>
-    <section dir="ltr" class=" grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 gap-6 mx-auto mt-12">
+    <section
+      dir="ltr"
+      class="grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 gap-6 mx-auto mt-12 fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+    >
       <!-- صورة 1 (كبيرة على الشمال في النص) -->
       <div class="row-span-2 flex items-center">
         <img
           src="/assets/mep1.webp"
           alt="road1"
-          class="w-[600px] h-[450px] object-cover"
+          class="w-[600px] h-[450px] object-cover fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out"
         />
       </div>
 
@@ -596,7 +595,7 @@
         <img
           src="/assets/mep2.webp"
           alt="road2"
-          class="w-[670px] h-[550px] object-cover"
+          class="w-[670px] h-[550px] object-cover fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out"
         />
       </div>
 
@@ -605,7 +604,7 @@
         <img
           src="/assets/mep3.webp"
           alt="road3"
-          class="w-[320px] h-[400px] object-cover"
+          class="w-[320px] h-[400px] object-cover fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out"
         />
       </div>
     </section>

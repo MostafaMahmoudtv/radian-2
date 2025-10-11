@@ -112,8 +112,16 @@ body {
 
 .dropdownMenu {
   position: absolute;
-  right: 210px !important;
-  top: -15px !important;
+  right: 228px !important;
+  padding: 1rem !important;
+  width: 18vw;
+}
+.dropdownMenu ul{
+  padding: 1.2rem !important;
+}
+.dropdownMenu ul li{
+    padding: 0.4rem !important;
+
 }
 .language-dropdown:hover .dropdown-content {
   opacity: 1;
@@ -152,7 +160,7 @@ body {
 }
 
 .language-option:hover span {
-  transform: translateX(-10px);
+  transform: translateX(-23px);
 }
 
 .language-option:hover span::before {
@@ -193,13 +201,12 @@ body {
 
 .dropdown-dropdown-m {
   left: -150px;
-  top: -5px !important;
-  padding: 0.5rem;
+  width: 22vw !important;
+  top:-32px !important ;
 }
 
 .dropdown-dropdown-m ul {
   background-color: white !important;
-  width: 120%;
   border-radius: 15px;
   overflow: hidden;
   margin: 0;
@@ -213,7 +220,7 @@ body {
 }
 
 .dropdown-dropdown-m ul li:hover {
-  transform: translateX(10px);
+  transform: translateX(23px);
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -231,7 +238,7 @@ body {
 }
 
 .dropdown-content .language-option ul {
-  padding: 0.7rem 0.2rem !important;
+  padding: 0.7rem 0.2rem ;
 }
 
 .dropdown-content .language-option ul li {
@@ -246,7 +253,7 @@ body {
   content: "";
   position: absolute;
   right: 0;
-  top: 62%;
+  top: 52%;
   transform: translateY(-50%) translateX(10px);
   opacity: 0;
   color: #000;
@@ -261,7 +268,7 @@ body {
 }
 
 .dropdown-content .language-option ul li:hover {
-  transform: translateX(-5px);
+  transform: translateX(-23px);
 }
 
 .dropdown-content .language-option ul li:hover::before {
@@ -870,6 +877,12 @@ aside {
   .sus-section span {
     font-size: 2rem;
   }
+  .language-option.active span{
+    transform: translateX(0) !important;
+  }
+      .dropdown-content .language-option ul li:hover{
+    color: rgb(11, 11, 180) !important;
+      }
 }
 
 @media (min-width: 1024px) {
@@ -1424,7 +1437,7 @@ aside {
    تثبيت تأثير hover على الصفحة الحالية
    ========================================= */
 .language-option.active span {
-  transform: translateX(-5px) !important;
+  transform: translateX(-23px) ;
 }
 
 .language-option.active span::before {
@@ -1433,12 +1446,34 @@ aside {
 }
 
 .dropdown-dropdown-m ul li.active {
-  transform: translateX(-5px) !important;
+  transform: translateX(-23px) !important;
 }
 
 .dropdown-dropdown-m ul li.active::before {
   opacity: 1 !important;
   transform: translateY(-50%) translateX(0) !important;
+}
+
+
+/* ====== الشرطة الثابتة للصفحة الحالية ====== */
+
+/* لعناصر القائمة الرئيسية */
+.language-option.active span::before,
+.language-option a.active span::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* لعناصر الـ submenu (زي Traffic Studies) */
+.dropdown-content .language-option ul a.active li::before,
+.dropdown-content .language-option ul li.active::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.language-option.active span,
+.language-option a.active span,
+.dropdown-content .language-option ul a.active li {
+  transform: translateX(-23px);
 }
 
 .slider-container {
@@ -1537,3 +1572,7 @@ aside {
 .fog-overlay.active {
   opacity: 1;
 }
+ .dropdown-content{
+  width: 19vw !important;
+  padding-left: 1rem;
+ }

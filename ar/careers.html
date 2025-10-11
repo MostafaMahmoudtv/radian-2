@@ -239,12 +239,14 @@
                 </div>
               </div>
 
-              <button
-                class="language-option py-2 flex items-center text-black"
-                data-lang="en"
-              >
-                <span><a href="support.html"> الدعم والإدارة</a></span>
-              </button>
+           <div class="language-option flex items-center text-black">
+                <button
+                  class="dropdownBtn inline-flex items-center py-2 w-100 transition"
+                  data-lang="en"
+                >
+                  <span><a href="support.html"> الدعم والإدارة</a></span>
+                </button>
+              </div>
               <div
                 class="relative language-option w-100 flex items-center text-black dropdownWrapper"
               >
@@ -811,8 +813,8 @@
         </div>
       </div>
     </section>
-    <section dir="ltr" class="container mt-8 mx-auto px-6 py-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section dir="ltr" class="container mt-8 mx-auto px-6 py-20 fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out">
         <!-- النصوص -->
         <div class="text-right mr-16">
           <!-- العنوان الرئيسي -->
@@ -858,19 +860,19 @@
         </div>
 
         <!-- الصور -->
-        <div class="relative m-2 mt-16 flex justify-center">
+        <div class="relative m-2 mt-16 flex justify-center fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out">
           <!-- الصورة الأساسية -->
           <img
             src="/assets/Future.webp"
             alt="Main Image"
-            class="w-full h-[450px] object-cover"
+            class="w-full h-[450px] object-cover fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out"
           />
 
           <!-- الصورة المتداخلة -->
           <img
             src="/assets/Future-2.webp"
             alt="Overlay Image"
-            class="absolute top-[-60px] right-[-20px] w-2/3 md:w-1/2 h-[250px] object-cover"
+            class="absolute top-[-60px] right-[-20px] w-2/3 md:w-1/2 h-[250px] object-cover fade-section opacity-0 translate-y-10 transition-all duration-1000 ease-out"
           />
         </div>
       </div>
