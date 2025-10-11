@@ -1016,7 +1016,6 @@ aside {
 @media (max-width: 1024px) and (min-width: 641px) {
   #cardsWrapper .details-btn a {
     margin-top: 16rem;
-    margin-left: -4rem;
   }
 
   #cardsWrapper > div {
