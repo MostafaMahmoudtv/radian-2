@@ -488,43 +488,46 @@
       </div>
     </aside>
 
-    <section class="relative h-[500px] w-full first-section">
-      <!-- Image -->
-      <img
-        src="/assets/Engineering-Studies-1.webp"
-        class="w-full h-[82vh] brightness-[65%] object-cover"
-        alt="services"
-      />
+   <section class="relative w-full h-[70vh] overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src="/assets/Engineering-Studies-1.webp"
+      alt="services"
+      class="w-full h-full object-cover brightness-[65%]"
+    />
+  </div>
 
-      <!-- Text over the image -->
-      <div
-        class="absolute top-1/3 left-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700 z-10"
-      >
-        <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
-          Services
-        </h2>
-        <a
-          id="sliderBtn"
-          href="#services-form"
-          class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+  <!-- Text over the image -->
+  <div
+    class="relative z-10 top-1/3 left-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700"
+  >
+    <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
+      Services
+    </h2>
+    <a
+      id="sliderBtn"
+      href="#services-form"
+      class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+    >
+      <span class="inline-flex">
+        Inquiry
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <span class="inline-flex">
-            Inquiry
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
-                fill="white"
-              /></svg
-          ></span>
-        </a>
-      </div>
-    </section>
+          <path
+            d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+            fill="white"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
 
     <section
       class="grid w-full mt-16 py-12 px-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
