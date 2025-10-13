@@ -1587,3 +1587,20 @@ aside {
   width: 19vw !important;
   padding-right: 1rem;
  }
+ .first-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.first-section img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+section + section {
+  margin-top: 100px; /* عشان السكشن التاني ينزل تحت بوضوح */
+  position: relative;
+  z-index: 1;
+}
