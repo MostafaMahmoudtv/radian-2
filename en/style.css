@@ -1100,8 +1100,9 @@ aside {
     height: 90vh;
   }
     .career-icons-section >div {
-height: 36vh !important;
+height: 38vh !important;
 overflow: hidden;
+background-color: white !important;
   }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
