@@ -22,6 +22,7 @@ body {
   margin: auto;
 }
 
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -1573,6 +1574,21 @@ aside {
   opacity: 1;
 }
  .dropdown-content{
-  width: 19vw !important;
+  width: 22vw !important;
   padding-left: 1rem;
+
  }
+ .about-first >div{
+  align-items: end;
+
+ }
+  .about-first >div h2{
+    margin-bottom: 4rem;
+        font-size: 2.4rem !important;
+
+  }
+  .icons-section{
+    margin-top: 0 !important;
+  }
+  .icons-section h2{
+margin-bottom:2rem ;   }

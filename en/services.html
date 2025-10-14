@@ -24,7 +24,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="icon" type="image/png" href="../assets/title.png" />
+    <link rel="icon" type="image/png" href="../assets/title.png" />
 
     <title>Services-Radian</title>
   </head>
@@ -60,7 +60,7 @@
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown-content absolute top-full  mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+              class="dropdown-content absolute top-full mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
             >
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
@@ -91,7 +91,7 @@
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown-content absolute top-full  mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+              class="dropdown-content absolute top-full mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
             >
               <div
                 class="language-option flex items-center text-black"
@@ -296,7 +296,7 @@
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown-content absolute top-full  mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+              class="dropdown-content absolute top-full mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
             >
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
@@ -449,7 +449,7 @@
           <p>RADIAN Hail Branch – Hail</p>
         </div>
         <div class="flex gap-3 mt-[100px] justify-center">
-         <a
+          <a
             href="https://www.linkedin.com/company/radian-engineering-consulting-company"
             target="_blank"
             class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
@@ -488,7 +488,7 @@
       </div>
     </aside>
 
-   <section class="relative w-full h-[82vh] overflow-hidden">
+  <section class="relative w-full h-[82vh] overflow-hidden">
   <!-- Background Image -->
   <div class="absolute inset-0">
     <img
@@ -499,38 +499,46 @@
   </div>
 
   <!-- Text over the image -->
-  <div
-    class="relative z-10 top-1/3 left-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700"
-  >
-    <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
-      Services
-    </h2>
-    <a
-      id="sliderBtn"
-      href="#services-form"
-      class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+  <div class="relative container mx-auto px-10 h-full flex items-center justify-start">
+    <div
+      class="max-w-4xl text-white drop-shadow-lg space-y-6 transition-all duration-700 z-10"
     >
-      <span class="inline-flex">
-        Inquiry
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
-            fill="white"
-          />
-        </svg>
+      <span
+        class="inline-block bg-[#3779BB3B] px-3 py-1 rounded text-white text-sm"
+      >
+        OUR SERVICES
       </span>
-    </a>
+      <h2 id="sliderText" class="text-[4rem] leading-tight">
+        Services
+      </h2>
+      <a
+        id="sliderBtn"
+        href="#services-form"
+        class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+      >
+        <span class="inline-flex items-center">
+          Inquiry
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+              fill="white"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
   </div>
 </section>
 
+
     <section
-      class="grid w-full mt-16 py-12 px-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+      class="grid w-full mt-16 py-12 px-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 container"
     >
       <!-- Card 1 -->
       <div class="flex flex-col items-center space-y-4 group">
@@ -1132,12 +1140,12 @@
       </div>
     </section>
     <section
-      class="bg-[#CCE4FF] rounded-br-[100px] py-32 px-6 md:px-16 mt-16"
+      class="bg-[#CCE4FF] rounded-br-[100px] py-32 px-6 md:px-16 mt-16 "
       id="services-form"
     >
       <div
         dir="ltr"
-        class="flex flex-col md:flex-row justify-between items-start gap-10"
+        class="flex flex-col md:flex-row justify-between items-start gap-10 container"
       >
         <!-- form -->
 
@@ -1199,16 +1207,17 @@
               href="#"
               class="block bg-[#3779BB] inline-flex justify-center text-white px-[0px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[25%] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 choosen-radian-btn"
             >
-                   <svg
-            class="w-6 h-6 fill-current"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
-              fill="currentColor"
-            />
-          </svg> Send
+              <svg
+                class="w-6 h-6 fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Send
             </a>
           </form>
         </div>

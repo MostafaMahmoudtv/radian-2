@@ -57,13 +57,13 @@ const slides = [
     img: "/assets/Slider-1.webp",
     text: "Engineering Excellence Across Continents",
     btnText: "More About Radian",
-    btnLink: "about.html",
+    btnLink: "en/about.html",
   },
   {
     img: "/assets/Slider-2.webp",
     text: "Turning Aspirations into Engineering Masterpieces",
     btnText: "View Our Services",
-    btnLink: "services.html",
+    btnLink: "en/services.html",
   },
 ];
 
@@ -112,15 +112,24 @@ if (
     setTimeout(() => {
       const fullText = slides[index].text;
 
-      const words = fullText.split(" ");
-      if (words.length > 1) {
-        sliderText.innerHTML = `
-          ${words[0]} 
-          <span class="text-blue-400 italic font-bold slider-home-colored ">${words[1]}</span>
-          ${words.slice(2).join(" ")}
-        `;
+      if (index === 1) {
+        // ✅ السلايد الثاني - تلوين كلمة Masterpieces فقط
+        sliderText.innerHTML = fullText.replace(
+          "Masterpieces",
+          `<span class="text-blue-400 italic font-bold slider-home-colored">Masterpieces</span>`
+        );
       } else {
-        sliderText.innerHTML = fullText;
+        // ✅ السلايد الأول - نفس النظام القديم (تلوين الكلمة الثانية فقط)
+        const words = fullText.split(" ");
+        if (words.length > 1) {
+          sliderText.innerHTML = `
+            ${words[0]} 
+            <span class="text-blue-400 italic font-bold slider-home-colored ">${words[1]}</span>
+            ${words.slice(2).join(" ")}
+          `;
+        } else {
+          sliderText.innerHTML = fullText;
+        }
       }
 
       sliderBtn.innerHTML = `
@@ -146,7 +155,7 @@ if (
       
     }, 500);
 
-    const topOffset = dotPositions[index] - 9.5; // 25/2 - 6/2 = 12.5 - 3 = 9.5
+    const topOffset = dotPositions[index] - 9.5;
     movingBorder.style.transform = `translateY(${topOffset}px) translateX(-50%)`;
 
     dots.forEach((dot) => dot.classList.remove("active"));
@@ -160,8 +169,8 @@ if (
   const initialOffset = dotPositions[0] - 9.5;
   movingBorder.style.transform = `translateY(${initialOffset}px) translateX(-50%)`;
   goToSlide(0);
-
 }
+
 // ========== Counter ==========
 function animateCounter(counter) {
   const target = +counter.getAttribute("data-target");

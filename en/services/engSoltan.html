@@ -24,7 +24,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="icon" type="image/png" href="../../assets/title.png" />
+    <link rel="icon" type="image/png" href="../../assets/title.png" />
 
     <title>Eng-Soltan-Radian</title>
   </head>
@@ -91,7 +91,7 @@
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown-content absolute top-full  mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+              class="dropdown-content absolute top-full mt-2 w-[220px] bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
             >
               <div
                 class="language-option flex items-center text-black"
@@ -304,7 +304,7 @@
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown-content absolute top-full  mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
+              class="dropdown-content absolute top-full mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-200"
             >
               <div
                 class="language-option px-4 py-2 flex items-center text-black"
@@ -457,7 +457,7 @@
           <p>RADIAN Hail Branch – Hail</p>
         </div>
         <div class="flex gap-3 mt-[100px] justify-center">
-         <a
+          <a
             href="https://www.linkedin.com/company/radian-engineering-consulting-company"
             target="_blank"
             class="relative group w-[50px] h-[50px] rounded-full bg-[#1a4e81] flex items-center justify-center overflow-hidden"
@@ -501,54 +501,47 @@
   <img
     src="/assets/urban-planning-department.webp"
     alt="Urban Planning Department"
-    class="w-full h-full object-cover brightness-[50%]"
+    class="absolute inset-0 w-full h-full object-cover brightness-[50%]"
   />
 
-  <!-- Text overlay -->
-  <div
-    class="absolute top-1/2 left-10 -translate-y-1/2 max-w-3xl text-white drop-shadow-lg space-y-6 transition-all duration-700 z-10"
-  >
-    <h2
-      id="sliderText"
-      class="text-[2.5rem] md:text-[4rem] leading-tight text-white"
-    >
-      <div class="inline-block">
-        <a href="../services.html" class="group inline-flex items-center mb-4">
-          <span
-            class="block w-8 h-8 border-l-2 border-t-2 -rotate-45 transition-transform duration-300 group-hover:-translate-x-2"
-          ></span>
-        </a>
-        Eng. Sultan Al-Oqab appointed as
-        <span
-          class="text-blue-400 italic"
-          style="font-style: italic !important"
-        >
-          Chairman of the National Committee for Engineering Consultancy Offices
-        </span>
-      </div>
-    </h2>
+  <!-- Text & Button Overlay -->
+  <div class="relative container mx-auto px-10 h-full flex items-center justify-start">
+    <div class="max-w-7xl text-white drop-shadow-lg space-y-6 transition-all duration-700 z-10">
+      <!-- Title with Back Arrow -->
+      <h2 class="text-[2.5rem] md:text-[4rem] leading-tight">
+        <span class="inline-flex flex-wrap items-center gap-3">
+          <!-- Back Arrow -->
+          <span class="inline-flex items-center">
+            <a href="../services.html" class="group inline-flex items-center">
+              <span
+                class="block w-8 h-8 border-l-2 border-t-2 -rotate-45 transition-transform duration-300 group-hover:-translate-x-2"
+              ></span>
+            </a>
 
-    <a
-      id="sliderBtn"
-      href="#myform"
-      class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
-    >
-      <span class="inline-flex">
+            <!-- كل النصوص هنا في span واحد -->
+            <span class="ml-3">
+              Engineer Sultan Al-Oqab elected as chairman of the
+              <span class="text-blue-400 italic">National Committee for Engineering Offices</span>
+            </span>
+          </span>
+        </span>
+      </h2>
+
+      <!-- Inquiry Button -->
+      <a
+        id="sliderBtn"
+        href="#myform"
+        class="inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
+      >
         Inquiry
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
-            fill="white"
+            fill="currentColor"
           />
         </svg>
-      </span>
-    </a>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -607,14 +600,14 @@
     >
       <div
         dir="ltr"
-        class="flex flex-col md:flex-row justify-between items-start gap-10"
+        class="flex flex-col md:flex-row justify-between items-start gap-10 container"
       >
         <!-- form -->
 
         <!-- text -->
         <div class="w-full md:w-1/2 text-left space-y-4">
           <span
-            class="inline-block bg-blue-50 px-3 py-1 rounded text-gray-700 text-sm"
+            class="inline-block bg-[#3779BB3B] px-3 py-1 rounded text-gray-700 text-sm"
           >
             INQUIRE
           </span>
@@ -622,7 +615,7 @@
             <div class="inline">
               Do you have questions or need more information?
             </div>
-                       <span class="text-[#4BA1F7] font-bold italic inline another-font"
+            <span class="text-[#4BA1F7] font-bold italic inline another-font"
               >We’re here to help.</span
             >
           </h3>
@@ -669,16 +662,17 @@
               href="#"
               class="block bg-[#3779BB] inline-flex justify-center text-white px-[0px] py-[13px] text-base rounded-full shadow-lg transition duration-500 w-full max-w-[25%] text-center border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600 choosen-radian-btn"
             >
-                   <svg
-            class="w-6 h-6 fill-current"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
-              fill="currentColor"
-            />
-          </svg> Send
+              <svg
+                class="w-6 h-6 fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.2376 8.05523L7.04617 8.05523L7.05023 7.05025L16.9497 7.05025L16.9497 16.9497L15.9448 16.9538L15.9448 8.76233L7.40379 17.3033L6.69668 16.5962L15.2376 8.05523Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Send
             </a>
           </form>
         </div>

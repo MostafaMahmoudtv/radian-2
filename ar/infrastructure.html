@@ -502,19 +502,21 @@
       </div>
     </aside>
 
-    <section class="relative h-[80vh] w-full first-section">
-      <!-- الصورة -->
-      <img
-        src="/assets/Engineering-Studies-1.webp"
-        class="absolute inset-0 w-full h-full object-cover brightness-[65%]"
-        alt="about"
-      />
+ <section class="relative h-[80vh] w-full first-section">
+  <!-- الصورة -->
+  <img
+    src="/assets/Engineering-Studies-1.webp"
+    class="absolute inset-0 w-full h-full object-cover brightness-[65%]"
+    alt="about"
+  />
 
-      <!-- النص فوق الصورة -->
+  <!-- النص فوق الصورة -->
+  <div class="absolute inset-0 flex items-center">
+    <div class="container mx-auto px-6 lg:px-12">
       <div
-        class="absolute top-1/3 right-10 max-w-lg text-white drop-shadow-lg space-y-6 translate-y-5 transition-all duration-700 z-10"
+        class="max-w-lg ml-auto text-white drop-shadow-lg space-y-6 transition-all duration-700 z-10 text-right"
       >
-        <h2 id="sliderText" class="text-[4rem] text-white leading-tight">
+        <h2 id="sliderText" class="text-[3.5rem] md:text-[4rem] leading-tight">
           البنية التحتية
         </h2>
         <a
@@ -522,7 +524,7 @@
           href="#myform"
           class="relative inline-flex items-center gap-2 bg-white/30 backdrop-blur-md text-white px-[40px] py-[13px] rounded-full shadow-lg border border-transparent transition-all duration-500 hover:bg-transparent hover:border-white text-base"
         >
-          <span class="inline-flex">
+          <span class="inline-flex items-center gap-2">
             استفسار
             <svg
               width="24"
@@ -534,13 +536,17 @@
               <path
                 d="M8.76236 8.05523H16.9538L16.9497 7.05025H7.05025V16.9497H8.05523V8.76233L16.5962 17.3033L17.3033 16.5962L8.76236 8.05523Z"
                 fill="white"
-              /></svg
-          ></span>
+              />
+            </svg>
+          </span>
         </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
     <section
-      class="grid w-full mt-16 py-12 px-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+      class="grid w-full mt-16 py-12 px-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 container mx-auto"
     >
       <div class="flex flex-col items-center text-center space-y-4 group">
         <div class="relative w-full h-[500px] cursor-pointer">
@@ -665,7 +671,7 @@
     >
       <div
         dir="ltr"
-        class="flex flex-col-reverse md:flex-row justify-between items-start gap-10"
+        class="flex flex-col-reverse md:flex-row justify-between items-start gap-10 container mx-auto"
       >
         <!-- form -->
         <div dir="rtl" class="w-full md:w-1/2">
@@ -730,7 +736,7 @@
         <!-- text -->
         <div class="w-full md:w-1/2 text-right space-y-4">
           <span
-            class="inline-block bg-blue-50 px-3 py-1 rounded text-gray-700 text-sm"
+            class="inline-block bg-[#3779BB3B] px-3 py-1 rounded text-gray-700 text-sm"
           >
             هل لديك استفسار؟
           </span>
