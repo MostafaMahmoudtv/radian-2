@@ -22,7 +22,6 @@ body {
   margin: auto;
 }
 
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -116,12 +115,11 @@ body {
   padding: 1rem !important;
   width: 18vw;
 }
-.dropdownMenu ul{
+.dropdownMenu ul {
   padding: 1.2rem !important;
 }
-.dropdownMenu ul li{
-    padding: 0.4rem !important;
-
+.dropdownMenu ul li {
+  padding: 0.4rem !important;
 }
 .language-dropdown:hover .dropdown-content {
   opacity: 1;
@@ -201,7 +199,7 @@ body {
 
 .dropdown-dropdown-m {
   width: 22vw !important;
-  top:-32px !important ;
+  top: -32px !important ;
 }
 
 .dropdown-dropdown-m ul {
@@ -237,7 +235,7 @@ body {
 }
 
 .dropdown-content .language-option ul {
-  padding: 0.7rem 0.2rem ;
+  padding: 0.7rem 0.2rem;
 }
 
 .dropdown-content .language-option ul li {
@@ -274,7 +272,6 @@ body {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
-
 
 #scrollToTop {
   opacity: 0;
@@ -653,7 +650,6 @@ aside {
     padding: 0.75rem 0rem;
     position: relative;
     font-size: 1rem;
-
   }
 
   .nav ul li span.flex {
@@ -876,12 +872,12 @@ aside {
   .sus-section span {
     font-size: 2rem;
   }
-  .language-option.active span{
+  .language-option.active span {
     transform: translateX(0) !important;
   }
-      .dropdown-content .language-option ul li:hover{
+  .dropdown-content .language-option ul li:hover {
     color: rgb(11, 11, 180) !important;
-      }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1097,11 +1093,12 @@ aside {
   .slider-section {
     height: 90vh;
   }
-  .career-icons-section >div {
-height: 33vh !important;
-overflow: hidden;
-background-color: white !important;
+  .career-icons-section > div {
+    height: 37vh !important;
+    overflow: hidden;
+    background-color: white !important;
 
+    align-items: center;
   }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
@@ -1159,19 +1156,17 @@ background-color: white !important;
   .dropdown-content .language-option ul {
     padding: 0 !important;
     margin: 0 !important;
-      margin-top: 1rem !important;
+    margin-top: 1rem !important;
   }
-  .language-option{
+  .language-option {
     padding-right: 0;
   }
-  .nav ul{
+  .nav ul {
     padding-right: 1rem;
   }
   .dropdown-content .language-option ul li {
     font-size: 1rem;
     color: #262626 !important;
-
-
   }
   .dropdown-content .language-option ul li::before {
     content: none; /* يشيل الشرطة */
@@ -1240,20 +1235,19 @@ background-color: white !important;
   .header.fixed {
     display: none;
   }
-  .about-first >div{
-  align-items: end;
-
- }
-  .about-first >div h2{
-    margin-bottom: 4rem;
-        font-size: 2.4rem !important;
-
+  .about-first > div {
+    align-items: end;
   }
-  .icons-section{
+  .about-first > div h2 {
+    margin-bottom: 4rem;
+    font-size: 2.4rem !important;
+  }
+  .icons-section {
     margin-top: 0 !important;
   }
-  .icons-section h2{
-margin-bottom:2rem ;   }
+  .icons-section h2 {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1456,7 +1450,7 @@ margin-bottom:2rem ;   }
    تثبيت تأثير hover على الصفحة الحالية
    ========================================= */
 .language-option.active span {
-  transform: translateX(-23px) ;
+  transform: translateX(-23px);
 }
 
 .language-option.active span::before {
@@ -1472,7 +1466,6 @@ margin-bottom:2rem ;   }
   opacity: 1 !important;
   transform: translateY(-50%) translateX(0) !important;
 }
-
 
 /* ====== الشرطة الثابتة للصفحة الحالية ====== */
 
@@ -1591,9 +1584,7 @@ margin-bottom:2rem ;   }
 .fog-overlay.active {
   opacity: 1;
 }
- .dropdown-content{
+.dropdown-content {
   width: 22vw !important;
   padding-left: 1rem;
-
- }
- 
+}
