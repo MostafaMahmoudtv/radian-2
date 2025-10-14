@@ -1097,6 +1097,10 @@ aside {
   .slider-section {
     height: 90vh;
   }
+  .career-icons-section >div {
+height: 30vh !important;
+overflow: hidden;
+  }
 }
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
