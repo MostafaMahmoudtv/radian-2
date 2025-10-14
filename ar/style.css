@@ -113,7 +113,6 @@ body {
 
 .dropdownMenu {
   position: absolute;
-  right: 228px !important;
   padding: 1rem !important;
   width: 18vw;
 }
@@ -201,7 +200,6 @@ body {
 }
 
 .dropdown-dropdown-m {
-  left: -150px;
   width: 22vw !important;
   top:-32px !important ;
 }
