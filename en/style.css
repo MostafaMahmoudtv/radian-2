@@ -1122,6 +1122,7 @@ aside {
     width: fit-content;
     display: inline-flex;
     justify-content: space-between;
+    width: 260px;
   }
   #preloader {
     width: 90vw;
