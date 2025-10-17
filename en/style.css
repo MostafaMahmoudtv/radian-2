@@ -723,6 +723,22 @@ aside {
   .language-option:hover span {
     all: unset;
   }
+  .career-components{
+    height: 20vh !important;
+  }
+  .career-components >div{
+    top:-5rem !important ;
+  }
+   .career-components >div>div{
+    overflow: hidden;
+    height: auto !important;
+   }
+   .career-components >div>div h3{
+    font-size: 15px !important;
+   }
+    .career-components >div>div p{
+      font-size: 10px !important;
+    }
 }
 /* موبايل وتابلت */
 @media (max-width: 1024px) {
@@ -842,6 +858,7 @@ aside {
   }
   .radian-choosen {
     display: flex !important;
+    position: relative;
     justify-content: space-between !important;
   }
   .Be-Part-of-Radian {
@@ -991,12 +1008,20 @@ aside {
   }
   .radian-choosen {
     display: block !important;
-
+    position: relative !important;
+    height: fit-content !important;
   }
   .radian-choosen div {
     margin-top: 20px;
   }
+  .career-components{
+    height: fit-content !important;
+        overflow-y: hidden !important;
 
+  }
+  .career-components >div{
+    top:-2rem !important ;
+  }
   #sliderText > div {
     font-size: 1.7rem;
     width: 70vw;
@@ -1014,6 +1039,9 @@ aside {
   }
   .slider-section {
     height: 100vh;
+  }
+  .radian-choosen-section{
+    padding-bottom: 0 !important;
   }
 }
 
@@ -1085,6 +1113,7 @@ aside {
   }
   #sliderContent {
     max-width: 70vw;
+    padding-left: 1rem !important;
   }
   #sliderContent h2 {
     font-size: 2.5rem !important;
@@ -1612,10 +1641,10 @@ align-items: center;
 }
 
 section + section {
-  margin-top: 100px; /* عشان السكشن التاني ينزل تحت بوضوح */
   position: relative;
   z-index: 1;
 }
+
   @media screen and (min-width: 1920px) {
     #cardsWrapper {
       overflow-x: visible !important;
@@ -1629,3 +1658,4 @@ section + section {
       width: 25% !important;
     }
   }
+  
