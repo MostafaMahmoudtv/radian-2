@@ -18,10 +18,14 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1370px;
   margin: auto;
 }
+.container2{
+    max-width: 1370px;
+  margin: auto;
 
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -191,7 +195,7 @@ body {
   right: -195px !important;
 }
 .dropdownMenu ul {
-    width: 20vw ;
+  width: 280px !important;
 
 }
 .dropdownMenu ul li {
@@ -987,6 +991,7 @@ aside {
   }
   .radian-choosen {
     display: block !important;
+
   }
   .radian-choosen div {
     margin-top: 20px;
@@ -1106,6 +1111,7 @@ background-color: white !important;
 align-items: center;
   }
 }
+
 /* ديسكتوب: القوايم الفرعية تطلع جنب */
 @media (min-width: 1024px) {
   .dropdownWrapper .dropdownMenu {
@@ -1590,7 +1596,7 @@ align-items: center;
   opacity: 1;
 }
  .dropdown-content{
-  width: 19vw !important;
+  width: 260px !important;
   padding-right: 1rem;
  }
  .first-section {
@@ -1610,3 +1616,16 @@ section + section {
   position: relative;
   z-index: 1;
 }
+  @media screen and (min-width: 1920px) {
+    #cardsWrapper {
+      overflow-x: visible !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+    }
+
+    #cardsWrapper > div {
+      flex: 0 0 25% !important;
+      max-width: 25% !important;
+      width: 25% !important;
+    }
+  }
