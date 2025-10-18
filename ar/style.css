@@ -898,10 +898,7 @@ aside {
   }
 }
  @media (max-width: 768px) {
-  #cardsWrapper .details-btn a {
-    margin-top: 210px;
-    margin-right: -23px;
-  }
+
 
   #projects-list {
     display: flex;
@@ -1027,10 +1024,6 @@ aside {
 }
 
  @media (max-width: 1024px) and (min-width: 641px) {
-  #cardsWrapper .details-btn a {
-    margin-top: 247px;
-    margin-right: 5px;
-  }
 
   #cardsWrapper > div {
     width: 50% !important; 
