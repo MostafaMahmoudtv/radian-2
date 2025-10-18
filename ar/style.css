@@ -295,7 +295,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px); /* ممكن تزود أو تقلل حسب التأثير اللي تحبه */
+    transform: translateY(-5px); 
   }
 }
 
@@ -305,18 +305,18 @@ body {
 
 @media (max-width: 1024px) {
   .header .nav {
-    display: none; /* اخفي القايمة العادية */
+    display: none; 
   }
 
   #menuIcon {
-    display: flex; /* خلي أيقونة المينيو تبان */
+    display: flex; 
     color: white;
-    font-weight: bold; /* أو غيرها حسب الخلفية */
+    font-weight: bold; 
   }
 
   .header {
     position: absolute;
-    background: transparent; /* خلفية شفافة أو solid */
+    background: transparent; 
   }
 }
 
@@ -328,8 +328,8 @@ body {
 }
 
 .icon-square {
-  transition: transform 0.2s ease-in-out; /* اسرع شوية */
-  transform-origin: center center; /* يلف في النص بالظبط */
+  transition: transform 0.2s ease-in-out; 
+  transform-origin: center center; 
 }
 
 .icon-square:hover {
@@ -343,6 +343,8 @@ body {
 .slider-section {
   height: 100vh;
   width: 100vw;
+      overflow: hidden;
+
 }
 
 .sidebar {
@@ -351,8 +353,8 @@ body {
   left: -300px;
   width: 300px;
   height: 100vh;
-  background: #f1f5f9; /* رمادي فاتح */
-  color: #1e293b; /* أزرق غامق للنص */
+  background: #f1f5f9; 
+  color: #1e293b; 
   border-right: 2px solid #ccc;
   transition: left 0.4s ease;
   z-index: 1000 !important;
@@ -382,7 +384,7 @@ body {
 .counter {
   font-size: 2rem;
   font-weight: bold;
-  color: #1da1f2; /* الأزرق المستخدم */
+  color: #1da1f2; 
 }
 .icon-C {
   stroke: #1da1f2;
@@ -396,22 +398,21 @@ body {
     display: none;
   }
 }
-/* للموبايل والتابلت لحد 1023px */
 @media (max-width: 1024px) {
   #about .absolute {
-    position: relative !important; /* بدل ما تبقى فوق الصورة */
+    position: relative !important; 
     top: auto !important;
     right: auto !important;
-    margin: 1rem 0 0 0 !important; /* يشيل السالب margin */
-    width: 100% !important; /* ياخد العرض كله */
-    padding: 2rem 1.5rem !important; /* padding أصغر يناسب الموبايل */
-    border-radius: 1rem !important; /* زوايا أنعم */
+    margin: 1rem 0 0 0 !important; 
+    width: 100% !important; 
+    padding: 2rem 1.5rem !important; 
+    border-radius: 1rem !important; 
   }
   aside .aside-content {
     display: none;
   }
   #about h2 {
-    font-size: 1.75rem !important; /* أصغر عشان ما يكسرش */
+    font-size: 1.75rem !important; 
     line-height: 2.25rem !important;
   }
 
@@ -421,16 +422,14 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  /* الصورة */
-  .bg-white img {
-    height: auto !important; /* خلي الصورة تاخد حجمها الطبيعي */
+   .bg-white img {
+    height: auto !important; 
     width: 100%;
     object-fit: cover;
   }
 
-  /* النص */
-  .bg-white h2 {
-    font-size: 1.75rem !important; /* أصغر شوية */
+   .bg-white h2 {
+    font-size: 1.75rem !important; 
     line-height: 2.25rem !important;
   }
 
@@ -454,11 +453,10 @@ body {
     padding: 0.3rem 0;
     flex: 4;
   }
-  /* الكروت */
-  .bg-white .max-w-4xl {
-    margin-top: 2rem !important; /* شيل السالب margin */
-    margin-inline-start: 0 !important; /* شيل الإزاحة */
-    grid-template-columns: 1fr !important; /* خليها عمود واحد */
+   .bg-white .max-w-4xl {
+    margin-top: 2rem !important; 
+    margin-inline-start: 0 !important; 
+    grid-template-columns: 1fr !important; 
     text-align: center;
   }
   .main-dropdown {
@@ -466,23 +464,22 @@ body {
   }
 
   .main-dropdown.rotate {
-    transform: rotate(180deg); /* يلف لفوق */
+    transform: rotate(180deg); 
   }
 
   .bg-white .max-w-4xl > div {
     padding: 1.5rem !important;
   }
 }
-/* الريسبونسف للشبكة */
-@media (max-width: 1024px) {
+ @media (max-width: 1024px) {
   section .grid {
-    grid-template-columns: repeat(2, 1fr); /* تابلت: عمودين */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1.5rem;
   }
 
   .fa-angle-down {
     transition: transform 0.3s ease;
-    display: inline-block; /* مهم عشان يقلب */
+    display: inline-block; 
   }
   .header {
     padding: 0;
@@ -538,22 +535,22 @@ body {
 
 @media (max-width: 1024px) {
   section .grid {
-    grid-template-columns: 1fr; /* موبايل: عمود واحد */
+    grid-template-columns: 1fr; 
     gap: 1.25rem;
   }
   .language-option span:hover {
     color: rgb(11, 11, 180);
   }
   section .grid > div {
-    border-left: none; /* نشيل البوردر على الموبايل */
+    border-left: none; 
   }
 
   section .grid > div:last-child {
-    border-bottom: none; /* آخر كارت من غير خط */
+    border-bottom: none; 
   }
 
   section h2 {
-    font-size: 2rem; /* العنوان يصغر على الموبايل */
+    font-size: 2rem; 
     line-height: 1.4;
   }
 }
@@ -569,7 +566,7 @@ aside {
 }
 
 @media (max-width: 1024px) {
-  /* نخلي الناف عمودية */
+
   .nav ul {
     flex-direction: column;
     align-items: stretch;
@@ -632,7 +629,7 @@ aside {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    width: 100vw !important; /* خليه ياخد عرض الكلمة + الأيقونة فقط */
+    width: 100vw !important; 
     transition: none !important;
   }
 
@@ -655,8 +652,7 @@ aside {
     display: flex;
   }
 
-  /* نلغي الانميشن */
-  .nav ul li .dropdown-content {
+   .nav ul li .dropdown-content {
     position: relative;
     top: auto;
     right: auto;
@@ -667,11 +663,10 @@ aside {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
-    display: none; /* تبقى مقفولة افتراضي */
+    display: none; 
   }
 
-  /* لما تبقى مفتوحة */
-  .nav ul li.open .dropdown-content {
+   .nav ul li.open .dropdown-content {
     display: block;
   }
 
@@ -683,38 +678,32 @@ aside {
     color: rgb(11, 11, 180);
   }
 
-  /* السهم */
-
+ 
   .fa-angle-down {
     transition: transform 0.3s ease;
-    display: inline-block; /* مهم عشان يقلب */
+    display: inline-block; 
   }
 
-  /* دوران السهم عند الفتح */
-  .nav ul li.open.has-dropdown::after {
+   .nav ul li.open.has-dropdown::after {
     transform: translateY(-50%) rotate(90deg);
   }
 
-  /* نشيل الأنيميشن الخاص بالـ hover */
-  .language-option span::before,
+   .language-option span::before,
   .language-option:hover span {
     all: unset;
   }
 }
-/* موبايل وتابلت */
-@media (max-width: 1024px) {
-  /* شيل أي انيميشن أو transition من القوايم الفرعية */
-  .dropdownWrapper .dropdownMenu {
+ @media (max-width: 1024px) {
+   .dropdownWrapper .dropdownMenu {
     transition: none !important;
     max-height: none !important;
   }
 
   .dropdownWrapper.open .dropdownMenu {
-    display: block !important; /* تظهر مباشرة */
+    display: block !important; 
   }
 
-  /* كمان لو الزرار واخد transition من Tailwind */
-  .dropdownBtn {
+   .dropdownBtn {
     transition: none !important;
   }
   .header {
@@ -738,7 +727,10 @@ aside {
     height: 90vh;
   }
   .slider-section {
+
     height: 90vh;
+        overflow: hidden;
+
   }
   .slider-home-container {
     height: 100vh;
@@ -905,8 +897,7 @@ aside {
     margin: 0 auto;
   }
 }
-/* موبايل (أقل من 640px) */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   #cardsWrapper .details-btn a {
     margin-top: 210px;
     margin-right: -23px;
@@ -925,9 +916,9 @@ aside {
     margin: auto !important;
   }
   #cardsWrapper > div {
-    width: 100% !important; /* الكارت ياخد 90% من العرض */
-    margin: 10px auto; /* مسافة بين الكروت */
-    min-height: 300px; /* يقلل الطول شوية */
+    width: 100% !important; 
+    margin: 10px auto; 
+    min-height: 300px; 
   }
   .icons-section {
     overflow: hidden;
@@ -953,7 +944,7 @@ aside {
     text-align: right !important;
     gap: 10px !important;
     margin: auto !important;
-    flex-direction: row-reverse !important; /* الايقونة يمين */
+    flex-direction: row-reverse !important; 
   }
   .iconssvg-content {
     width: 70%;
@@ -977,8 +968,8 @@ aside {
   }
   .icons-section > div > div .text {
     display: flex !important;
-    flex-direction: column !important; /* يخلي الرقم فوق والبراجراف تحته */
-    align-items: flex-start !important; /* النص يفضل متراص شمال */
+    flex-direction: column !important; 
+    align-items: flex-start !important; 
   }
 
   .icons-section > div > div svg {
@@ -1035,15 +1026,14 @@ aside {
   }
 }
 
-/* تابلت (من 641px لحد 1024px) */
-@media (max-width: 1024px) and (min-width: 641px) {
+ @media (max-width: 1024px) and (min-width: 641px) {
   #cardsWrapper .details-btn a {
     margin-top: 247px;
     margin-right: 5px;
   }
 
   #cardsWrapper > div {
-    width: 50% !important; /* كارتين في الصف */
+    width: 50% !important; 
     margin-bottom: 20px;
     min-height: 350px;
     position: relative;
@@ -1121,9 +1111,11 @@ aside {
   }
   .slider-section #slider {
     height: 90vh;
+
   }
   .slider-section {
     height: 90vh;
+    overflow: hidden;
   }
   .career-icons-section > div {
     height: 37vh !important;
@@ -1133,11 +1125,10 @@ aside {
     align-items: center;
   }
 }
-/* ديسكتوب: القوايم الفرعية تطلع جنب */
-@media (min-width: 1024px) {
+ @media (min-width: 1024px) {
   .dropdownWrapper .dropdownMenu {
     position: absolute;
-    right: 100%; /* جنب الزرار */
+    right: 100%; 
     top: 0;
     display: none;
     min-width: 200px;
@@ -1147,17 +1138,16 @@ aside {
   }
 }
 
-/* موبايل/تابلت: القوايم الفرعية تحت */
-@media (max-width: 1024px) {
+ @media (max-width: 1024px) {
   .dropdownWrapper .dropdownMenu {
-    position: static; /* تخليها تحت العنصر */
+    position: static; 
     width: 100%;
-    display: none; /* تبدأ مخفية */
-    transition: none; /* مفيش انيميشن */
+    display: none; 
+    transition: none; 
   }
 
   .dropdownWrapper.open .dropdownMenu {
-    display: block; /* تظهر مباشرة */
+    display: block; 
   }
   .career-icons-section {
     display: flex !important;
@@ -1172,14 +1162,13 @@ aside {
     min-width: 120px !important;
   }
 }
-/* وضع الموبايل */
-@media (max-width: 1024px) {
+ @media (max-width: 1024px) {
   .dropdownWrapper .dropdownMenu {
-    position: relative !important; /* بدل absolute */
+    position: relative !important; 
     top: 0 !important;
     left: 0 !important;
-    width: 100% !important; /* تاخد عرض كامل */
-    display: none; /* مقفولة افتراضياً */
+    width: 100% !important; 
+    display: none; 
   }
   .dropdown-content {
     padding: 0;
@@ -1201,13 +1190,13 @@ aside {
     color: #262626 !important;
   }
   .dropdown-content .language-option ul li::before {
-    content: none; /* يشيل الشرطة */
+    content: none; 
     padding: 0;
     margin: 0;
   }
 
   .dropdownWrapper.open .dropdownMenu {
-    display: block; /* تفتح عند الضغط */
+    display: block; 
   }
   .header {
     padding: 0;
@@ -1292,7 +1281,7 @@ aside {
     padding-right: 0.3rem !important;
     transition: none !important;
     transform: none !important;
-    opacity: 1 !important; /* خليه ثابت */
+    opacity: 1 !important; 
     margin-right: 0 !important;
   }
   .header.fixed {
@@ -1307,21 +1296,20 @@ aside {
 .language-option > ul {
   margin: 0 !important;
   padding: 0 !important;
-  list-style: none !important; /* يشيل البولتس الافتراضية */
+  list-style: none !important; 
 }
 
 .language-option > ul > li {
-  margin: 0 !important; /* يشيل أي مسافة افتراضية */
-  padding: 0.3rem 0.6rem !important; /* تحكم يدوي في المسافة بين العناصر */
+  margin: 0 !important; 
+  padding: 0.3rem 0.6rem !important; 
 }
-/* الخلفية */
-#preloader {
+ #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: white; /* خلفية بيضة */
+  background: white; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1330,10 +1318,9 @@ aside {
   transition: opacity 0.2s ease, visibility 0.5s ease;
 }
 
-/* النص */
-#preloader .loader-text {
+ #preloader .loader-text {
   text-align: center;
-  color: #0c3c60; /* نفس اللون */
+  color: #0c3c60; 
 }
 
 #preloader .loader-text p {
@@ -1344,8 +1331,7 @@ aside {
   overflow: hidden;
 }
 
-/* الخط اللي تحت "جار التحميل..." */
-#preloader .loader-text p .underline {
+ #preloader .loader-text p .underline {
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -1381,13 +1367,11 @@ aside {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-/* نخلي الأبو (group) عنده perspective علشان الدوران يبان */
-.group {
+ .group {
   perspective: 1000px;
 }
 
-/* زر استعرض التفاصيل كله */
-.group a.flex.items-center.gap-2 {
+ .group a.flex.items-center.gap-2 {
   transform: rotateX(-90deg);
   opacity: 0;
   transform-origin: center;
@@ -1397,15 +1381,13 @@ aside {
 .group:hover a.flex.items-center.gap-2 {
   transform: rotateX(0deg);
   opacity: 1;
-  transition-delay: 0.1s; /* يستنى شوية بعد ما زر + يختفي */
+  transition-delay: 0.1s; 
 }
-/* علشان الدوران يبقى واقعي */
-.group {
+ .group {
   perspective: 1000px;
 }
 
-/* زر + الصغير */
-.group .flex.items-center.justify-center.bg-\[\#CCE4FF\] {
+ .group .flex.items-center.justify-center.bg-\[\#CCE4FF\] {
   transform: rotateX(0deg);
   opacity: 1;
   transform-origin: center;
@@ -1417,8 +1399,7 @@ aside {
   opacity: 0;
 }
 
-/* زر استعرض التفاصيل */
-.group .flex.items-center.gap-2 {
+ .group .flex.items-center.gap-2 {
   transform: rotateX(-90deg);
   opacity: 0;
   transform-origin: center;
@@ -1428,7 +1409,7 @@ aside {
 .group:hover .flex.items-center.gap-2 {
   transform: rotateX(0deg);
   opacity: 1;
-  transition-delay: 0.3s; /* يبدأ بعد ما زر + يخلص */
+  transition-delay: 0.3s; 
 }
 #preloader {
   position: fixed;
@@ -1442,15 +1423,13 @@ aside {
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-/* النص */
-.loader-text h2 {
+ .loader-text h2 {
   font-size: 33px !important;
   color: #1e4a6e;
   margin: 0.5rem 0;
 }
 
-/* الخط الخارجي */
-.loading-line {
+ .loading-line {
   position: relative;
   width: 200px;
   height: 4px;
@@ -1460,8 +1439,7 @@ aside {
   margin-top: 12px;
 }
 
-/* شريط التقدم الحقيقي */
-.progress {
+ .progress {
   position: absolute;
   right: 0;
   top: 0;
@@ -1472,15 +1450,11 @@ aside {
   transform-origin: left;
 }
 
-/* إخفاء عند الانتهاء */
-#preloader.fade-out {
+ #preloader.fade-out {
   opacity: 0;
   visibility: hidden;
 }
-
-/* =========================================
-   تثبيت تأثير hover على الصفحة الحالية
-   ========================================= */
+ 
 .language-option.active span {
   transform: translateX(-23px);
 }
@@ -1498,18 +1472,14 @@ aside {
   opacity: 1 !important;
   transform: translateY(-50%) translateX(0) !important;
 }
-
-/* ====== الشرطة الثابتة للصفحة الحالية ====== */
-
-/* لعناصر القائمة الرئيسية */
+ 
 .language-option.active span::before,
 .language-option a.active span::before {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
 
-/* لعناصر الـ submenu (زي Traffic Studies) */
-.dropdown-content .language-option ul a.active li::before,
+ .dropdown-content .language-option ul a.active li::before,
 .dropdown-content .language-option ul li.active::before {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
@@ -1544,11 +1514,11 @@ aside {
   height: 25px;
   border: 1px solid white;
   border-radius: 50%;
-  transition: transform 0.5s ease; /* نرجع transform */
+  transition: transform 0.5s ease; 
   z-index: 1;
   top: 17px;
   left: 50%;
-  transform: translateX(-50%); /* توسيط أفقي */
+  transform: translateX(-50%); 
 }
 
 .dot {
@@ -1598,16 +1568,14 @@ aside {
   justify-content: space-between;
 }
 
-/* تأثير الضباب */
-.fog-overlay {
+ .fog-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(226, 233, 227, 0.25); /* لون أبيض هادي منتشـر */
-  /* دعم للسفاري */
-  z-index: 20;
+  background: rgba(226, 233, 227, 0.25); 
+   z-index: 20;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;

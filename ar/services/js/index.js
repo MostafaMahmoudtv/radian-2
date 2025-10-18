@@ -3,10 +3,10 @@ var swiper = new Swiper(".mySwiperb", {
   spaceBetween: 20,
   loop: true,
   autoplay: {
-    delay: 2500, // الوقت بين كل انتقال (بالمللي ثانية)
-    disableOnInteraction: false, // يكمّل بعد ما المستخدم يتفاعل
+    delay: 2500, 
+    disableOnInteraction: false, 
   },
-  speed: 800, // سرعة الانتقال (أنيميشن السلايد نفسه)
+  speed: 800, 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

@@ -6,8 +6,7 @@ const sidePanel = document.getElementById("sidePanel");
 const closeBtn = document.getElementById("closeBtn");
 const overlay = document.getElementById("overlay");
 
-// ========== Scroll & Header ==========
-window.addEventListener("scroll", function () {
+ window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY;
 
   if (scrollTop === 0) {
@@ -27,8 +26,7 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// ========== Side Menu ==========
-function openMenu() {
+ function openMenu() {
   sidePanel?.classList.remove("-translate-x-full");
   sidePanel?.classList.add("translate-x-0");
   overlay?.classList.remove("opacity-0", "pointer-events-none");
@@ -52,10 +50,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeMenu();
 });
 
-// ========== Slider (مُحدّث) ==========
-const slides = [
-  // استخدم backticks علشان HTML multi-line، هنا النص + sv
-  {
+ const slides = [
+   {
     img: "/assets/Slider-1.webp",
     text: "التميّز الهندسي عبر القارات",
     btnText: "اعرف المزيد عن راديان",
@@ -77,8 +73,7 @@ const dots = document.querySelectorAll(".dot");
 const movingBorder = document.getElementById("movingBorder");
 const slideNumbers = document.querySelectorAll(".slide-number");
 
-// إنشاء عنصر الضباب
-const fogOverlay = document.createElement("div");
+ const fogOverlay = document.createElement("div");
 fogOverlay.className = "fog-overlay";
 document.body.appendChild(fogOverlay);
 
@@ -90,15 +85,12 @@ if (
   dots.length &&
   movingBorder
 ) {
-  // تحديد مواقع النقاط مسبقاً
-  const dotPositions = [0, 40]; // المسافات بين النقاط
+   const dotPositions = [0, 40];
 
   function goToSlide(index) {
-    // تفعيل تأثير الضباب
-    fogOverlay.classList.add("active");
+     fogOverlay.classList.add("active");
 
-    // تحديث الخلفية
-    sliderWrapper.innerHTML = "";
+     sliderWrapper.innerHTML = "";
 
     const imgDiv = document.createElement("div");
     imgDiv.className =
@@ -109,19 +101,16 @@ if (
 
     sliderWrapper.appendChild(imgDiv);
 
-    // حركة التكبير البسيطة
-    setTimeout(() => {
+     setTimeout(() => {
       imgDiv.style.transform = "scale(1.23)";
     }, 50);
 
-    // تحريك النص للخارج مؤقتًا
-    sliderContent.classList.add("opacity-0", "translate-x-20");
+     sliderContent.classList.add("opacity-0", "translate-x-20");
 
     setTimeout(() => {
       const fullText = slides[index].text;
 
-      // ✨ تقسيم الجملة لكلمات وتلوين التانية فقط
-      const words = fullText.split(" ");
+       const words = fullText.split(" ");
       if (words.length > 1){
   sliderText.innerHTML = `
     <span class="text-blue-400 italic slider-home-colored">${words[0]}</span>
@@ -148,37 +137,30 @@ if (
       `;
       sliderBtn.href = slides[index].btnLink;
 
-      // إعادة الظهور بانسيابية
-      sliderContent.classList.remove("opacity-0", "translate-x-20");
+       sliderContent.classList.remove("opacity-0", "translate-x-20");
 
-      // إزالة تأثير الضباب
-      setTimeout(() => {
+       setTimeout(() => {
         fogOverlay.classList.remove("active");
       }, 300);
     }, 500);
 
-    // تحريك الدائرة إلى النقطة المحددة
-    const topOffset = dotPositions[index] - 9.5; // 25/2 - 6/2 = 12.5 - 3 = 9.5
+     const topOffset = dotPositions[index] - 9.5; // 25/2 - 6/2 = 12.5 - 3 = 9.5
     movingBorder.style.transform = `translateY(${topOffset}px) translateX(-50%)`;
 
-    // تحديث النقاط
-    dots.forEach((dot) => dot.classList.remove("active"));
+     dots.forEach((dot) => dot.classList.remove("active"));
     dots[index].classList.add("active");
   }
 
-  // عند الضغط على أي نقطة
-  dots.forEach((dot) => {
+   dots.forEach((dot) => {
     dot.addEventListener("click", () => goToSlide(parseInt(dot.dataset.slide)));
   });
 
-  // أول سلايد - نحرك الدائرة للنقطة الأولى
-  const initialOffset = dotPositions[0] - 9.5;
+   const initialOffset = dotPositions[0] - 9.5;
   movingBorder.style.transform = `translateY(${initialOffset}px) translateX(-50%)`;
   goToSlide(0);
 }
 
-// ========== Counter ==========
-function animateCounter(counter) {
+ function animateCounter(counter) {
   const target = +counter.getAttribute("data-target");
   const duration = 2000;
   const step = target / (duration / 16);
@@ -213,8 +195,7 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", handleScroll);
 
-// ========== Swiper ==========
-var swiper = new Swiper(".mySwiper", {
+ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
   loop: true,
@@ -230,8 +211,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// ========== Show More Projects ==========
-const projectsList = document.getElementById("projects-list");
+ const projectsList = document.getElementById("projects-list");
 const toggleBtn = document.getElementById("toggle-btn");
 
 if (projectsList && toggleBtn) {
@@ -261,8 +241,7 @@ if (projectsList && toggleBtn) {
   });
 }
 
-// ========== Dropdown + Arrow ==========
-document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".dropdownWrapper").forEach((wrapper) => {
     const btn = wrapper.querySelector(".dropdownBtn");
     const menu = wrapper.querySelector(".dropdownMenu");
@@ -270,8 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!btn || !menu || !icon) return;
 
-    // Desktop hover
-    btn.addEventListener("mouseenter", () => {
+     btn.addEventListener("mouseenter", () => {
       if (window.innerWidth > 992) {
         menu.classList.remove("hidden");
       }
@@ -282,14 +260,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Mobile click
-    btn.addEventListener("click", (e) => {
+     btn.addEventListener("click", (e) => {
       if (window.innerWidth <= 992) {
         e.preventDefault();
         e.stopPropagation();
 
-        // اقفل باقي القوائم
-        document.querySelectorAll(".dropdownWrapper").forEach((w) => {
+         document.querySelectorAll(".dropdownWrapper").forEach((w) => {
           if (w !== wrapper) {
             w.querySelector(".dropdownMenu")?.classList.add("hidden");
             w.classList.remove("open");
@@ -303,15 +279,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ========== Navbar Clone in Sidebar ==========
-const nav = document.querySelector(".nav");
+ const nav = document.querySelector(".nav");
 if (nav && sidePanel) {
   const sideNav = nav.cloneNode(true);
   sideNav.classList.add("flex-col", "space-y-4", "mt-6", "xl:hidden");
   sideNav.classList.remove("flex", "justify-center");
   sidePanel.appendChild(sideNav);
-  // ========== إصلاح دروب داون السايدبار في وضع الموبايل ==========
-if (sidePanel) {
+ if (sidePanel) {
   sidePanel.querySelectorAll(".has-dropdown").forEach((item) => {
     const btn = item.querySelector("a, .dropdownBtn, span");
     const dropdown = item.querySelector(".dropdown-content");
@@ -322,16 +296,14 @@ if (sidePanel) {
           e.preventDefault();
           e.stopPropagation();
 
-          // افتح أو اقفل القائمة الحالية فقط
-          dropdown.classList.toggle("hidden");
+           dropdown.classList.toggle("hidden");
           item.classList.toggle("open");
         }
       });
     }
   });
 
-  // لو ضغطت على لينك جوه القائمة → ما تقفلهاش
-  sidePanel.querySelectorAll(".dropdown-content a").forEach((link) => {
+   sidePanel.querySelectorAll(".dropdown-content a").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.stopPropagation();
     });
@@ -340,8 +312,7 @@ if (sidePanel) {
 
 }
 
-// ========== Parent Dropdowns ==========
-document.querySelectorAll(".nav ul li").forEach((item) => {
+ document.querySelectorAll(".nav ul li").forEach((item) => {
   const dropdown = item.querySelector(".dropdown-content");
   if (dropdown) {
     item.classList.add("has-dropdown");
@@ -354,30 +325,25 @@ document.querySelectorAll(".nav ul li").forEach((item) => {
   }
 });
 
-// Preloader
-const progressBar = document.getElementById("progress-bar");
+ const progressBar = document.getElementById("progress-bar");
 const preloader = document.getElementById("preloader");
 const mainContent = document.getElementById("main-content");
 
 let progress = 0;
 
-// نحاكي التحميل التدريجي
-const fakeLoading = setInterval(() => {
+ const fakeLoading = setInterval(() => {
   if (progress < 90) {
-    // يتوقف عند 90% إلى أن الصفحة تكمل
-    progress += Math.random() * 10;
+     progress += Math.random() * 10;
     if (progress > 90) progress = 90;
     progressBar.style.width = progress + "%";
   }
 }, 200);
 
-// عند اكتمال تحميل الصفحة فعليًا
-window.addEventListener("load", () => {
+ window.addEventListener("load", () => {
   clearInterval(fakeLoading);
   progressBar.style.width = "100%";
 
-  // نديه نص ثانية علشان المستخدم يشوف الاكتمال
-  setTimeout(() => {
+   setTimeout(() => {
     preloader.classList.add("fade-out");
     setTimeout(() => {
       preloader.style.display = "none";
@@ -385,8 +351,7 @@ window.addEventListener("load", () => {
     }, 600);
   }, 500);
 });
-// Links
-document.querySelectorAll("a").forEach((link) => {
+ document.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
     if (!href) return;
@@ -425,15 +390,13 @@ document.querySelectorAll("a").forEach((link) => {
   });
 });
 
-// Cards Wrapper Slider
-const slider = document.getElementById("cardsWrapper");
+ const slider = document.getElementById("cardsWrapper");
 if (slider) {
   let isDown = false;
   let startX;
   let scrollLeft;
 
-  // Mouse Events (Desktop)
-  slider.addEventListener("mousedown", (e) => {
+   slider.addEventListener("mousedown", (e) => {
     isDown = true;
     slider.classList.add("active");
     startX = e.pageX - slider.offsetLeft;
@@ -449,8 +412,7 @@ if (slider) {
     slider.scrollLeft = scrollLeft - walk;
   });
 
-  // Touch Events (Mobile)
-  slider.addEventListener("touchstart", (e) => {
+   slider.addEventListener("touchstart", (e) => {
     isDown = true;
     startX = e.touches[0].pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
@@ -465,13 +427,11 @@ if (slider) {
 }
 
 
-// ========== Scroll To Top ==========
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   const scrollToTopBtn = document.getElementById("scrollToTop");
   const path = document.getElementById("progressPath");
 
-  // لو العنصر مش موجود في الصفحة نخرج بهدوء
-  if (!scrollToTopBtn || !path) return;
+   if (!scrollToTopBtn || !path) return;
 
   const pathLength = path.getTotalLength();
 
@@ -505,25 +465,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownButtons = document.querySelectorAll(".dropdownBtn");
 
   dropdownButtons.forEach((btn) => {
-    const menu = btn.nextElementSibling; // القايمة اللي بعد الزر
-    const arrow = btn.querySelector(".arrow"); // السهم لو موجود
+    const menu = btn.nextElementSibling; 
+    const arrow = btn.querySelector(".arrow"); 
 
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
 
-      // لو الزر ده مفتوح بالفعل → اقفله وارجع
-      const isOpen = !menu.classList.contains("hidden");
+       const isOpen = !menu.classList.contains("hidden");
 
-      // اقفل كل القوائم التانية
-      document.querySelectorAll(".dropdownMenu").forEach((m) => {
+       document.querySelectorAll(".dropdownMenu").forEach((m) => {
         if (m !== menu) m.classList.add("hidden");
       });
       document
         .querySelectorAll(".arrow")
         .forEach((a) => a.classList.remove("rotate-90"));
 
-      // لو مش مفتوح → افتحه
-      if (!isOpen) {
+       if (!isOpen) {
         menu.classList.remove("hidden");
         arrow?.classList.add("rotate-90");
       } else {
@@ -533,8 +490,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // اقفل الكل لما تضغط برا
-  document.addEventListener("click", (e) => {
+   document.addEventListener("click", (e) => {
     if (!e.target.closest(".dropdownWrapper")) {
       document
         .querySelectorAll(".dropdownMenu")
@@ -545,8 +501,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-// تحديد الصفحة الحالية (الملف المفتوح)
-
+ 
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
   const allLinks = document.querySelectorAll(
@@ -562,15 +517,12 @@ document.addEventListener("DOMContentLoaded", function () {
       currentPage !== "" &&
       currentPage !== "index.html"
     ) {
-      // فعّل اللينك نفسه (عشان li جوه a)
-      link.classList.add("active");
+       link.classList.add("active");
 
-      // لو جوه language-option
-      const parentOption = link.closest(".language-option");
+       const parentOption = link.closest(".language-option");
       if (parentOption) parentOption.classList.add("active");
 
-      // لو جوه dropdownMenu (زي traffic-studies)
-      const dropdownMenu = link.closest(".dropdownMenu");
+       const dropdownMenu = link.closest(".dropdownMenu");
       if (dropdownMenu) {
         const dropdownWrapper = dropdownMenu.closest(".dropdownWrapper");
         if (dropdownWrapper) {
@@ -580,8 +532,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const arrow = dropdownWrapper.querySelector(".arrow");
         }
 
-        // فعل Services الرئيسي فوق
-        const mainDropdown = dropdownMenu.closest(".dropdown-content");
+         const mainDropdown = dropdownMenu.closest(".dropdown-content");
         if (mainDropdown) {
           const mainGroup = mainDropdown.closest(".group");
           if (mainGroup) {
@@ -591,8 +542,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // لو اللينك الرئيسي (زي About, Media Center)
-      const group = link.closest(".group");
+       const group = link.closest(".group");
       if (group) {
         const underline = group.querySelector("span.absolute");
         if (underline) underline.style.width = "100%";
