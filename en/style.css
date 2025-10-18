@@ -1113,7 +1113,7 @@ aside {
   }
   #sliderContent {
     max-width: 70vw;
-    padding-left: 1rem !important;
+    padding-left: 0.5rem !important;
   }
   #sliderContent h2 {
     font-size: 2.5rem !important;
@@ -1122,7 +1122,6 @@ aside {
     width: fit-content;
     display: inline-flex;
     justify-content: space-between;
-    width: 260px;
   }
   #preloader {
     width: 90vw;

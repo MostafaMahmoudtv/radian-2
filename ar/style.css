@@ -1105,7 +1105,7 @@ aside {
   }
   #sliderContent {
     max-width: 80vw;
-        padding-right: 1rem !important;
+        padding-right: 0.5rem !important;
 
   }
   #sliderContent h2 {

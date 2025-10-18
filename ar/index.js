@@ -310,6 +310,34 @@ if (nav && sidePanel) {
   sideNav.classList.add("flex-col", "space-y-4", "mt-6", "xl:hidden");
   sideNav.classList.remove("flex", "justify-center");
   sidePanel.appendChild(sideNav);
+  // ========== إصلاح دروب داون السايدبار في وضع الموبايل ==========
+if (sidePanel) {
+  sidePanel.querySelectorAll(".has-dropdown").forEach((item) => {
+    const btn = item.querySelector("a, .dropdownBtn, span");
+    const dropdown = item.querySelector(".dropdown-content");
+
+    if (btn && dropdown) {
+      btn.addEventListener("click", (e) => {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // افتح أو اقفل القائمة الحالية فقط
+          dropdown.classList.toggle("hidden");
+          item.classList.toggle("open");
+        }
+      });
+    }
+  });
+
+  // لو ضغطت على لينك جوه القائمة → ما تقفلهاش
+  sidePanel.querySelectorAll(".dropdown-content a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
+}
+
 }
 
 // ========== Parent Dropdowns ==========
