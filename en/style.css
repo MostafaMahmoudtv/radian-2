@@ -182,7 +182,7 @@ body {
 }
 .slider-home-colored,
 .another-font {
-  font-family: "DM Sans";
+  font-family: "DM Sans" !important;
 }
 .language-option ul li:hover::before {
   opacity: 1;
