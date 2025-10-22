@@ -1613,3 +1613,9 @@ section + section {
     width: 25% !important;
   }
 }
+@media(min-width: 1688px)  {
+    .radian-choosen {
+      right: 8.8% !important;
+      transform: scale(1.05);
+    }
+  }
