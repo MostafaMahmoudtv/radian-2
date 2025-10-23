@@ -1,3 +1,5 @@
+
+
 html,
 body {
   margin: 0;
@@ -1305,7 +1307,7 @@ aside {
   flex-direction: column;
   z-index: 999999;
   transition: opacity 0.2s ease, visibility 0.5s ease;
-  font-family: "DM Sans";
+  font-family: 'Playfair Display', serif !important;
 }
 
 #preloader .loader-text {
@@ -1618,5 +1620,5 @@ section + section {
   }
   .slider-home-colored,
 .another-font {
-  font-family: "DM Sans" !important;
+   font-family: 'Playfair Display', serif !important;
 }
